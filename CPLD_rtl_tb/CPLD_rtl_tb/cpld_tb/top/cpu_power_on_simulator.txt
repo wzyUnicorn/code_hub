@@ -1,0 +1,89 @@
+always@(posedge clk)
+   begin
+	   if(mif.o_PSOn&mif.o_VDD18_EN)begin
+		   if(!mif.i_WorkPowerGood1)begin
+		   mif.i_ATX_PG<=1'b1;
+		   mif.i_WorkPowerGood1<=1'b1;
+		$display($time, "STATE IS PSON2!!!");
+		   end 
+		   else begin
+		   mif.i_ATX_PG<=1'b1;
+		   mif.i_WorkPowerGood1<=1'b1;
+		   end
+	   end
+	   else begin
+		   mif.i_ATX_PG<=1'b0;
+		   mif.i_WorkPowerGood1<=1'b0;
+	   end
+   end
+always@(posedge clk)
+   begin
+	   if(mif.o_YellowLED)begin
+		   if(!mif.i_WorkPowerGood2)begin
+		   mif.i_WorkPowerGood2<=1'b1;
+		$display($time, "WORKPOWER OK!!!");
+		   end 
+		   else begin
+		   mif.i_WorkPowerGood2<=1'b1;
+		   end
+	   end
+	   else begin
+		   mif.i_WorkPowerGood2<=1'b0;
+	   end
+   end
+always@(posedge clk)
+   begin
+	   if(mif.o_S0_1V2Enable&mif.o_S1_1V2Enable)begin
+		   if(!mif.i_S0_VTT_PWRGD)begin
+		   mif.i_S0_VTT_PWRGD<=1'b1;
+		   mif.i_S1_VTT_PWRGD<=1'b1;
+		$display($time, "STATE IS WorkPowerGood!!!");
+		   end 
+		   else begin
+		   mif.i_S0_VTT_PWRGD<=1'b1;
+		   mif.i_S1_VTT_PWRGD<=1'b1;
+		   end
+	   end
+	   else begin
+		   mif.i_S0_VTT_PWRGD<=1'b0;
+		   mif.i_S1_VTT_PWRGD<=1'b0;
+	   end
+   end
+
+always@(posedge clk)
+   begin
+	   if(mif.o_S0_CORE08_EN&mif.o_S1_CORE08_EN)begin
+		   if(!mif.i_S0_CORE08_PG)begin
+		   mif.i_S0_CORE08_PG<=1'b1;
+		   mif.i_S1_CORE08_PG<=1'b1;
+		$display($time, "STATE IS DLIPowerGood!!!");
+		   end 
+		   else begin
+		   mif.i_S0_CORE08_PG<=1'b1;
+		   mif.i_S1_CORE08_PG<=1'b1;
+		   end
+	   end
+	   else begin
+		   mif.i_S0_CORE08_PG<=1'b0;
+		   mif.i_S1_CORE08_PG<=1'b0;
+	   end
+   end
+
+always@(posedge clk)
+   begin
+	   if(mif.o_S0_DLI_VDD18_EN&mif.o_S1_DLI_VDD18_EN)begin
+		   if(!mif.i_S0_DLI_VDD18_PG)begin
+		   mif.i_S0_DLI_VDD18_PG<=1'b1;
+		   mif.i_S1_DLI_VDD18_PG<=1'b1;
+		$display($time, "STATE IS VTTPowerGood!!!");
+		   end 
+		   else begin
+		   mif.i_S0_DLI_VDD18_PG<=1'b1;
+		   mif.i_S1_DLI_VDD18_PG<=1'b1;
+		   end
+	   end
+	   else begin
+		   mif.i_S0_DLI_VDD18_PG<=1'b0;
+		   mif.i_S1_DLI_VDD18_PG<=1'b0;
+	   end
+   end
