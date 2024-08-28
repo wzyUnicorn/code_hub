@@ -1,0 +1,191 @@
+<<<<<<< HEAD
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>K2201 simulation_caselist</title>
+		<!--css代码声明-->
+		<style type="text/css">
+		//div的设置
+			#showdiv{
+				width: 450px;
+				height: 530px;
+				border: solid 2px grey;
+				border-radius: 10px;
+				/*margin: auto;*/
+				margin-top: 20px;
+				margin-left: 350px;
+			}
+			//表格的设置
+			table{
+				margin: auto;
+				color: white;
+				font-family: "Consolas";
+				margin-top: 20px;
+			}
+			//特殊文字的设置
+			span{
+				font-size: 13px;
+			}
+			//验证码设置
+			#codeSpan{
+				font-size: 20px;
+			}
+			//添加背景图
+			body{
+				background: url(img/backgroud.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			//设置行高
+			tr{
+				height: 35px;
+			}
+			//设置text属性框
+			input[type=text]{
+				border-radius: 10px;
+			}
+			//设置password属性框
+			input[type=password]{
+				border-radius: 10px;
+			}
+			//设置标题样式
+			h3{
+				color: white;
+				font-family: "Brush Script MT";
+				font-size: 30px;
+			}
+		</style>
+		<!--js代码声明-->
+		<script type="text/javascript">
+			function creatCode(){
+				//获得四位随机数
+				var code=Math.floor(Math.random()*9000+1000);
+				//获取span对象
+				var span=document.getElementById("codeSpan");
+				//把随机数赋值给span
+				span.innerHTML=code;
+			}
+		</script>
+	</head>
+	<body onload="creatCode()">
+		<h3 align="center" style="color: orange;font-size: 16px;">
+                <span style="color: blue;font-size: 30px;">K2201</span>simulation_caselist
+		</h3>
+		<div id="showdiv">
+			<form action="#">
+				<table>
+					<tr >
+						<td width="50px">Usename:</td>
+						<td width="300px">
+				<input type="text" name="uname" id="uname" value="" />
+					<span id="" style="color: red">*Within ten words</span>
+						</td>
+					</tr>
+					<tr >
+						   <td>Password:</td>
+						   <td >
+				<input type="password" name="pwd" id="pwd" value="" />
+						</td>
+					</tr>
+					<tr >
+						<td>Confirm:</td>
+						<td >
+		<input type="password" name="confirm" id="confirm" value="" />
+						</td>
+					</tr>
+					<tr >
+						<td>Tel:</td>
+						<td >		
+					<input type="text" name="num" id="num" value="" />
+						</td>
+					</tr>
+					<tr >
+						<td>E-Mail:</td>
+						<td >
+							<input type="text" name="mail" id="mail" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>Gender:</td>
+						<td >
+							F<input type="radio" name="sex" id="" value="1" checked="checked"/>
+							M<input type="radio" name="sex" id="" value="0" />
+						</td>
+					</tr>
+					<tr>
+						<td>Native Place:</td>
+						<td >
+							<select name="address">
+								<option value="0">--Choices--</option>
+								<option value="1">Beijing</option>
+								<option value="2">Shanghai</option>
+								<option value="3">Guangzhou</option>
+								<option value="4">Shenzhen</option>
+								<option value="5">Hongkong</option>
+								<option value="5">Maco</option>
+								<option value="6">Xian</option>
+								<option value="7">Chengdu</option>
+								<option value="8">Chongqiong</option>
+							</select>
+						</td>
+					</tr>
+					<tr >
+						<td>Hobby:</td>
+						<td >
+							<input type="checkbox" name="" id="" value="" />Game&nbsp;
+							<input type="checkbox" name="" id="" value="" />Guitar
+							<input type="checkbox" name="" id="" value="" />basketball
+							<br />
+							<input type="checkbox" name="" id="" value="" />Music
+							<input type="checkbox" name="" id="" value="" />Movie&nbsp;
+							<input type="checkbox" name="" id="" value="" />Running
+						</td>
+					</tr>
+					<tr >
+						<td>Self-introduction:</td>
+						<td >
+							<textarea name="intro" rows="5" cols="30"></textarea>
+						</td>
+					</tr>
+					<tr >		
+						<td>Identtifying code:</td>
+						<td >
+							
+							<input type="text" name="code" id="code" value="" />
+							<span id="codeSpan" onclick="creatCode()" style="background: url(img/code.jpg.gif);color: black;"></span>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2" align="center">
+							<input type="checkbox" name="agree" id="" value="1" /><b>Do you agree the company agreement?</b>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2" align="center">
+							<input type="submit" name="" id="" value="Register" />
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
+
+
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个网页</title>
+</head>
+<body>
+    <h1>欢迎来到我的网页！</h1>
+    <p>这是我创建的第一个网页。它使用了基本的HTML标签。</p>
+    <ul>
+        <li>HTML是网页的骨架。</li>
+        <li>CSS用于设计和布局。</li>
+        <li>JavaScript用于添加交互功能。</li>
+    </ul>
+</body>
+</html>
+>>>>>>> ab12590473d056ffbbb97cd147bab23028d1c10d
