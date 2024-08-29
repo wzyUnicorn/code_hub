@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        td, th
+        {
+            border: 1px solid #cad9ea;
+            height: 30px;
+        }
+        th
+        {
+            background-color: #CCE8EB;
+            color: #666;
+            width: 600px;
+        }
+        tbody>tr {
+            background-color: #C8C8C8;
+        }
+        tr:hover {
+            background-color: #ffa !important;
+        }
+        .different {
+            background-color: #FF0000 !important;
+            color: #00FF00 !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var i, flag = false;
+            var rows = $("table").find("tr").length;
+            var columns = $("table tbody tr:eq(0)").find("td").length;
+
+            $('table tbody tr').each(function() {
+                for (i = 0; i < columns - 1; ++i) {
+                    if ($(this).find('td').eq(i).text() != $(this).find('td').eq(i + 1).text()) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == true) {
+                    $(this).addClass("different");
+                }
+                flag = false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <thead><th>姓名</th><th>张三</th><th>李四</th><th>王五</th><th>老刘</th><th>天七</th></thead>
+        <tbody>
+        <tr><th>0</th>   <td>01</td> <td>02</td>  <td>03</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>1</th>   <td>04</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>2</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>3</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>4</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>5</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>6</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>7</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>8</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>9</th>   <td>10</td> <td>10</td>  <td>13</td> <td>10</td>  <td>10</td>  </tr>
+        <tr><th>10</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>11</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>12</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>13</th>   <td>10</td> <td>10</td>  <td>10</td> <td>14</td>  <td>15</td> </tr>
+        <tr><th>14</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>15</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>16</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>17</th>   <td>11</td> <td>11</td>  <td>11</td> <td>11</td>  <td>11</td> </tr>
+        <tr><th>18</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>19</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        <tr><th>20</th>   <td>10</td> <td>10</td>  <td>10</td> <td>17</td>  <td>10</td> </tr>
+        <tr><th>21</th>   <td>10</td> <td>10</td>  <td>10</td> <td>10</td>  <td>10</td> </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

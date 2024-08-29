@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .resume {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1.name {
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .personal-info, .job-intent, .self-evaluation, .education, .work-experience, .project-experience, .skills {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .personal-info {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- 个人信息 -->
+        <section class="personal-info">
+            <h1 class="name">姓名</h1>
+            <div class="contact-info">
+                <p>电话: <span>电话</span></p>
+                <p>邮箱: <span>wwlasyh@icloud.com</span></p>
+                <p>性别: <span>性别</span></p>
+                <p>年龄: <span>年龄</span></p>
+            </div>
+        </section>
+
+        <!-- 求职意向 -->
+        <section class="job-intent">
+            <h2>求职意向</h2>
+            <p>意向岗位: <span>意向岗位</span></p>
+            <p>意向城市: <span>意向城市</span></p>
+            <p>期望薪资: <span>期望薪资</span></p>
+            <p>求职类型: <span>求职类型</span></p>
+        </section>
+
+        <!-- 自我评价 -->
+        <section class="self-evaluation">
+            <h2>自我评价</h2>
+            <p>[自我评价内容]</p>
+        </section>
+
+        <!-- 教育经历 -->
+        <section class="education">
+            <h2>教育经历</h2>
+            <!-- 教育经历内容 -->
+        </section>
+
+        <!-- 工作经历 -->
+        <section class="work-experience">
+            <h2>工作经历</h2>
+            <!-- 工作经历内容 -->
+        </section>
+
+        <!-- 项目经历 -->
+        <section class="project-experience">
+            <h2>项目经历</h2>
+            <!-- 项目经历内容 -->
+        </section>
+
+        <!-- 相关技能 -->
+        <section class="skills">
+            <h2>相关技能</h2>
+            <!-- 技能列表 -->
+        </section>
+    </div>
+</body>
+</html>
