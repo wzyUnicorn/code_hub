@@ -1,0 +1,400 @@
+TOOL:	irun(64)	15.20-p001: Started on Mar 15, 2024 at 16:16:43 CST
+irun
+	-messages
+	-nocopyright
+	-64bit
+	-sv
+	-gui
+	-uvm
+	-update
+	-define CONFIG_FOR_SIM
+	-work worklib
+	-l sim_logs/test_iic_power_on_reset_sim.log
+	-sem2009
+	-errormax 15
+	-access +rwc
+	-input probe_wave.tcl
+	-covtest test_iic_power_on_reset
+	-timescale 1ns/1ns
+	-coverage all
+	-covoverwrite
+	-status
+	+UVM_NO_RELNOTES
+	+UVM_TESTNAME=test_iic_power_on_reset
+	-incdir ../../rtl/
+	-f rtl_list.f
+		../../rtl/rst_btn.v
+		../../rtl/mt_rst.v
+		../../rtl/tele_ctrl.v
+		../../rtl/power_state.v
+		../../rtl/async.v
+		../../rtl/delay.v
+		../../rtl/delay_x32.v
+		../../rtl/fsm_ctrl.v
+		../../rtl/beep.v
+		../../rtl/sby_rst.v
+		../../rtl/vga_btn_cnt.v
+		../../rtl/clock.v
+		../../rtl/pwr_btn.v
+		../../rtl/iicSlave_define.v
+		../../rtl/serialInterface.v
+		../../rtl/iic_slaver.v
+		../../rtl/iic_reg.v
+		../../rtl/lpc_slave.v
+		../../rtl/lpc_reg.v
+		../../rtl/cpld_6b.v
+	-incdir ../agent/btn_agent
+	-incdir ../agent/iic_agent
+	-incdir ../agent/lpc_agent
+	-incdir ../agent/tele_agent
+	-incdir ../env
+	-incdir ../test
+	-incdir ../test/seqlib
+	../top/cpld_if.sv
+	../agent/btn_agent/btn_agent_pkg.svh
+	../agent/iic_agent/iic_agent_pkg.svh
+	../agent/lpc_agent/lpc_agent_pkg.svh
+	../agent/tele_agent/tele_agent_pkg.svh
+	../env/env_pkg.svh
+	../test/test_pkg.svh
+	../top/cpld_tb.sv
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> database -open -shm -into test_wave.shm test_wave -default -event
+Created default SHM database test_wave
+ncsim> probe -create cpld_tb -depth all -all -database test_wave -waveform
+ncsim: *W,PRWFD: Only the signals/variables having immediate scope 'cpld_tb' will be added to the waveform viewer.
+Created probe 1
+ncsim> probe -create $uvm:{uvm_test_top} -depth all -tasks -functions -all -database test_wave -waveform
+ncsim: *W,PRWFD: Only the signals/variables having immediate scope '$uvm:{uvm_test_top}' will be added to the waveform viewer.
+Created probe 2
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-p001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test test_iic_power_on_reset...
+UVM_WARNING /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1602) @ 0: reporter [RegModel] In map 'iic_rgm.reg_map' register 'iic_rgm.beepdv' maps to same address as register 'iic_rgm.regA2': 'h8
+UVM_WARNING /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1602) @ 0: reporter [RegModel] In map 'iic_rgm.reg_map' register 'iic_rgm.beepen' maps to same address as register 'iic_rgm.regA2': 'h8
+UVM_WARNING /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1602) @ 0: reporter [RegModel] In map 'lpc_rgm.reg_map' register 'lpc_rgm.beepdv' maps to same address as register 'lpc_rgm.regA2': 'h808
+UVM_WARNING /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1602) @ 0: reporter [RegModel] In map 'lpc_rgm.reg_map' register 'lpc_rgm.beepen' maps to same address as register 'lpc_rgm.regA2': 'h808
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------
+Name                       Type                                  Size  Value
+----------------------------------------------------------------------------
+uvm_test_top               test_iic_power_on_reset               -     @3145
+  env                      environment                           -     @3210
+    btn_agt                btn_agent                             -     @3894
+      drv                  btn_driver                            -     @5394
+        rsp_port           uvm_analysis_port                     -     @5493
+        seq_item_port      uvm_seq_item_pull_port                -     @5444
+      mon                  btn_monitor                           -     @5473
+        btnmonAP           uvm_analysis_port                     -     @5586
+      sqr                  btn_sequencer                         -     @4756
+        rsp_export         uvm_analysis_export                   -     @4813
+        seq_item_export    uvm_seq_item_pull_imp                 -     @5363
+        arbitration_queue  array                                 0     -    
+        lock_queue         array                                 0     -    
+        num_last_reqs      integral                              32    'd1  
+        num_last_rsps      integral                              32    'd1  
+    fnc                    functional_coverage                   -     @4047
+      ap0                  uvm_analysis_imp_btnmon               -     @5656
+      ap1                  uvm_analysis_imp_iicmon               -     @5705
+      ap2                  uvm_analysis_imp_lpcmon               -     @5754
+      ap3                  uvm_analysis_imp_teldrv               -     @5803
+    iic_agt                iic_agent                             -     @3924
+      drv                  iic_driver                            -     @6477
+        rsp_port           uvm_analysis_port                     -     @6576
+        seq_item_port      uvm_seq_item_pull_port                -     @6527
+      mon                  iic_monitor                           -     @6556
+        map                uvm_analysis_port                     -     @6665
+      sqr                  iic_sequencer                         -     @5841
+        rsp_export         uvm_analysis_export                   -     @5898
+        seq_item_export    uvm_seq_item_pull_imp                 -     @6446
+        arbitration_queue  array                                 0     -    
+        lock_queue         array                                 0     -    
+        num_last_reqs      integral                              32    'd1  
+        num_last_rsps      integral                              32    'd1  
+    iic_predictor          uvm_reg_predictor #(iic_transaction)  -     @3183
+      bus_in               uvm_analysis_imp                      -     @4372
+      reg_ap               uvm_analysis_port                     -     @4423
+    lpc_agt                lpc_agent                             -     @3954
+      drv                  lpc_driver                            -     @7352
+        rsp_port           uvm_analysis_port                     -     @7451
+        seq_item_port      uvm_seq_item_pull_port                -     @7402
+      mon                  lpc_monitor                           -     @7431
+        map                uvm_analysis_port                     -     @7536
+      sqr                  lpc_sequencer                         -     @6716
+        rsp_export         uvm_analysis_export                   -     @6773
+        seq_item_export    uvm_seq_item_pull_imp                 -     @7321
+        arbitration_queue  array                                 0     -    
+        lock_queue         array                                 0     -    
+        num_last_reqs      integral                              32    'd1  
+        num_last_rsps      integral                              32    'd1  
+    lpc_predictor          uvm_reg_predictor #(lpc_transaction)  -     @4610
+      bus_in               uvm_analysis_imp                      -     @4673
+      reg_ap               uvm_analysis_port                     -     @4724
+    scb                    scoreboard                            -     @4014
+      ap0                  uvm_analysis_imp_btnmon               -     @7604
+      ap1                  uvm_analysis_imp_iicmon               -     @7653
+      ap2                  uvm_analysis_imp_lpcmon               -     @7702
+    tel_agt                tele_agent                            -     @3984
+      drv                  tele_driver                           -     @8373
+        ap                 uvm_analysis_port                     -     @8521
+        rsp_port           uvm_analysis_port                     -     @8472
+        seq_item_port      uvm_seq_item_pull_port                -     @8423
+      sqr                  tele_sequencer                        -     @7737
+        rsp_export         uvm_analysis_export                   -     @7794
+        seq_item_export    uvm_seq_item_pull_imp                 -     @8342
+        arbitration_queue  array                                 0     -    
+        lock_queue         array                                 0     -    
+        num_last_reqs      integral                              32    'd1  
+        num_last_rsps      integral                              32    'd1  
+  vsqr                     virtual_sequencer                     -     @3240
+    rsp_export             uvm_analysis_export                   -     @3298
+    seq_item_export        uvm_seq_item_pull_imp                 -     @3848
+    arbitration_queue      array                                 0     -    
+    lock_queue             array                                 0     -    
+    num_last_reqs          integral                              32    'd1  
+    num_last_rsps          integral                              32    'd1  
+----------------------------------------------------------------------------
+
+
+#### Factory Configuration (*)
+
+  No instance or type overrides are registered with this factory
+
+All types registered with the factory: 173 total
+(types without type names will not be printed)
+
+  Type Name
+  ---------
+  beep_divide
+  beep_en
+  btn_agent
+  btn_base_sequence
+  btn_driver
+  btn_monitor
+  btn_sequencer
+  cpld_output_tr
+  environment
+  functional_coverage
+  iic_adapter
+  iic_agent
+  iic_base_sequence
+  iic_driver
+  iic_monitor
+  iic_reg_a0
+  iic_reg_a1
+  iic_reg_a2
+  iic_reg_a3
+  iic_reg_model
+  iic_sequencer
+  iic_transaction
+  lpc_adapter
+  lpc_agent
+  lpc_base_sequence
+  lpc_driver
+  lpc_monitor
+  lpc_reg_a0
+  lpc_reg_a1
+  lpc_reg_a2
+  lpc_reg_a3
+  lpc_reg_model
+  lpc_sequencer
+  lpc_transaction
+  scoreboard
+  tele_agent
+  tele_base_sequence
+  tele_ctrl_item
+  tele_driver
+  tele_sequencer
+  test_base
+  test_btn_on_iic_beep
+  test_btn_on_iic_off
+  test_btn_on_iic_random_addr
+  test_btn_on_iic_reset
+  test_btn_on_tele_off
+  test_btn_on_tele_reset
+  test_btn_power_on_again
+  test_btn_power_on_alarm
+  test_btn_power_on_dcok
+  test_btn_power_on_interrupt
+  test_btn_power_on_jitter
+  test_btn_power_on_off
+  test_btn_power_on_reset
+  test_iic_on_btn_off
+  test_iic_on_btn_reset
+  test_iic_on_lpc_beep
+  test_iic_on_lpc_ich
+  test_iic_on_lpc_mtrst
+  test_iic_on_lpc_off
+  test_iic_on_lpc_reset
+  test_iic_on_lpc_vga
+  test_iic_on_tele_off
+  test_iic_on_tele_reset
+  test_iic_power_on_beep
+  test_iic_power_on_mtrst
+  test_iic_power_on_off
+  test_iic_power_on_reset
+  test_lpc_beep
+  test_lpc_ich
+  test_lpc_mt_reset
+  test_lpc_power_off
+  test_lpc_soft_reset
+  test_lpc_transfer_abort
+  test_lpc_vga
+  test_lpc_vga_disable
+  test_lpc_write_read
+  test_tele_on_btn_off
+  test_tele_on_btn_reset
+  test_tele_on_iic_off
+  test_tele_on_iic_reset
+  test_tele_on_lpc_off
+  test_tele_on_lpc_reset
+  test_tele_on_off
+  test_tele_on_rst_off
+  virtual_sequence_base
+  virtual_sequencer
+  vseq_btn_on_iic_beep
+  vseq_btn_on_iic_off
+  vseq_btn_on_iic_random_addr
+  vseq_btn_on_iic_reset
+  vseq_btn_on_tele_off
+  vseq_btn_on_tele_reset
+  vseq_btn_power_on_again
+  vseq_btn_power_on_alarm
+  vseq_btn_power_on_dcok
+  vseq_btn_power_on_interrupt
+  vseq_btn_power_on_jitter
+  vseq_btn_power_on_off
+  vseq_btn_power_on_reset
+  vseq_iic_on_btn_off
+  vseq_iic_on_btn_reset
+  vseq_iic_on_lpc_beep
+  vseq_iic_on_lpc_ich
+  vseq_iic_on_lpc_mtrst
+  vseq_iic_on_lpc_off
+  vseq_iic_on_lpc_reset
+  vseq_iic_on_lpc_vga
+  vseq_iic_on_tele_off
+  vseq_iic_on_tele_reset
+  vseq_iic_power_on_beep
+  vseq_iic_power_on_mtrst
+  vseq_iic_power_on_off
+  vseq_iic_power_on_reset
+  vseq_lpc_beep
+  vseq_lpc_ich
+  vseq_lpc_mt_reset
+  vseq_lpc_power_off
+  vseq_lpc_soft_reset
+  vseq_lpc_transfer_abort
+  vseq_lpc_vga
+  vseq_lpc_vga_disable
+  vseq_lpc_write_read
+  vseq_tele_on_btn_off
+  vseq_tele_on_btn_reset
+  vseq_tele_on_iic_off
+  vseq_tele_on_iic_reset
+  vseq_tele_on_lpc_off
+  vseq_tele_on_lpc_reset
+  vseq_tele_on_off
+  vseq_tele_on_rst_off
+(*) Types with no associated type name will be printed as <unknown>
+
+####
+
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+UVM_INFO ../agent/btn_agent/btn_driver.sv(26) @ 1593750: uvm_test_top.env.btn_agt.drv [Button Driver] Power-on start
+UVM_INFO ../agent/btn_agent/btn_driver.sv(27) @ 1593750: uvm_test_top.env.btn_agt.drv [Button Driver] step=0,last step=2'b000
+UVM_INFO ../agent/iic_agent/iic_driver.sv(31) @ 1984375: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC transfer start
+UVM_INFO ../agent/iic_agent/iic_driver.sv(41) @ 6781250: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC Slave Acknowledge slave address transmit
+UVM_INFO ../agent/iic_agent/iic_driver.sv(44) @ 6781250: uvm_test_top.env.iic_agt.drv [IIC Driver] Master Writing
+UVM_INFO ../agent/iic_agent/iic_driver.sv(52) @ 11281250: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC Slave Acknowledge reg addr transmit
+UVM_INFO ../env/scoreboard.sv(87) @ 15468750: uvm_test_top.env.scb [Scoreboard] Power-On step: PSOn
+UVM_INFO ../env/scoreboard.sv(50) @ 15468750: uvm_test_top.env.scb [Scoreboard] Get iic tr
+UVM_INFO ../env/scoreboard.sv(88) @ 15718750: uvm_test_top.env.scb [Scoreboard] Power-On step: PSOn2
+UVM_INFO ../agent/iic_agent/iic_driver.sv(59) @ 15781250: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC Slave Acknowledge data transmit
+UVM_INFO ../env/scoreboard.sv(89) @ 15937500: uvm_test_top.env.scb [Scoreboard] Power-On step: WorkPG1
+UVM_INFO ../agent/iic_agent/iic_driver.sv(79) @ 15984375: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC transfer finish
+UVM_INFO ../env/scoreboard.sv(90) @ 16156250: uvm_test_top.env.scb [Scoreboard] Power-On step: WorkPG2
+UVM_INFO ../env/scoreboard.sv(91) @ 16375000: uvm_test_top.env.scb [Scoreboard] Power-On step: DLIPG
+UVM_INFO ../env/scoreboard.sv(92) @ 16843750: uvm_test_top.env.scb [Scoreboard] Power-On step: VTTPG
+UVM_INFO ../env/scoreboard.sv(95) @ 16843750: uvm_test_top.env.scb [Scoreboard] Power-On step: PRST9230
+UVM_INFO ../env/scoreboard.sv(96) @ 16843750: uvm_test_top.env.scb [Scoreboard] Power-On step: HUB_RST
+UVM_INFO ../env/scoreboard.sv(99) @ 16843750: uvm_test_top.env.scb [Scoreboard] Power-On step: ipmi_perst
+UVM_INFO ../env/scoreboard.sv(93) @ 16968750: uvm_test_top.env.scb [Scoreboard] Power-On step: CPU_DCOK
+UVM_INFO ../env/scoreboard.sv(94) @ 17093750: uvm_test_top.env.scb [Scoreboard] Power-On step: CPU_RST
+UVM_INFO ../env/scoreboard.sv(98) @ 22968750: uvm_test_top.env.scb [Scoreboard] Power-On step: CPLD_INT
+UVM_INFO ../agent/btn_agent/btn_driver.sv(126) @ 24031250: uvm_test_top.env.btn_agt.drv [Button Driver] seq_item done
+UVM_INFO ../agent/iic_agent/iic_driver.sv(90) @ 24468750: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC seq item done
+UVM_INFO ../agent/iic_agent/iic_driver.sv(31) @ 24984375: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC transfer start
+UVM_INFO ../agent/iic_agent/iic_driver.sv(41) @ 29781250: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC Slave Acknowledge slave address transmit
+UVM_INFO ../agent/iic_agent/iic_driver.sv(44) @ 29781250: uvm_test_top.env.iic_agt.drv [IIC Driver] Master Writing
+UVM_INFO ../agent/iic_agent/iic_driver.sv(52) @ 34281250: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC Slave Acknowledge reg addr transmit
+UVM_INFO ../env/scoreboard.sv(50) @ 38468750: uvm_test_top.env.scb [Scoreboard] Get iic tr
+UVM_INFO ../agent/iic_agent/iic_driver.sv(59) @ 38781250: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC Slave Acknowledge data transmit
+UVM_INFO ../agent/iic_agent/iic_driver.sv(79) @ 38984375: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC transfer finish
+UVM_INFO ../agent/iic_agent/iic_driver.sv(90) @ 40968750: uvm_test_top.env.iic_agt.drv [IIC Driver] IIC seq item done
+UVM_INFO ../agent/btn_agent/btn_driver.sv(134) @ 40968750: uvm_test_top.env.btn_agt.drv [Button Driver] Shut down phase: power cut off at the end of simulation
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   34
+UVM_WARNING :    4
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[Button Driver]     4
+[IIC Driver]    14
+[RNTST]     1
+[RegModel]     4
+[Scoreboard]    14
+[UVMTOP]     1
+Simulation complete via $finish(1) at time 41531250 NS + 58
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> ncsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.poweron_st_cg" will be generated for covergroup instance "poweron_st_cg" as the name of the covergroup instance is not specified explicitly: ../env/functional_coverage.sv, 17.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.iic_module_cg" will be generated for covergroup instance "iic_module_cg" as the name of the covergroup instance is not specified explicitly: ../env/functional_coverage.sv, 30.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.lpc_module_cg" will be generated for covergroup instance "lpc_module_cg" as the name of the covergroup instance is not specified explicitly: ../env/functional_coverage.sv, 38.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.tele_control_cg" will be generated for covergroup instance "tele_control_cg" as the name of the covergroup instance is not specified explicitly: ../env/functional_coverage.sv, 44.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  cpld_tb(cpld_tb)
+  scope    :  scope
+  testname :  test_iic_power_on_reset
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_043bf408_154c46a2.ucm (reused)
+  data               :  ./cov_work/scope/test_iic_power_on_reset/icc_043bf408_154c46a2.ucd
+  cpu                :  0.6s system + 0.6s user = 1.2s total
+ncsim: Memory Usage - 35.7M program + 315.4M data = 351.1M total (370.7M Peak)
+ncsim: CPU Usage - 1.8s system + 2.7s user = 4.5s total (44.0s, 10.3% cpu)
+TOOL:	irun(64)	15.20-p001: Exiting on Mar 15, 2024 at 16:17:27 CST  (total: 00:00:44)
