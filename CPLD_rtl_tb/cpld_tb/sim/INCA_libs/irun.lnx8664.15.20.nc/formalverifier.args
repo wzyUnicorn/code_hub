@@ -1,0 +1,25 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-uvmhome
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+-sv_lib
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
+-messages
+-NOCOPYRIGHT
+-64bit
+-ERRORMAX
+15
+-INPUT
+probe_wave.tcl
+-COVTEST
+test_iic_power_on_reset
+-COVERAGE
+all
+-COVOVERWRITE
+-STATUS
++UVM_TESTNAME=test_iic_power_on_reset
+-MESSAGES
+-SV_LIB
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmdpi.so

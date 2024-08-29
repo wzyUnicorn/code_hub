@@ -1,0 +1,32 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/rst_btn.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/mt_rst.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/tele_ctrl.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/power_state.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/async.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/delay.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/delay_x32.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/fsm_ctrl.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/beep.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/sby_rst.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/vga_btn_cnt.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/clock.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/pwr_btn.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/iicSlave_define.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/serialInterface.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/iic_slaver.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/iic_reg.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/lpc_slave.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/lpc_reg.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/rtl/cpld_6b.v
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/top/cpld_if.sv
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/agent/btn_agent/btn_agent_pkg.svh
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/agent/iic_agent/iic_agent_pkg.svh
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/agent/lpc_agent/lpc_agent_pkg.svh
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/agent/tele_agent/tele_agent_pkg.svh
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/env/env_pkg.svh
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/test/test_pkg.svh
+/home/ICer/CPLD_rtl_tb/CPLD_rtl_tb/cpld_tb/top/cpld_tb.sv
