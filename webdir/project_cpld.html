@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目介绍</title>
+    <link rel="stylesheet" href="project_k2201.css">
+</head>
+<body>
+    <header>
+        <h1>6B双路服务器CPLD项目</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">项目概览</a></li>
+                <li><a href="#feature">工作内容</a></li>		
+             </ul>
+        </nav>
+    </header>
+
+    <section id="overview">
+        <h2>项目概览</h2>
+        <p> 6B四路服务器的上电/复位以及功能模块控制选用Lattice的MachXO2系列LCMXO2-2000HC-4TG100C的CPLD芯片来实现。</p>
+    </section>
+
+    <section id="feature">
+        <h2>工作内容</h2>	
+        <ul>
+            <li>负责验证双路服务器 CPLD 通过 iic 协议、lpc协议， 控制系统软关机软重启复位等操作， 通过上电复位时序控制模块控制主板的上电复位等功能。</li>
+			<li>1、基于现有cpld 设计文档及 rtl 设计代码， 搭建基于 UVM 的验证环境。</li>
+            <li>2、根据 IIC 及 LPC 协议规范， 输入激励， 针对验证计划中列举的功能点进行测试， 构建测试用例。</p>
+            <li>3、使用 imc 对代码覆盖率、行覆盖率、条件覆盖率、toggle 覆盖率、功能覆盖率和断言覆盖率分别进行收集。</li>
+			<li>4、进行回归测试， 将各测试用例下的覆盖率数据进行 merge,得出完整的覆盖率报告， 并在各项工 作完成后撰写测试报告记录和统计各项数据。</li>
+         </ul>
+    </section>
+    <a href="personal_profile.html" style="display: block; text-align: center;">上一级</a>
+
+    <footer>
+        <p>&copy; 6B双路服务器CPLD</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

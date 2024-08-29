@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目介绍</title>
+    <link rel="stylesheet" href="project_k2201.css">
+</head>
+<body>
+    <header>
+        <h1>K2201项目无线终端芯片的验证</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">项目概览</a></li>
+                <li><a href="#features">工作内容</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <section id="overview">
+        <h2>项目概览</h2>
+        <p> k2201无线终端芯片是采用TurMass™技术，面向低成本、低功耗、中低速率的无线
+传输终端SoC芯片，主要应用于远程数据采集、控制等领域的无线传输。
+<p>本次验证在原有veriolog基础验证环境上进行进一步优化，使用sv语言的UVM等验证方法进行验证，开发shell/python/makefile等脚本提升自动化效率，结合html，JavaScript等语言优化验证结果显示与统计。</p>
+    </section>
+
+    <section id="features">
+        <h2>工作内容</h2>
+        <ul>
+ 			<li>1、soc仿真环境bbu模块自动化遍历仿真运行脚本编写；</li>
+            <li>2、添加html网页端支持测试结果分类显示"RUNNING"\"PASS"\"FAIL"并匹配不同背景色等效果;完成测试结果的html网页端显示，并可链接查看对应log文件等功能；k2201网页端合并group与index信息，取消date，新增post_sim_max、 post_sim_min、start-time、finish-time、simulate-time、case-description、svn-version等table信息列；html网页端增加table内容滚动显示按钮功能，以解决当运行case数量过多时，单页表格无法显示全部信息
+的问题；支持SVN版本号码显示页面，并自动存储每个版本的测试页面的需求；完成html设置admin用户密码，登录后自动跳转至测试页面，非法用户则无法访问测试页面的功能；</li>
+            <li>3、RF部分环境优化;</li>
+			<li>4、完成fft对数模块环境的优化；</li>
+			<li>5、SSP、DMAC等的验证。</li>
+        </ul>
+    </section>
+
+    <a href="personal_profile.html" style="display: block; text-align: center;">上一级</a>
+    
+    <footer>
+        <p>&copy; K2201项目无线终端芯片</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目介绍</title>
+    <link rel="stylesheet" href="project_k2201.css">
+</head>
+<body>
+    <header>
+        <h1>江南计算所处理器芯片项目</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">项目概览</a></li>
+                <li><a href="#sbox">SBOX部件的验证内容</a></li>
+				<li><a href="#ebox">流水线调度部件的验证内容</a></l
+				
+             </ul>
+        </nav>
+    </header>
+
+    <section id="overview">
+        <h2>项目概览</h2>
+        <p> 采用国产自研申威架构的高性能多核处理器芯片，主要负责SBOX与流水线调度部件的验证工作。</p>
+    </section>
+
+    <section id="sbox">
+        <h2>SBOX部件的验证内容</h2>
+        <ul>
+ 			<li>负责处理器从核簇内 SBOX 部件的验证， 该部件处理从核簇内从核之间以及簇外从核之间的同步请求、中断请求、异步描述符请求、指令脱靶等的转发调度。与执行部件、描述符管理部件、同步
+网、L1ICache 等部件存在数据交互。</li>
+            <li>1、根据设计 spec 文档提取验证功能点， 制定验证方案， 搭建相应的 UVM 部件级环境， 编写各种定向测试用例与受控随机测试用例。</li>
+            <li>2、搭建各交互部件 VIP 环境。按照从核簇接口协议， 进行同步请求、描述符请求、中断请求、指令脱靶请求的发送和响应的接收； 分别完成期望请求 （响应） 与实际请求 （响应） 的对比校验。</p>
+            <li>3、解决环境报错， 发现并协同设计人员追踪 rtl 设计 bug。更新验证环境， 修改测试用例， 进行回归测试。</li>
+            <li>4、进行代码覆盖率与功能覆盖率的收集与分析， 补充测试用例以提高覆盖率。</li>
+         </ul>
+    </section>
+	
+	    <section id="ebox">
+        <h2>流水线部件的验证内容</h2>
+        <ul>
+ 			<li>负责从核流水线调度部件的验证工作。该处理器为超标量多条流水线发射， 主要用于大型服务器。流水线调度部件负责指令的调度分派作用， 将指令组译码后信息经过可发射条件的判断， 通过相关
+仲裁算法后发射到某条流水线， 到达相应执行部件完成对应指令的向量标量等类型的运算、对于访存类指令则完成相应地址的访问， 将数据写回寄存器。同时伴随同步、旁路逻辑、分支预测的实现
+等。</li>
+            <li>1、根据流水线调度部件设计文档， 分解功能点， 编写验证方案及验证框图。搭建流水线调度部件验证环境。编写向量类指令、标量类指令、浮点类型指令、转移类指令等测试用例。</li>
+            <li>2、使用脚本语言编写运行脚本， 回归脚本， 收集覆盖率脚本。</p>
+            <li>3、编写虚拟模型， driver 同时将数据包发送给 DUT 和虚拟模型， 虚拟模型内部也有一套仲裁算法， 将 DUT 输出结果同虚拟模型的结果进行比对。</li>
+         </ul>
+    </section>
+    <a href="personal_profile.html" style="display: block; text-align: center;">上一级</a>
+
+    <footer>
+        <p>&copy; 江南计算所处理器芯片</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
