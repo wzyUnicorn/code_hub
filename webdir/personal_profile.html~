@@ -4,33 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人简历</title>
+    <link rel="stylesheet" href="personal_profile.css">
 
 </head>
 <body>
     <div class="resume">
         <!-- 个人信息 -->
-        <section class="personal-info">
+        <header class="personal-info">
             <h1 class="name">王子瑜个人简历</h1>
-
-            <h1>个人信息</h1>
 			<div class="contact-info">
                 <p>电话: <span>18516266489</span></p>
                 <p>邮箱: <span>wwlasyh@icloud.com</span></p>
-                <p>性别: <span>男</span></p>
-                <p>年龄: <span>33</span></p>
-            </div>
-        </section>
-
-        <!-- 求职意向 -->
-        <section class="job-intent">
-            <h2>求职意向</h2>
-            <div class="contact-info">
-			    <p>意向岗位: <span>IC验证工程师</span></p>
+                <p>意向岗位: <span>IC验证工程师</span></p>
                 <p>意向城市: <span>上海</span></p>
                 <p>期望薪资: <span>20—30k</span></p>
-                <p>求职类型: <span>全职</span></p>
-			</div>
-        </section>
+
+            </div>
+        </header>
 
         <!-- 自我评价 -->
         <section class="self-evaluation">
@@ -42,16 +32,10 @@
             <p>5、熟练掌握 verilog、 SystemVerilog 语言， 熟悉验证 UVM 方法学， 可独立搭建验证环境。</p>
         </section>
 
-        <!-- 教育经历 -->
-        <section class="education">
-            <h2>教育经历</h2>
-            2010/9-2014/6就读于兰州理工大学应用物理学（微电子方向）<!-- 教育经历内容 -->
-        </section>
-
-        <!-- 工作经历 -->
         <section class="work-experience">
-            <h2>工作经历</h2>
+            <h2>教育及工作经历</h2>
             <!-- 工作经历内容 -->
+            <p>2010年9月-2014年7月就读于兰州理工大学应用物理学专业（微电子方向）</p>
 			<p>2014年8月-2019年3月担任广德竹昌电子科技有限公司机械设计工程师一职；</p>
 			<p>2019年3月-2021年10月担任三一重机(上海)股份有限公司装配工艺工程师一职；</p>
 			<p>2021年11月-2023年8月担任上海君众信息科技有限公司芯片验证工程师一职；</p>

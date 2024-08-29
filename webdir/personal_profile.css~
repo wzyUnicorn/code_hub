@@ -1,39 +1,32 @@
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+.work-experience {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
 
-        .resume {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.project-experience {
+    background: #CCCCCC;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+.self-evaluation{
+    background: #CCCCCC;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
 
-        section {
-            margin-bottom: 20px;
-        }
 
-        h1.name {
-            text-align: center;
-        }
 
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        .personal-info, .job-intent, .self-evaluation, .education, .work-experience, .project-experience, .skills {
-            border-bottom: 3px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .personal-info {
+.personal-info {
             padding-bottom: 20px;
             margin-bottom: 20px;
         }
