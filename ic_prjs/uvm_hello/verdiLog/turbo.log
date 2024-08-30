@@ -1,0 +1,4 @@
+Command Line: /home/synopsys/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas
+uname(Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64)
+[ERROR] Could not checkout Verdi license. Use verdi -licdebug for more information.
+au time 3.135399 0.812755 0.591815 delta 115462144 115462144 total 540545024 540545024
