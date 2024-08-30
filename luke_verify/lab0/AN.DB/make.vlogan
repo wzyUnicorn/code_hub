@@ -1,0 +1,27 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -l comp.log -full64 -sverilog -timescale=1ps/1ps -full64
+
+all :		_VCSgd_jBAPse_1.db \
+	_VCSgd_kVs5jd_1.db \
+	_VCSgd_Rl6MKe_1.db \
+	_VCSgd_suJRrb_1.db \
+
+
+
+_VCSgd_jBAPse_1.db :	../mcdt/v1/arbiter.v 
+		${VLOGAN}  ${VLOGAN_OPT} ../mcdt/v1/arbiter.v
+
+
+_VCSgd_kVs5jd_1.db :	../mcdt/v1/slave_fifo.v 
+		${VLOGAN}  ${VLOGAN_OPT} ../mcdt/v1/slave_fifo.v
+
+
+_VCSgd_Rl6MKe_1.db :	../mcdt/v1/mcdt.v 
+		${VLOGAN}  ${VLOGAN_OPT} ../mcdt/v1/mcdt.v
+
+
+_VCSgd_suJRrb_1.db :	tb1.v 
+		${VLOGAN}  ${VLOGAN_OPT} tb1.v
+
+

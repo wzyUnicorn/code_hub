@@ -1,0 +1,6 @@
+irun: 15.20-p001: (c) Copyright 1995-2016 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-p001: Started on Mar 08, 2024 at 23:37:37 CST
+irun
+	-gui
+irun: *E,NOMOPT: You have not specified a -R (or a -r <snapshot>) option, nor have you specified a source file for compilation.
+TOOL:	irun	15.20-p001: Exiting on Mar 08, 2024 at 23:37:37 CST  (total: 00:00:00)

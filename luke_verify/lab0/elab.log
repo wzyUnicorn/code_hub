@@ -1,0 +1,65 @@
+Command: vcs -full64 -debug_all -l elab.log -sim_res=1ps -top tb1 -o tb1.simv
+Doing common elaboration 
+                         Chronologic VCS (TM)
+        Version O-2018.09-1_Full64 -- Tue Dec 19 18:51:18 2023
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all -debug_region+cell+encrypt' instead.
+
+Top Level Modules:
+       tb1
+TimeScale is 1 ps / 1 ps
+
+Warning-[PCWM-W] Port connection width mismatch
+tb1.v, 22
+"mcdt dut( .clk_i (clk),  .rstn_i (rstn),  .ch0_data_i (ch0_data),  .ch0_valid_i (ch0_valid),  .ch0_ready_o (ch0_ready),  .ch0_margin_o (ch0_margin),  .ch1_data_i (ch1_data),  .ch1_valid_i (ch1_valid),  .ch1_ready_o (ch1_ready),  .ch1_margin_o (ch1_margin),  .ch2_data_i (ch2_data),  .ch2_valid_i (ch2_valid),  .ch2_ready_o (ch2_ready),  .ch2_margin_o (ch2_margin),  .mcdt_data_o (mcdt_data),  .mcdt_val_o (mcdt_val),  .mcdt_id_o (mcdt_id));"
+  The following 5-bit expression is connected to 6-bit port "ch0_margin_o" of 
+  module "mcdt", instance "dut".
+  Expression: ch0_margin
+  	use +lint=PCWM for more details
+
+
+Warning-[PCWM-W] Port connection width mismatch
+tb1.v, 22
+"mcdt dut( .clk_i (clk),  .rstn_i (rstn),  .ch0_data_i (ch0_data),  .ch0_valid_i (ch0_valid),  .ch0_ready_o (ch0_ready),  .ch0_margin_o (ch0_margin),  .ch1_data_i (ch1_data),  .ch1_valid_i (ch1_valid),  .ch1_ready_o (ch1_ready),  .ch1_margin_o (ch1_margin),  .ch2_data_i (ch2_data),  .ch2_valid_i (ch2_valid),  .ch2_ready_o (ch2_ready),  .ch2_margin_o (ch2_margin),  .mcdt_data_o (mcdt_data),  .mcdt_val_o (mcdt_val),  .mcdt_id_o (mcdt_id));"
+  The following 5-bit expression is connected to 6-bit port "ch1_margin_o" of 
+  module "mcdt", instance "dut".
+  Expression: ch1_margin
+  	use +lint=PCWM for more details
+
+
+Warning-[PCWM-W] Port connection width mismatch
+tb1.v, 22
+"mcdt dut( .clk_i (clk),  .rstn_i (rstn),  .ch0_data_i (ch0_data),  .ch0_valid_i (ch0_valid),  .ch0_ready_o (ch0_ready),  .ch0_margin_o (ch0_margin),  .ch1_data_i (ch1_data),  .ch1_valid_i (ch1_valid),  .ch1_ready_o (ch1_ready),  .ch1_margin_o (ch1_margin),  .ch2_data_i (ch2_data),  .ch2_valid_i (ch2_valid),  .ch2_ready_o (ch2_ready),  .ch2_margin_o (ch2_margin),  .mcdt_data_o (mcdt_data),  .mcdt_val_o (mcdt_val),  .mcdt_id_o (mcdt_id));"
+  The following 5-bit expression is connected to 6-bit port "ch2_margin_o" of 
+  module "mcdt", instance "dut".
+  Expression: ch2_margin
+  	use +lint=PCWM for more details
+
+Starting vcs inline pass...
+1 module and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/ICer/luke_verify/lab0/csrc'
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic  -o .//../tb1.simv.daidir//_csrc0.so objs/amcQw_d.o 
+rm -f _csrc0.so
+if [ -x ../tb1.simv ]; then chmod -x ../tb1.simv; fi
+g++  -o ../tb1.simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/tb1.simv.daidir/ -Wl,-rpath=./tb1.simv.daidir/ \
+-Wl,-rpath='$ORIGIN'/tb1.simv.daidir//scsim.db.dir  -rdynamic -Wl,-rpath=/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib \
+-L/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib    _44743_archive_1.so _prev_archive_1.so \
+_csrc0.so  SIM_l.o  _csrc0.so     rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew \
+-lsimprofile -lvirsim -luclinative /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive          /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_save_restore_new.o \
+-ldl  -lc -lm -lpthread -ldl 
+../tb1.simv up to date
+make[1]: Leaving directory '/home/ICer/luke_verify/lab0/csrc'
+CPU time: .599 seconds to compile + .384 seconds to elab + .251 seconds to link

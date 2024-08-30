@@ -1,0 +1,28 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-loadpli
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
+-NOCOPYRIGHT
+-WORK
+worklib
+-SEM2009
+-ERRORMAX
+15
+-ACCESS
++rwc
+-timescale
+1ns/1ns
+-COVERAGE
+all
+-STATUS
+-MESSAGES
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-HASXLMODE

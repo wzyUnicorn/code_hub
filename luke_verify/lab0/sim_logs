@@ -1,0 +1,56 @@
+TOOL:	irun(64)	15.20-p001: Started on May 29, 2024 at 16:43:20 CST
+irun
+	-messages
+	-nocopyright
+	-gui
+	-64bit
+	-sv
+	-uvm
+	-update
+	-define CONFIG_FOR_SIM
+	-work worklib
+	-l sim_logs
+	-sem2009
+	-errormax 15
+	-access +rwc
+	-timescale 1ns/1ns
+	-coverage all
+	-covoverwrite
+	-status
+	arbiter.v
+	mcdt.v
+	slave_fifo.v
+	tb1.sv
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb1.dut.a2s0_ack_s tb1.dut.a2s1_ack_s tb1.dut.a2s2_ack_s tb1.dut.ch0_data_i tb1.dut.ch0_margin_o tb1.dut.ch0_ready_o tb1.dut.ch0_valid_i tb1.dut.ch1_data_i tb1.dut.ch1_margin_o tb1.dut.ch1_ready_o tb1.dut.ch1_valid_i tb1.dut.ch2_data_i tb1.dut.ch2_margin_o tb1.dut.ch2_ready_o tb1.dut.ch2_valid_i tb1.dut.clk_i tb1.dut.mcdt_data_o tb1.dut.mcdt_id_o tb1.dut.mcdt_val_o tb1.dut.rstn_i tb1.dut.slv0_data_s tb1.dut.slv0_req_s tb1.dut.slv0_val_s tb1.dut.slv1_data_s tb1.dut.slv1_req_s tb1.dut.slv1_val_s tb1.dut.slv2_data_s tb1.dut.slv2_req_s tb1.dut.slv2_val_s
+Created probe 1
+ncsim> run
+Simulation interrupted at 353946565 NS + 2
+ncsim> probe -create -shm tb1.ch0_data tb1.ch0_margin tb1.ch0_ready tb1.ch0_valid tb1.ch1_data tb1.ch1_margin tb1.ch1_ready tb1.ch1_valid tb1.ch2_data tb1.ch2_margin tb1.ch2_ready tb1.ch2_valid tb1.clk tb1.mcdt_data tb1.mcdt_id tb1.mcdt_val tb1.rstn
+Created probe 2
+ncsim> run
+Simulation interrupted at 549274780 NS + 0
+ncsim> ^C
+ncsim> exit
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb1(tb1)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_7f3573f4_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_7f3573f4_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+ncsim: Memory Usage - 35.7M program + 207.4M data = 243.1M total (2980.0M Peak)
+ncsim: CPU Usage - 69.1s system + 16.6s user = 85.7s total (185.6s, 46.2% cpu)
+TOOL:	irun(64)	15.20-p001: Exiting on May 29, 2024 at 16:46:27 CST  (total: 00:03:07)

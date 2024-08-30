@@ -1,0 +1,25 @@
+
+Warning-[RT_SMLWITHGUI] Smartlog with -gui
+  The '-sml' flag is ignored; Smartlog is always enabled with '-gui'.
+  The Smartlog is stored at DVEfiles/dve_gui.log.
+
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Dec 19 18:51 2023
+VCD+ Writer O-2018.09-1_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+The file '/home/ICer/luke_verify/lab0/inter.vpd' was opened successfully.
+dve> run 1000ns
+1000000 ps
+dve> restart
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Dec 19 18:52 2023
+VCD+ Writer O-2018.09-1_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+The file '/home/ICer/luke_verify/lab0/inter.vpd' was opened successfully.
+dve> run 1000ns
+1000000 ps
+No design was updated from VPD file.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1000000 ps
+CPU Time:      0.180 seconds;       Data structure size:   0.0Mb
+Tue Dec 19 19:04:12 2023

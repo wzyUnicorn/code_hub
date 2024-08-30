@@ -1,0 +1,6 @@
+Command: vlogan -full64 -sverilog -timescale=1ps/1ps -nc -l comp.log ../mcdt/v1/arbiter.v \
+../mcdt/v1/slave_fifo.v ../mcdt/v1/mcdt.v tb1.v
+Parsing design file '../mcdt/v1/arbiter.v'
+Parsing design file '../mcdt/v1/slave_fifo.v'
+Parsing design file '../mcdt/v1/mcdt.v'
+Parsing design file 'tb1.v'
