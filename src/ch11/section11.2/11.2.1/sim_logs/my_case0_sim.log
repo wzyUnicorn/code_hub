@@ -1,0 +1,98 @@
+TOOL:	irun(64)	15.20-p001: Started on Mar 15, 2024 at 15:56:51 CST
+irun
+	-messages
+	-nocopyright
+	-64bit
+	-sv
+	-uvm
+	-update
+	-define CONFIG_FOR_SIM
+	-work worklib
+	-l sim_logs/my_case0_sim.log
+	-sem2009
+	-errormax 15
+	-access +rwc
+	-input probe_wave.tcl
+	-covtest my_case0
+	-timescale 1ns/1ns
+	-coverage all
+	-covoverwrite
+	-status
+	+UVM_NO_RELNOTES
+	+UVM_TESTNAME=my_case0
+	-f rtl_list.f
+		../../../ch2/dut/dut.sv
+		my_transaction.sv
+		my_sequencer.sv
+		my_driver.sv
+		my_monitor.sv
+		my_agent.sv
+		my_model.sv
+		my_scoreboard.sv
+		my_env.sv
+		base_test.sv
+		my_case0.sv
+		top_tb.sv
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+ncvlog: Memory Usage - 20.6M program + 46.2M data = 66.9M total
+ncvlog: CPU Usage - 0.0s system + 0.4s user = 0.4s total (0.4s, 100.0% cpu)
+file: ../../../ch2/dut/dut.sv
+	module worklib.dut:sv
+		errors: 0, warnings: 0
+file: my_transaction.sv
+class my_transaction extends uvm_sequence_item;
+                                             |
+ncvlog: *E,SVNOTY (my_transaction.sv,4|45): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+   `uvm_object_utils_begin(my_transaction)
+                         |
+ncvlog: *E,NOTDIR (my_transaction.sv,25|25): `uvm_object_utils_begin: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+   `uvm_object_utils_begin(my_transaction)
+                          |
+ncvlog: *E,EXPENC (my_transaction.sv,25|26): Expecting the keyword 'endclass'.
+      `uvm_field_int(dmac, UVM_ALL_ON)
+                   |
+ncvlog: *E,NOTDIR (my_transaction.sv,26|19): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+      `uvm_field_int(smac, UVM_ALL_ON)
+                   |
+ncvlog: *E,NOTDIR (my_transaction.sv,27|19): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+      `uvm_field_int(ether_type, UVM_ALL_ON)
+                   |
+ncvlog: *E,NOTDIR (my_transaction.sv,28|19): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+      `uvm_field_array_int(pload, UVM_ALL_ON)
+                         |
+ncvlog: *E,NOTDIR (my_transaction.sv,29|25): `uvm_field_array_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+      `uvm_field_int(crc, UVM_ALL_ON)
+                   |
+ncvlog: *E,NOTDIR (my_transaction.sv,30|19): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+   `uvm_object_utils_end
+                       |
+ncvlog: *E,NOTDIR (my_transaction.sv,31|23): `uvm_object_utils_end: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+   function new(string name = "my_transaction");
+              |
+ncvlog: *E,NEWOIC (my_transaction.sv,33|14): The class constructor method 'new' is only allowed within a class declaration.
+      super.new();
+          |
+ncvlog: *E,CLSSPX (my_transaction.sv,34|10): 'super' can only be used within a class scope that derives from a base class.
+endclass
+       |
+ncvlog: *E,MPANDC (my_transaction.sv,37|7): expecting the keyword 'module', 'macromodule', 'primitive', 'connectmodule','connect', 'discipline' or 'nature' [A.1].
+file: my_sequencer.sv
+      `uvm_update_sequence_lib_and_item(my_transaction)
+                                      |
+ncvlog: *E,NOTDIR (my_sequencer.sv,8|38): `uvm_update_sequence_lib_and_item: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+   `uvm_sequencer_utils(my_sequencer)
+                      |
+ncvlog: *E,NOTDIR (my_sequencer.sv,11|22): `uvm_sequencer_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: my_driver.sv
+   `uvm_component_utils(my_driver)
+                      |
+ncvlog: *E,NOTDIR (my_driver.sv,7|22): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+ncvlog: *F,MAXERR: maximum error count reached (15).
+ncvlog: Memory Usage - 20.6M program + 29.3M data = 50.0M total
+ncvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 100.0% cpu)
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 2).
+TOOL:	irun(64)	15.20-p001: Exiting on Mar 15, 2024 at 15:56:51 CST  (total: 00:00:00)

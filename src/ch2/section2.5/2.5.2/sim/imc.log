@@ -1,0 +1,11 @@
+IMC(64): 15.20-p001: (c) Copyright 1995-2016 Cadence Design Systems Inc - Coverage engine version: 15.20-p001
+Starting batch mode
+imc> merge my_case* -initial_model test_base -out all_cov -overwrite
+imc: *I,MERGL1: Merging IUS Coverage ...
+----------------------------
+imc: *E,ERME01: icc ucd file in the initial run 'cov_work/scope/test_base' is missing. Specify a valid initial run name.
+imc: *E,ERME06: IUS coverage merging failed.
+imc: *I,MERGL1: No Specman coverage databases found in the runs.
+Total conflicts during target model creation: 0
+Total items not merged                      : 0
+List of conflicts non-merged items during target model creation report only when merge is run with "-message 1" option.

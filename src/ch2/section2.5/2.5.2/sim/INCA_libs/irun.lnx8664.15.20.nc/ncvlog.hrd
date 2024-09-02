@@ -1,0 +1,21 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-sv
+-DEFINE
+CONFIG_FOR_SIM
+-WORK
+worklib
+-INCDIR
+../../../dut
+-INCDIR
+../env
+-INCDIR
+../top
+-I_INCDIR
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv

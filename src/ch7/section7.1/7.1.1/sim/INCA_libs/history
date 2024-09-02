@@ -1,0 +1,8 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(21Apr2024:00:42:03):( irun -messages -nocopyright -64bit -sv -uvm -update -define CONFIG_FOR_SIM -work worklib -l sim_logs/my_case0_sim.log -sem2009 -errormax 15 -access +rwc -input probe_wave.tcl -covtest my_case0 -timescale 1ns/1ns -coverage all -covoverwrite -status +UVM_NO_RELNOTES +UVM_TESTNAME=my_case0 -incdir ../../../../ch2/dut -incdir ../env -incdir ../top ../../../../ch2/dut/dut.sv ../top/top_tb.sv )
+s2::(21Apr2024:00:44:12):( irun -messages -nocopyright -64bit -sv -uvm -update -define CONFIG_FOR_SIM -work worklib -l sim_logs/my_case0_sim.log -sem2009 -errormax 15 -access +rwc -input probe_wave.tcl -covtest my_case0 -timescale 1ns/1ns -coverage all -covoverwrite -status +UVM_NO_RELNOTES +UVM_TESTNAME=my_case0 -incdir ../../../../ch2/dut -incdir ../env -incdir ../top ../../../../ch2/dut/dut.sv ../top/top_tb.sv )
+s3::(21Apr2024:00:45:52):( irun -messages -nocopyright -64bit -gui -sv -uvm -update -define CONFIG_FOR_SIM -work worklib -l sim_logs/my_case0_sim.log -sem2009 -errormax 15 -access +rwc -input probe_wave.tcl -covtest my_case0 -timescale 1ns/1ns -coverage all -covoverwrite -status +UVM_NO_RELNOTES +UVM_TESTNAME=my_case0 -incdir ../../../../ch2/dut -incdir ../env -incdir ../top ../../../../ch2/dut/dut.sv ../top/top_tb.sv )
+s4::(22Apr2024:20:18:06):( irun -messages -nocopyright -64bit -gui -sv -uvm -update -define CONFIG_FOR_SIM -work worklib -l sim_logs/my_case0_sim.log -sem2009 -errormax 15 -access +rwc -input probe_wave.tcl -covtest my_case0 -timescale 1ns/1ns -coverage all -covoverwrite -status +UVM_NO_RELNOTES +UVM_TESTNAME=my_case0 -incdir ../../../../ch7/dut -incdir ../env -incdir ../top ../../../../ch7/dut/dut.sv ../top/top_tb.sv )

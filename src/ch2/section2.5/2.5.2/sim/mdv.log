@@ -1,0 +1,7 @@
+16:49:05:0260 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 38193
+18:36:24:0490 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 46483
+18:36:24:0677 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - icc ucd file in the initial run 'cov_work/scope/test_base' is missing. Specify a valid initial run name.
+18:36:24:0677 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - IUS coverage merging failed.
+18:37:59:0091 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 39118
+18:37:59:0175 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - IUS coverage merging failed.
+18:37:59:0176 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - icc ucd file in the initial run 'cov_work/scope/test_base' is missing. Specify a valid initial run name.

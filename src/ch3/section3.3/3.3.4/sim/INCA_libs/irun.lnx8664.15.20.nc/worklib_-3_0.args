@@ -1,0 +1,36 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-RUNMODE
+-NOCOPYRIGHT
+-sv
+-DEFINE
+CONFIG_FOR_SIM
+-ERRORMAX
+15
+-STATUS
+-INCDIR
+../../../../ch2/dut
+-INCDIR
+../env
+-INCDIR
+../top
+-I_INCDIR
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv
+-UPDATE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-work
+worklib
+-UVMNOSINGLESTEP
+-define
+UVM_PLI
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/cdns_uvm_pkg.sv

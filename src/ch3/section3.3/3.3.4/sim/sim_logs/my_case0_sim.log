@@ -1,0 +1,518 @@
+TOOL:	irun(64)	15.20-p001: Started on Apr 21, 2024 at 16:19:28 CST
+irun
+	-messages
+	-nocopyright
+	-64bit
+	-gui
+	-sv
+	-uvm
+	-update
+	-define CONFIG_FOR_SIM
+	-work worklib
+	-l sim_logs/my_case0_sim.log
+	-sem2009
+	-errormax 15
+	-access +rwc
+	-input probe_wave.tcl
+	-covtest my_case0
+	-timescale 1ns/1ns
+	-coverage all
+	-covoverwrite
+	-status
+	+UVM_NO_RELNOTES
+	+UVM_TESTNAME=my_case0
+	-incdir ../../../../ch2/dut
+	-incdir ../env
+	-incdir ../top
+	../../../../ch2/dut/dut.sv
+	../top/top_tb.sv
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+ncvlog: Memory Usage - 20.6M program + 46.4M data = 67.0M total
+ncvlog: CPU Usage - 0.1s system + 0.6s user = 0.7s total (0.7s, 99.3% cpu)
+file: ../../../../ch2/dut/dut.sv
+	module worklib.dut:sv
+		errors: 0, warnings: 0
+file: ../top/top_tb.sv
+	interface worklib.my_if:sv
+		errors: 0, warnings: 0
+         m_trans.randomize();
+                         |
+ncvlog: *W,FUNTSK (../env/my_case0.sv,16|25): function called as a task without void'().
+(`include file: ../env/my_case0.sv line 16, file: ../top/top_tb.sv line 15)
+	module worklib.top_tb:sv
+		errors: 0, warnings: 0
+ncvlog: *W,SPDUSD: Include directory ../../../../ch2/dut given but not used.
+ncvlog: *W,SPDUSD: Include directory ../top given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 3
+ncvlog: Memory Usage - 20.6M program + 41.1M data = 61.7M total
+ncvlog: CPU Usage - 0.0s system + 0.1s user = 0.1s total (0.2s, 46.1% cpu)
+ncelab: *W,DSEMOPT: The behavior enabled under -sem2009 option has become the default behavior in IUS 15.1 release. Use of this switch is no longer required. It will be deprecated in a future release.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		$unit_0x0293e262
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.dut
+		worklib.top_tb
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.\$unit_0x0293e262 :compilation_unit <0x08ef9f41>
+			streams:   0, words:     0
+		worklib.\$unit_0x0293e262 :compilation_unit <0x1f615241>
+			streams:  24, words: 25987
+		worklib.cdns_assert2uvm_pkg:sv <0x75b38481>
+			streams:   3, words:  2639
+		worklib.cdns_uvm_pkg:sv <0x10288cb9>
+			streams:  28, words: 46637
+		worklib.cdns_uvm_pkg:sv <0x224b1bb8>
+			streams:  10, words:  9554
+		worklib.cdns_uvm_pkg:sv <0x289fa1ad>
+			streams: 136, words: 296025
+		worklib.cdns_uvm_pkg:sv <0x400a8ea4>
+			streams:   9, words:  6436
+		worklib.cdns_uvmapi:svp <0x2423905d>
+			streams:  27, words: 38295
+		worklib.dut:sv <0x4ac0eb81>
+			streams:   3, words:  1647
+		worklib.top_tb:sv <0x03521b36>
+			streams:  78, words: 140155
+		worklib.uvm_pkg:sv <0x043c64d1>
+			streams:  25, words: 63122
+		worklib.uvm_pkg:sv <0x0aa6f46f>
+			streams:  27, words: 34211
+		worklib.uvm_pkg:sv <0x0b1104e6>
+			streams:  31, words: 36539
+		worklib.uvm_pkg:sv <0x11a8866d>
+			streams:  39, words: 45632
+		worklib.uvm_pkg:sv <0x131d31d5>
+			streams:  27, words: 43114
+		worklib.uvm_pkg:sv <0x1658cf34>
+			streams:  52, words: 69519
+		worklib.uvm_pkg:sv <0x16c50e99>
+			streams:  35, words: 46751
+		worklib.uvm_pkg:sv <0x1b668f3c>
+			streams:   7, words:  7967
+		worklib.uvm_pkg:sv <0x1bed3028>
+			streams:  71, words: 153928
+		worklib.uvm_pkg:sv <0x1c4d810d>
+			streams:  23, words: 31599
+		worklib.uvm_pkg:sv <0x1d0ce515>
+			streams:  24, words: 27404
+		worklib.uvm_pkg:sv <0x1d176f1e>
+			streams:  28, words: 36794
+		worklib.uvm_pkg:sv <0x1deffd36>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x207e495f>
+			streams:  27, words: 48536
+		worklib.uvm_pkg:sv <0x217dfcd6>
+			streams:  27, words: 46271
+		worklib.uvm_pkg:sv <0x252ee327>
+			streams:  16, words: 26899
+		worklib.uvm_pkg:sv <0x2d5ef37a>
+			streams:  29, words: 121764
+		worklib.uvm_pkg:sv <0x2d9cc850>
+			streams:   9, words:  5977
+		worklib.uvm_pkg:sv <0x2fe0f711>
+			streams:  26, words: 40358
+		worklib.uvm_pkg:sv <0x3566e22c>
+			streams:  27, words: 45373
+		worklib.uvm_pkg:sv <0x3579945e>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x3fea9bd3>
+			streams:  26, words: 114099
+		worklib.uvm_pkg:sv <0x419b2c11>
+			streams:  25, words: 71098
+		worklib.uvm_pkg:sv <0x46785129>
+			streams:   7, words:  1863
+		worklib.uvm_pkg:sv <0x488eef15>
+			streams:  27, words: 55779
+		worklib.uvm_pkg:sv <0x4e3737e4>
+			streams:  26, words: 58656
+		worklib.uvm_pkg:sv <0x5055a25b>
+			streams:   7, words:  1863
+		worklib.uvm_pkg:sv <0x51221beb>
+			streams: 4718, words: 10622446
+		worklib.uvm_pkg:sv <0x51fe358e>
+			streams:  25, words: 69451
+		worklib.uvm_pkg:sv <0x52903482>
+			streams:  25, words: 64671
+		worklib.uvm_pkg:sv <0x532499c5>
+			streams:  25, words: 62303
+		worklib.uvm_pkg:sv <0x59042da3>
+			streams:   8, words:  9053
+		worklib.uvm_pkg:sv <0x5c032864>
+			streams:  25, words: 67033
+		worklib.uvm_pkg:sv <0x613ad341>
+			streams: 310, words: 498810
+		worklib.uvm_pkg:sv <0x64f20bd0>
+			streams:   7, words:  2385
+		worklib.uvm_pkg:sv <0x6b868fc2>
+			streams:  17, words: 18882
+		worklib.uvm_pkg:sv <0x6ec1c83b>
+			streams:  25, words: 40400
+		worklib.uvm_pkg:sv <0x70a53acd>
+			streams:  26, words: 39345
+		worklib.uvm_pkg:sv <0x722e82b0>
+			streams:  26, words: 52376
+		worklib.uvm_pkg:sv <0x7332c2ac>
+			streams:   9, words:  3363
+		worklib.uvm_pkg:sv <0x75a6f6af>
+			streams:  23, words: 23763
+		worklib.uvm_pkg:sv <0x763c3395>
+			streams:  22, words: 68980
+		worklib.uvm_pkg:sv <0x79720a50>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x7c3df914>
+			streams:   8, words:  8608
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    2       1
+		Verilog packages:              4       4
+		Registers:                 14068   10238
+		Scalar wires:                 10       -
+		Vectored wires:                4       -
+		Named events:                  4      12
+		Always blocks:                 1       1
+		Initial blocks:              292     159
+		Parallel blocks:              27      28
+		Pseudo assignments:            6       6
+		Assertions:                    2       2
+		Compilation units:             1       1
+		SV Class declarations:       202     314
+		SV Class specializations:    387     387
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+ncelab: Memory Usage - 49.0M program + 92.8M data = 141.8M total (Peak 143.1M)
+ncelab: CPU Usage - 0.5s system + 3.1s user = 3.7s total (3.7s, 100.0% cpu)
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> database -open -shm -into test_wave.shm test_wave -default -event
+Created default SHM database test_wave
+ncsim> probe -create top_tb.my_dut -depth all -all -database test_wave -waveform
+ncsim: *W,PRWFD: Only the signals/variables having immediate scope 'top_tb.my_dut' will be added to the waveform viewer.
+Created probe 1
+ncsim> probe -create $uvm:{uvm_test_top} -depth all -tasks -functions -all -database test_wave -waveform
+ncsim: *W,PRWFD: Only the signals/variables having immediate scope '$uvm:{uvm_test_top}' will be added to the waveform viewer.
+Created probe 2
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-p001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test my_case0...
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @4984         
+  dmac             integral        48    'h4edce614c2c4
+  smac             integral        48    'h686fe6e680af
+  vlan_info1       integral        16    'ha1f1        
+  vlan_info2       integral        3     'h5           
+  vlan_info3       integral        1     'h1           
+  vlan_info4       integral        12    'he2e         
+  ether_type       integral        16    'hb484        
+  pload            da(integral)    1010  -             
+    [0]            integral        8     'h19          
+    [1]            integral        8     'h5f          
+    [2]            integral        8     'h4f          
+    [3]            integral        8     'h11          
+    [4]            integral        8     'hc8          
+    ...            ...             ...   ...           
+    [1005]         integral        8     'hca          
+    [1006]         integral        8     'h91          
+    [1007]         integral        8     'h9           
+    [1008]         integral        8     'hc0          
+    [1009]         integral        8     'h34          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h1           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5088         
+  dmac             integral        48    'h91dceada454 
+  smac             integral        48    'h411f13fdd6ac
+  ether_type       integral        16    'hbcbb        
+  pload            da(integral)    263   -             
+    [0]            integral        8     'h49          
+    [1]            integral        8     'h67          
+    [2]            integral        8     'h83          
+    [3]            integral        8     'hd5          
+    [4]            integral        8     'hb1          
+    ...            ...             ...   ...           
+    [258]          integral        8     'hce          
+    [259]          integral        8     'h2           
+    [260]          integral        8     'hc4          
+    [261]          integral        8     'ha3          
+    [262]          integral        8     'hbd          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h0           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5047         
+  dmac             integral        48    'h4a6170a42d7f
+  smac             integral        48    'h78f279c5e42b
+  ether_type       integral        16    'h2404        
+  pload            da(integral)    888   -             
+    [0]            integral        8     'h86          
+    [1]            integral        8     'hd8          
+    [2]            integral        8     'h4d          
+    [3]            integral        8     'h25          
+    [4]            integral        8     'he0          
+    ...            ...             ...   ...           
+    [883]          integral        8     'h75          
+    [884]          integral        8     'ha9          
+    [885]          integral        8     'hee          
+    [886]          integral        8     'hc8          
+    [887]          integral        8     'h61          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h0           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5091         
+  dmac             integral        48    'he95a7fe52640
+  smac             integral        48    'h11953e9ab427
+  vlan_info1       integral        16    'hc089        
+  vlan_info2       integral        3     'h7           
+  vlan_info3       integral        1     'h1           
+  vlan_info4       integral        12    'h636         
+  ether_type       integral        16    'ha08e        
+  pload            da(integral)    1452  -             
+    [0]            integral        8     'ha8          
+    [1]            integral        8     'h96          
+    [2]            integral        8     'hf4          
+    [3]            integral        8     'h1b          
+    [4]            integral        8     'hd9          
+    ...            ...             ...   ...           
+    [1447]         integral        8     'hc7          
+    [1448]         integral        8     'h36          
+    [1449]         integral        8     'h39          
+    [1450]         integral        8     'h6a          
+    [1451]         integral        8     'h9a          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h1           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5101         
+  dmac             integral        48    'h32501660fcc5
+  smac             integral        48    'h7122d43bf244
+  vlan_info1       integral        16    'h1285        
+  vlan_info2       integral        3     'h7           
+  vlan_info3       integral        1     'h1           
+  vlan_info4       integral        12    'hf3          
+  ether_type       integral        16    'h8634        
+  pload            da(integral)    682   -             
+    [0]            integral        8     'h37          
+    [1]            integral        8     'h31          
+    [2]            integral        8     'hc8          
+    [3]            integral        8     'h4d          
+    [4]            integral        8     'hf1          
+    ...            ...             ...   ...           
+    [677]          integral        8     'h96          
+    [678]          integral        8     'h65          
+    [679]          integral        8     'hd8          
+    [680]          integral        8     'h47          
+    [681]          integral        8     'he7          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h1           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5089         
+  dmac             integral        48    'h97e3248f76c9
+  smac             integral        48    'h3f9705ef616b
+  ether_type       integral        16    'h399c        
+  pload            da(integral)    674   -             
+    [0]            integral        8     'he           
+    [1]            integral        8     'hf           
+    [2]            integral        8     'hdc          
+    [3]            integral        8     'h40          
+    [4]            integral        8     'h1a          
+    ...            ...             ...   ...           
+    [669]          integral        8     'h61          
+    [670]          integral        8     'he8          
+    [671]          integral        8     'hf1          
+    [672]          integral        8     'h23          
+    [673]          integral        8     'h39          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h0           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5076         
+  dmac             integral        48    'h42188430c89 
+  smac             integral        48    'hf40f04b29603
+  ether_type       integral        16    'ha363        
+  pload            da(integral)    1109  -             
+    [0]            integral        8     'h4e          
+    [1]            integral        8     'h86          
+    [2]            integral        8     'h2           
+    [3]            integral        8     'h5d          
+    [4]            integral        8     'h39          
+    ...            ...             ...   ...           
+    [1104]         integral        8     'h39          
+    [1105]         integral        8     'hc4          
+    [1106]         integral        8     'h3c          
+    [1107]         integral        8     'h90          
+    [1108]         integral        8     'hf8          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h0           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @4989         
+  dmac             integral        48    'h8951ee0e6e12
+  smac             integral        48    'h96e9f7b53be8
+  ether_type       integral        16    'hf0f6        
+  pload            da(integral)    173   -             
+    [0]            integral        8     'h66          
+    [1]            integral        8     'h6d          
+    [2]            integral        8     'hcb          
+    [3]            integral        8     'h3d          
+    [4]            integral        8     'h14          
+    ...            ...             ...   ...           
+    [168]          integral        8     'h76          
+    [169]          integral        8     'h7a          
+    [170]          integral        8     'h82          
+    [171]          integral        8     'h9a          
+    [172]          integral        8     'h59          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h0           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5070         
+  dmac             integral        48    'hc5f95092b08d
+  smac             integral        48    'h2b7b68c0826f
+  ether_type       integral        16    'h72a7        
+  pload            da(integral)    1363  -             
+    [0]            integral        8     'hcf          
+    [1]            integral        8     'h70          
+    [2]            integral        8     'hac          
+    [3]            integral        8     'h52          
+    [4]            integral        8     'h9           
+    ...            ...             ...   ...           
+    [1358]         integral        8     'h24          
+    [1359]         integral        8     'h92          
+    [1360]         integral        8     'h5d          
+    [1361]         integral        8     'hd           
+    [1362]         integral        8     'ha6          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h0           
+-------------------------------------------------------
+-------------------------------------------------------
+Name               Type            Size  Value         
+-------------------------------------------------------
+uvm_sequence_item  my_transaction  -     @5075         
+  dmac             integral        48    'h9ec513169e18
+  smac             integral        48    'h8a51f6b09a6b
+  vlan_info1       integral        16    'h5d76        
+  vlan_info2       integral        3     'h4           
+  vlan_info3       integral        1     'h1           
+  vlan_info4       integral        12    'h468         
+  ether_type       integral        16    'h17bd        
+  pload            da(integral)    1311  -             
+    [0]            integral        8     'h39          
+    [1]            integral        8     'h4f          
+    [2]            integral        8     'h4d          
+    [3]            integral        8     'h30          
+    [4]            integral        8     'hc           
+    ...            ...             ...   ...           
+    [1306]         integral        8     'hdc          
+    [1307]         integral        8     'hd9          
+    [1308]         integral        8     'h67          
+    [1309]         integral        8     'hd0          
+    [1310]         integral        8     'hac          
+  crc              integral        32    'h0           
+  is_vlan          integral        1     'h1           
+-------------------------------------------------------
+TEST CASE PASSED
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    1
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+Simulation complete via $finish(1) at time 100 NS + 86
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> run
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> ^C
+ncsim> exit
+coverage model statistics (approx):
+  covergroup instances  :  n/a
+  covergroup types  :  n/a
+  covergroup bins (types + instances)  :  n/a
+  blocks :  24
+  expressions :  0
+  toggle signals :  113
+  fsm states :  0
+  fsm transitions :  0
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  top_tb(top_tb)
+  scope    :  scope
+  testname :  my_case0
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_60cf2570_00000000.ucm
+  data               :  ./cov_work/scope/my_case0/icc_60cf2570_00000000.ucd
+  cpu                :  0.1s system + 0.0s user = 0.1s total
+ncsim: Memory Usage - 35.7M program + 296.2M data = 331.9M total (341.2M Peak)
+ncsim: CPU Usage - 2.3s system + 7.6s user = 9.8s total (197.1s, 5.0% cpu)
+TOOL:	irun(64)	15.20-p001: Exiting on Apr 21, 2024 at 16:22:50 CST  (total: 00:03:22)

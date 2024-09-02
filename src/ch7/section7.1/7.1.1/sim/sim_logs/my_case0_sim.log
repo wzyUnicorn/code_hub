@@ -1,0 +1,304 @@
+TOOL:	irun(64)	15.20-p001: Started on Apr 22, 2024 at 20:18:06 CST
+irun
+	-messages
+	-nocopyright
+	-64bit
+	-gui
+	-sv
+	-uvm
+	-update
+	-define CONFIG_FOR_SIM
+	-work worklib
+	-l sim_logs/my_case0_sim.log
+	-sem2009
+	-errormax 15
+	-access +rwc
+	-input probe_wave.tcl
+	-covtest my_case0
+	-timescale 1ns/1ns
+	-coverage all
+	-covoverwrite
+	-status
+	+UVM_NO_RELNOTES
+	+UVM_TESTNAME=my_case0
+	-incdir ../../../../ch7/dut
+	-incdir ../env
+	-incdir ../top
+	../../../../ch7/dut/dut.sv
+	../top/top_tb.sv
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+ncvlog: Memory Usage - 20.6M program + 46.4M data = 67.0M total
+ncvlog: CPU Usage - 0.1s system + 0.7s user = 0.8s total (0.8s, 95.9% cpu)
+file: ../../../../ch7/dut/dut.sv
+	module worklib.dut:sv
+		errors: 0, warnings: 0
+file: ../top/top_tb.sv
+	interface worklib.my_if:sv
+		errors: 0, warnings: 0
+	interface worklib.bus_if:sv
+		errors: 0, warnings: 0
+	module worklib.top_tb:sv
+		errors: 0, warnings: 0
+ncvlog: *W,SPDUSD: Include directory ../../../../ch7/dut given but not used.
+ncvlog: *W,SPDUSD: Include directory ../top given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+ncvlog: Memory Usage - 20.6M program + 41.9M data = 62.5M total
+ncvlog: CPU Usage - 0.0s system + 0.1s user = 0.1s total (0.2s, 62.2% cpu)
+ncelab: *W,DSEMOPT: The behavior enabled under -sem2009 option has become the default behavior in IUS 15.1 release. Use of this switch is no longer required. It will be deprecated in a future release.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		$unit_0x09e5511f
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.dut
+		worklib.top_tb
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.\$unit_0x09e5511f :compilation_unit <0x1bbd8f3c>
+			streams:  25, words: 29293
+		worklib.\$unit_0x09e5511f :compilation_unit <0x5d399cd1>
+			streams:   0, words:     0
+		worklib.cdns_assert2uvm_pkg:sv <0x75b38481>
+			streams:   3, words:  2639
+		worklib.cdns_uvm_pkg:sv <0x10288cb9>
+			streams:  28, words: 46637
+		worklib.cdns_uvm_pkg:sv <0x224b1bb8>
+			streams:  10, words:  9554
+		worklib.cdns_uvm_pkg:sv <0x289fa1ad>
+			streams: 136, words: 296025
+		worklib.cdns_uvm_pkg:sv <0x400a8ea4>
+			streams:   9, words:  6436
+		worklib.cdns_uvmapi:svp <0x2423905d>
+			streams:  27, words: 38295
+		worklib.dut:sv <0x2a031b39>
+			streams:   8, words:  4801
+		worklib.top_tb:sv <0x45dafd5c>
+			streams: 152, words: 276519
+		worklib.uvm_pkg:sv <0x002ff376>
+			streams:  25, words: 37126
+		worklib.uvm_pkg:sv <0x0032ff5a>
+			streams: 310, words: 498810
+		worklib.uvm_pkg:sv <0x043c64d1>
+			streams:  25, words: 63122
+		worklib.uvm_pkg:sv <0x0aa6f46f>
+			streams:  27, words: 34211
+		worklib.uvm_pkg:sv <0x0bf19fe3>
+			streams:  24, words: 27404
+		worklib.uvm_pkg:sv <0x131d31d5>
+			streams:  27, words: 43114
+		worklib.uvm_pkg:sv <0x15dd35d1>
+			streams:  26, words: 52376
+		worklib.uvm_pkg:sv <0x1b668f3c>
+			streams:   7, words:  7967
+		worklib.uvm_pkg:sv <0x1bed3028>
+			streams:  71, words: 153928
+		worklib.uvm_pkg:sv <0x1c4d810d>
+			streams:  23, words: 31599
+		worklib.uvm_pkg:sv <0x1d176f1e>
+			streams:  28, words: 36794
+		worklib.uvm_pkg:sv <0x1deffd36>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x207e495f>
+			streams:  27, words: 48536
+		worklib.uvm_pkg:sv <0x20cca187>
+			streams:  24, words: 54050
+		worklib.uvm_pkg:sv <0x217dfcd6>
+			streams:  27, words: 46271
+		worklib.uvm_pkg:sv <0x252ee327>
+			streams:  16, words: 26899
+		worklib.uvm_pkg:sv <0x2641b109>
+			streams:  25, words: 36977
+		worklib.uvm_pkg:sv <0x28ca8a89>
+			streams:  24, words: 27404
+		worklib.uvm_pkg:sv <0x29fb7691>
+			streams:  35, words: 48950
+		worklib.uvm_pkg:sv <0x2a943dd7>
+			streams:  52, words: 64617
+		worklib.uvm_pkg:sv <0x2d5ef37a>
+			streams:  29, words: 121764
+		worklib.uvm_pkg:sv <0x2d9cc850>
+			streams:   9, words:  5977
+		worklib.uvm_pkg:sv <0x2fe0f711>
+			streams:  26, words: 40358
+		worklib.uvm_pkg:sv <0x33f29e5a>
+			streams: 310, words: 498810
+		worklib.uvm_pkg:sv <0x345f0208>
+			streams:  26, words: 95602
+		worklib.uvm_pkg:sv <0x3566e22c>
+			streams:  27, words: 45373
+		worklib.uvm_pkg:sv <0x3579945e>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x35dce964>
+			streams:  22, words: 21166
+		worklib.uvm_pkg:sv <0x419b2c11>
+			streams:  25, words: 71098
+		worklib.uvm_pkg:sv <0x42dc023e>
+			streams:  26, words: 35149
+		worklib.uvm_pkg:sv <0x4442a6d1>
+			streams:  23, words: 23763
+		worklib.uvm_pkg:sv <0x46785129>
+			streams:   7, words:  1863
+		worklib.uvm_pkg:sv <0x488eef15>
+			streams:  27, words: 55779
+		worklib.uvm_pkg:sv <0x4e3737e4>
+			streams:  26, words: 58656
+		worklib.uvm_pkg:sv <0x5055a25b>
+			streams:   7, words:  1863
+		worklib.uvm_pkg:sv <0x51221beb>
+			streams: 4718, words: 10622446
+		worklib.uvm_pkg:sv <0x51fe358e>
+			streams:  25, words: 69451
+		worklib.uvm_pkg:sv <0x52903482>
+			streams:  25, words: 64671
+		worklib.uvm_pkg:sv <0x532499c5>
+			streams:  25, words: 62303
+		worklib.uvm_pkg:sv <0x59042da3>
+			streams:   8, words:  9053
+		worklib.uvm_pkg:sv <0x5c032864>
+			streams:  25, words: 67033
+		worklib.uvm_pkg:sv <0x64f20bd0>
+			streams:   7, words:  2385
+		worklib.uvm_pkg:sv <0x6b868fc2>
+			streams:  17, words: 18882
+		worklib.uvm_pkg:sv <0x6ffaa93a>
+			streams:  31, words: 34228
+		worklib.uvm_pkg:sv <0x70a53acd>
+			streams:  26, words: 39345
+		worklib.uvm_pkg:sv <0x7332c2ac>
+			streams:   9, words:  3363
+		worklib.uvm_pkg:sv <0x763c3395>
+			streams:  22, words: 68980
+		worklib.uvm_pkg:sv <0x78835264>
+			streams:  35, words: 80087
+		worklib.uvm_pkg:sv <0x79720a50>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x79aad37a>
+			streams:  39, words: 47044
+		worklib.uvm_pkg:sv <0x7c3df914>
+			streams:   8, words:  8608
+		worklib.uvm_pkg:sv <0x7c583d69>
+			streams:  58, words: 75762
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    3       2
+		Verilog packages:              4       4
+		Registers:                 15096   10385
+		Scalar wires:                 14       -
+		Vectored wires:                8       -
+		Named events:                  4      12
+		Always blocks:                 3       3
+		Initial blocks:              323     168
+		Parallel blocks:              27      28
+		Pseudo assignments:           11      11
+		Assertions:                    2       2
+		Compilation units:             1       1
+		SV Class declarations:       210     322
+		SV Class specializations:    428     428
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+ncelab: Memory Usage - 49.0M program + 100.1M data = 149.1M total (Peak 150.4M)
+ncelab: CPU Usage - 0.4s system + 3.5s user = 3.9s total (4.3s, 90.6% cpu)
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> database -open -shm -into test_wave.shm test_wave -default -event
+Created default SHM database test_wave
+ncsim> probe -create top_tb.my_dut -depth all -all -database test_wave -waveform
+ncsim: *W,PRWFD: Only the signals/variables having immediate scope 'top_tb.my_dut' will be added to the waveform viewer.
+Created probe 1
+ncsim> probe -create $uvm:{uvm_test_top} -depth all -tasks -functions -all -database test_wave -waveform
+ncsim: *W,PRWFD: Only the signals/variables having immediate scope '$uvm:{uvm_test_top}' will be added to the waveform viewer.
+Created probe 2
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-p001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test my_case0...
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+UVM_INFO ../env/bus_driver.sv(37) @ 1100000: uvm_test_top.env.bus_agt.drv [bus_driver] begin to drive one pkt
+UVM_INFO ../env/bus_monitor.sv(46) @ 1700000: uvm_test_top.env.bus_agt.mon [bus_monitor] end collect one pkt
+UVM_INFO ../env/bus_driver.sv(57) @ 1700000: uvm_test_top.env.bus_agt.drv [bus_driver] end drive one pkt
+UVM_INFO ../env/my_case0.sv(29) @ 1700000: uvm_test_top.env.bus_agt.sqr@@bseq [case0_bus_seq] invert's initial value is 0
+UVM_INFO ../env/bus_driver.sv(37) @ 1700000: uvm_test_top.env.bus_agt.drv [bus_driver] begin to drive one pkt
+UVM_INFO ../env/bus_monitor.sv(46) @ 2300000: uvm_test_top.env.bus_agt.mon [bus_monitor] end collect one pkt
+UVM_INFO ../env/bus_driver.sv(57) @ 2300000: uvm_test_top.env.bus_agt.drv [bus_driver] end drive one pkt
+UVM_INFO ../env/bus_driver.sv(37) @ 2300000: uvm_test_top.env.bus_agt.drv [bus_driver] begin to drive one pkt
+UVM_INFO ../env/bus_monitor.sv(46) @ 2900000: uvm_test_top.env.bus_agt.mon [bus_monitor] end collect one pkt
+UVM_INFO ../env/bus_driver.sv(57) @ 2900000: uvm_test_top.env.bus_agt.drv [bus_driver] end drive one pkt
+UVM_INFO ../env/my_case0.sv(35) @ 2900000: uvm_test_top.env.bus_agt.sqr@@bseq [case0_bus_seq] after set, invert's value is 1
+UVM_INFO ../env/bus_driver.sv(37) @ 2900000: uvm_test_top.env.bus_agt.drv [bus_driver] begin to drive one pkt
+UVM_INFO ../env/bus_monitor.sv(46) @ 3500000: uvm_test_top.env.bus_agt.mon [bus_monitor] end collect one pkt
+UVM_INFO ../env/bus_driver.sv(57) @ 3500000: uvm_test_top.env.bus_agt.drv [bus_driver] end drive one pkt
+UVM_INFO ../env/bus_driver.sv(37) @ 3500000: uvm_test_top.env.bus_agt.drv [bus_driver] begin to drive one pkt
+UVM_INFO ../env/bus_monitor.sv(46) @ 4100000: uvm_test_top.env.bus_agt.mon [bus_monitor] end collect one pkt
+UVM_INFO ../env/bus_driver.sv(57) @ 4100000: uvm_test_top.env.bus_agt.drv [bus_driver] end drive one pkt
+UVM_INFO ../env/my_case0.sv(41) @ 4100000: uvm_test_top.env.bus_agt.sqr@@bseq [case0_bus_seq] after set, invert's value is 0
+UVM_INFO ../env/my_scoreboard.sv(40) @ 68500000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+UVM_INFO ../env/my_scoreboard.sv(40) @ 143300000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+UVM_INFO ../env/my_scoreboard.sv(40) @ 160500000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+UVM_INFO ../env/my_scoreboard.sv(40) @ 180300000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+ncsim: *W,PRDASL: Dynamic array probe on "worklib.$unit_0x09e5511f::my_transaction@6762_4.pload" limited to 1000 elements.
+UVM_INFO ../env/my_scoreboard.sv(40) @ 425100000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+UVM_INFO ../env/my_scoreboard.sv(40) @ 535300000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+UVM_INFO ../env/my_scoreboard.sv(40) @ 733300000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+UVM_INFO ../env/my_scoreboard.sv(40) @ 788500000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+ncsim: *W,PRDASL: Dynamic array probe on "worklib.$unit_0x09e5511f::my_transaction@6694_15.pload" limited to 1000 elements.
+UVM_INFO ../env/my_scoreboard.sv(40) @ 1052100000: uvm_test_top.env.scb [my_scoreboard] Compare SUCCESSFULLY
+TEST CASE PASSED
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   28
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[bus_driver]    10
+[bus_monitor]     5
+[case0_bus_seq]     3
+[my_scoreboard]     9
+Simulation complete via $finish(1) at time 1164100 NS + 92
+/home/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> scope -set top_tb.my_dut
+ncsim> 

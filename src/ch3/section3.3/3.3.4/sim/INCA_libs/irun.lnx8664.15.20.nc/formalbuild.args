@@ -1,0 +1,14 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++NoArgsToLog
+-messages
+-NOCOPYRIGHT
+-64bit
+-COVTEST
+my_case0
+-COVERAGE
+all
+-COVOVERWRITE
+-UPDATE

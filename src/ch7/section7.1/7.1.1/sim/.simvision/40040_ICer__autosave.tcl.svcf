@@ -1,0 +1,134 @@
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  simulator::top_tb.my_dut 
+browser set \
+    -signalsort name
+browser yview see  simulator::top_tb.my_dut 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1920x977+-10+20}] != ""} {
+    window geometry "Waveform 1" 1920x977+-10+20
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ps \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	{simulator::top_tb.my_dut.bus_addr[15:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.bus_cmd_valid
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.bus_op
+	} ]
+set id [waveform add -signals  {
+	{simulator::top_tb.my_dut.bus_rd_data[15:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::top_tb.my_dut.bus_wr_data[15:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.clk
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.invert
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.rst_n
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.rx_dv
+	} ]
+set id [waveform add -signals  {
+	{simulator::top_tb.my_dut.rxd[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::top_tb.my_dut.tx_en
+	} ]
+set id [waveform add -signals  {
+	{simulator::top_tb.my_dut.txd[7:0]}
+	} ]
+
+waveform xview limits 0 9094532ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Source Browser windows
+#
+if {[catch {window new SrcBrowser -name "Source Browser 1" -geometry 974x939+724+58}] != ""} {
+    window geometry "Source Browser 1" 974x939+724+58
+}
+window target "Source Browser 1" on
+srcbrowser using {Source Browser 1}
+srcbrowser set \
+    -primarycursor TimeA \
+    -units ps \
+    -radix default \
+    -showstrength 0 \
+    -showcallstack 0 \
+    -displayvalues 0
+
+srcbrowser show -scope top_tb.my_dut -file /home/ICer/src/ch7/dut/dut.sv -line 1
+
+srcbrowser sidebar visibility partial
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 1920x977+-1+27
+
+#
+# Layout selection
+#
