@@ -1,0 +1,123 @@
+module sva_checker (
+input   wire                clk_cpu,
+input   wire                rst_n_cpu,
+input   wire                pclk,
+input   wire                prest_n,
+
+input   wire                spi0_clk,
+input   wire                spi0_csn0,
+input   wire                spi0_csn1,
+input   wire                spi0_csn2,
+input   wire                spi0_csn3,
+input   wire                spi0_sdo0,
+input   wire                spi0_sdo1,
+input   wire                spi0_sdo2,
+input   wire                spi0_sdo3,
+input   wire                spi0_oe0,
+input   wire                spi0_oe1,
+input   wire                spi0_oe2,
+input   wire                spi0_oe3,
+
+input   wire                spi0_sdi0,
+input   wire                spi0_sdi1,
+input   wire                spi0_sdi2,
+input   wire                spi0_sdi3,
+
+input   wire                spi1_clk,
+input   wire                spi1_csn0,
+input   wire                spi1_csn1,
+input   wire                spi1_csn2,
+input   wire                spi1_csn3,
+input   wire                spi1_sdo0,
+input   wire                spi1_sdo1,
+input   wire                spi1_sdo2,
+input   wire                spi1_sdo3,
+input   wire                spi1_oe0,
+input   wire                spi1_oe1,
+input   wire                spi1_oe2,
+input   wire                spi1_oe3,
+
+input   wire                spi1_sdi0,
+input   wire                spi1_sdi1,
+input   wire                spi1_sdi2,
+input   wire                spi1_sdi3,
+
+input   wire                ua_rxd,
+input   wire                ua_txd,  
+
+input   wire                i2c0_scl_pad_i,
+input   wire                i2c0_scl_pad_o, 
+input   wire                i2c0_scl_padoen_o, 
+
+input   wire                i2c0_sda_pad_i,
+input   wire                i2c0_sda_pad_o, 
+input   wire                i2c0_sda_padoen_o,
+
+input   wire                i2c1_scl_pad_i,
+input   wire                i2c1_scl_pad_o,
+input   wire                i2c1_scl_padoen_o,
+
+input   wire                i2c1_sda_pad_i,
+input   wire                i2c1_sda_pad_o,
+input   wire                i2c1_sda_padoen_o,
+
+input   wire  [2:0]         r_io_reuse_pad2,                   
+input   wire  [2:0]         r_io_reuse_pad1,                   
+input   wire  [2:0]         r_io_reuse_pad4,                   
+input   wire  [2:0]         r_io_reuse_pad3,                   
+input   wire  [2:0]         r_io_reuse_pad6,                   
+input   wire  [2:0]         r_io_reuse_pad5,                   
+input   wire  [2:0]         r_io_reuse_pad8,                   
+input   wire  [2:0]         r_io_reuse_pad7,                   
+input   wire  [2:0]         r_io_reuse_pad10,                   
+input   wire  [2:0]         r_io_reuse_pad9,                  
+input   wire  [2:0]         r_io_reuse_pad12,                   
+input   wire  [2:0]         r_io_reuse_pad11,                   
+input   wire  [2:0]         r_io_reuse_pad14,                   
+input   wire  [2:0]         r_io_reuse_pad13,                   
+input   wire  [2:0]         r_io_reuse_pad16,                   
+input   wire  [2:0]         r_io_reuse_pad15,                   
+input   wire  [2:0]         r_io_reuse_pad18,                   
+input   wire  [2:0]         r_io_reuse_pad17,                   
+input   wire  [2:0]         r_io_reuse_pad20,                   
+input   wire  [2:0]         r_io_reuse_pad19,                   
+
+input   wire  [24 :1]       pad ,
+
+input                       cpu_clk,
+input                       cpu_reset_n,
+input                       apb_clk,
+input                       apb_reset_n
+
+                       );
+
+// 1)   spi0_csn0 only map to pin 2 or pin 15
+
+   assert_spi0_csn0_pad_2_15: assert property ( @(posedge cpu_clk) 
+        spi0_csn0 && (r_io_reuse_pad15==0) |-> pad[15]);
+
+
+   assert_spi0_csn0_cannot_map_to_pad_3: assert property ( @(posedge cpu_clk) 
+        spi0_csn0 && (r_io_reuse_pad15==0) |-> pad[3] );
+
+
+
+// Assumptions about pinmux behavior
+
+  assume_i2c_signal: assume property ( @(posedge cpu_clk) 
+        (r_io_reuse_pad3==2) |-> (r_io_reuse_pad4==2) );
+
+  assume_qspi0_signal: assume property ( @(posedge cpu_clk) 
+        (r_io_reuse_pad3==1) |-> (r_io_reuse_pad4 ==1) && (r_io_reuse_pad5 ==1) &&(r_io_reuse_pad6 ==1)) ;
+
+
+// Functional coverage scenarios
+  cov_spi0_csn0_pad2: cover property (@(posedge cpu_clk)
+        (r_io_reuse_pad2==0) && spi0_csn0);
+
+  cov_spi0_csn0_pad15: cover property (@(posedge cpu_clk)
+        (r_io_reuse_pad15==0) && spi0_csn0);
+
+
+
+endmodule

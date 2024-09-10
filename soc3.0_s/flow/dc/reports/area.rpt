@@ -1,0 +1,675 @@
+Warning: Design 'soc_top' has '26' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : soc_top
+Version: N-2017.09-SP5
+Date   : Wed Oct  4 15:36:09 2023
+****************************************
+
+Library(s) Used:
+
+    sky130_fd_sc_hs__ss_150C_1v60 (File: /root/pwd/work/github/SOC_V3.0_final4/To_Customer/dc/lib/sky130_fd_sc_hs__ss_150C_1v60.db)
+
+Number of ports:                        41484
+Number of nets:                        213349
+Number of cells:                       180293
+Number of combinational cells:          97263
+Number of sequential cells:             82664
+Number of macros/black boxes:               0
+Number of buf/inv:                       7383
+Number of references:                      15
+
+Combinational area:             888205.288704
+Buf/Inv area:                    40982.975448
+Noncombinational area:         3493493.349501
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               4381698.638205
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                Local cell area
+                                  ---------------------  --------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-     Black-
+                                  Total         Total    national     national      boxes   Design
+--------------------------------  ------------  -------  -----------  ------------  ------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+soc_top                           4381698.6382    100.0      28.7712        0.0000  0.0000  soc_top
+chip_pin_mux                         1070.9280      0.0    1070.9280        0.0000  0.0000  pin_mux
+chip_pin_mux/gnrl_io_pad_inst[10].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_15
+chip_pin_mux/gnrl_io_pad_inst[11].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_14
+chip_pin_mux/gnrl_io_pad_inst[12].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_13
+chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_12
+chip_pin_mux/gnrl_io_pad_inst[14].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_11
+chip_pin_mux/gnrl_io_pad_inst[15].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_10
+chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_9
+chip_pin_mux/gnrl_io_pad_inst[17].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_8
+chip_pin_mux/gnrl_io_pad_inst[18].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_7
+chip_pin_mux/gnrl_io_pad_inst[19].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_6
+chip_pin_mux/gnrl_io_pad_inst[1].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_0
+chip_pin_mux/gnrl_io_pad_inst[20].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_5
+chip_pin_mux/gnrl_io_pad_inst[21].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_4
+chip_pin_mux/gnrl_io_pad_inst[22].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_3
+chip_pin_mux/gnrl_io_pad_inst[23].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_2
+chip_pin_mux/gnrl_io_pad_inst[24].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_1
+chip_pin_mux/gnrl_io_pad_inst[2].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_23
+chip_pin_mux/gnrl_io_pad_inst[3].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_22
+chip_pin_mux/gnrl_io_pad_inst[4].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_21
+chip_pin_mux/gnrl_io_pad_inst[5].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_20
+chip_pin_mux/gnrl_io_pad_inst[6].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_19
+chip_pin_mux/gnrl_io_pad_inst[7].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_18
+chip_pin_mux/gnrl_io_pad_inst[8].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_17
+chip_pin_mux/gnrl_io_pad_inst[9].x_gnrl_io_pad
+                                        0.0000      0.0       0.0000        0.0000  0.0000  gnrl_io_pad_16
+inst_apb_subsystem                 192345.0581      4.4      99.1008        0.0000  0.0000  apb_subsystem
+inst_apb_subsystem/apb2pin           1162.0368      0.0     279.7200      882.3168  0.0000  apb2pinmux
+inst_apb_subsystem/i_ahb2apb         4934.2607      0.1    2109.8880     2824.3728  0.0000  ahb2apb_20000000_2000ffff_20010000_2001ffff_20020000_2002ffff_20030000_2003ffff_20040000_2004ffff_20050000_2005ffff_20060000_2006ffff_20070000_2007ffff_20080000_2008ffff
+inst_apb_subsystem/i_i2c_master0_top
+                                     7469.3230      0.2     939.8592     1617.5807  0.0000  i2c_master_top_0
+inst_apb_subsystem/i_i2c_master0_top/byte_controller
+                                     4911.8831      0.1     602.5968      882.3168  0.0000  i2c_master_byte_ctrl_0
+inst_apb_subsystem/i_i2c_master0_top/byte_controller/bit_controller
+                                     3426.9695      0.1    1392.2064     1759.8384  0.0000  i2c_master_bit_ctrl_0
+inst_apb_subsystem/i_i2c_master0_top/byte_controller/bit_controller/sub_x_3
+                                      274.9248      0.0     274.9248        0.0000  0.0000  i2c_master_bit_ctrl_0_DW01_dec_0
+inst_apb_subsystem/i_i2c_master1_top
+                                     7469.3230      0.2     939.8592     1617.5807  0.0000  i2c_master_top_1
+inst_apb_subsystem/i_i2c_master1_top/byte_controller
+                                     4911.8831      0.1     602.5968      882.3168  0.0000  i2c_master_byte_ctrl_1
+inst_apb_subsystem/i_i2c_master1_top/byte_controller/bit_controller
+                                     3426.9695      0.1    1392.2064     1759.8384  0.0000  i2c_master_bit_ctrl_1
+inst_apb_subsystem/i_i2c_master1_top/byte_controller/bit_controller/sub_x_3
+                                      274.9248      0.0     274.9248        0.0000  0.0000  i2c_master_bit_ctrl_1_DW01_dec_0
+inst_apb_subsystem/i_pwm_apb        28561.8090      0.7    5122.8719     9411.3789  0.0000  pwm_apb
+inst_apb_subsystem/i_pwm_apb/gen_pwm[0].u_pwm
+                                     3506.8895      0.1     377.2224     1213.1856  0.0000  pwm_CtrSize32_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[0].u_pwm/add_x_2
+                                      497.1024      0.0     497.1024        0.0000  0.0000  pwm_CtrSize32_0_DW01_inc_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[0].u_pwm/gt_x_3
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_0_DW_cmp_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[0].u_pwm/lt_x_1
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_0_DW_cmp_1
+inst_apb_subsystem/i_pwm_apb/gen_pwm[1].u_pwm
+                                     3506.8895      0.1     377.2224     1213.1856  0.0000  pwm_CtrSize32_3
+inst_apb_subsystem/i_pwm_apb/gen_pwm[1].u_pwm/add_x_2
+                                      497.1024      0.0     497.1024        0.0000  0.0000  pwm_CtrSize32_3_DW01_inc_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[1].u_pwm/gt_x_3
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_3_DW_cmp_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[1].u_pwm/lt_x_1
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_3_DW_cmp_1
+inst_apb_subsystem/i_pwm_apb/gen_pwm[2].u_pwm
+                                     3506.8895      0.1     377.2224     1213.1856  0.0000  pwm_CtrSize32_2
+inst_apb_subsystem/i_pwm_apb/gen_pwm[2].u_pwm/add_x_2
+                                      497.1024      0.0     497.1024        0.0000  0.0000  pwm_CtrSize32_2_DW01_inc_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[2].u_pwm/gt_x_3
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_2_DW_cmp_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[2].u_pwm/lt_x_1
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_2_DW_cmp_1
+inst_apb_subsystem/i_pwm_apb/gen_pwm[3].u_pwm
+                                     3506.8895      0.1     377.2224     1213.1856  0.0000  pwm_CtrSize32_1
+inst_apb_subsystem/i_pwm_apb/gen_pwm[3].u_pwm/add_x_2
+                                      497.1024      0.0     497.1024        0.0000  0.0000  pwm_CtrSize32_1_DW01_inc_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[3].u_pwm/gt_x_3
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_1_DW_cmp_0
+inst_apb_subsystem/i_pwm_apb/gen_pwm[3].u_pwm/lt_x_1
+                                      709.6896      0.0     709.6896        0.0000  0.0000  pwm_CtrSize32_1_DW_cmp_1
+inst_apb_subsystem/i_uart_apb       21611.9660      0.5    1178.0208     2364.0335  0.0000  uart_apb
+inst_apb_subsystem/i_uart_apb/DP_OP_14_165_2548
+                                      274.9248      0.0     274.9248        0.0000  0.0000  uart_apb_DP_OP_14_165_2548_0
+inst_apb_subsystem/i_uart_apb/i_uart_sync_flops
+                                       73.5264      0.0       0.0000       73.5264  0.0000  uart_sync_flops_1_1
+inst_apb_subsystem/i_uart_apb/receiver
+                                     8690.5006      0.2     615.3840      888.7104  0.0000  uart_receiver
+inst_apb_subsystem/i_uart_apb/receiver/i_uart_rfifo_hubing
+                                     7186.4063      0.2    2076.3216     1692.7055  0.0000  uart_rfifo_hubing
+inst_apb_subsystem/i_uart_apb/receiver/i_uart_rfifo_hubing/raminfr_hubing_i
+                                     3417.3791      0.1     655.3440     2762.0352  0.0000  raminfr_hubing_1
+inst_apb_subsystem/i_uart_apb/transmitter
+                                     9030.9598      0.2     634.5648      736.8624  0.0000  uart_transmitter
+inst_apb_subsystem/i_uart_apb/transmitter/uart_tfifo_hubing
+                                     7659.5327      0.2     508.2912      479.5200  0.0000  uart_tfifo_hubing
+inst_apb_subsystem/i_uart_apb/transmitter/uart_tfifo_hubing/tfifo
+                                     6671.7215      0.2    1147.6512     5524.0703  0.0000  raminfr_hubing_0
+inst_apb_subsystem/pin_mux_register
+                                     3500.4959      0.1    1294.7040     2205.7919  0.0000  pin_mux_rf
+inst_apb_subsystem/u_apb_spi_master_0
+                                    58768.3714      1.3     199.8000        0.0000  0.0000  apb_spi_master_BUFFER_DEPTH10_APB_ADDR_WIDTH12_0
+inst_apb_subsystem/u_apb_spi_master_0/u_axiregs
+                                     8780.0110      0.2    3155.2416     5624.7694  0.0000  spi_master_apb_if_BUFFER_DEPTH10_APB_ADDR_WIDTH12_0
+inst_apb_subsystem/u_apb_spi_master_0/u_rxfifo
+                                    18678.9019      0.4    6436.7567    12242.1452  0.0000  spi_master_fifo_DATA_WIDTH32_BUFFER_DEPTH10_3
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl
+                                    12430.7566      0.3    2253.7440      258.9408  0.0000  spi_master_controller_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_clkgen
+                                     1123.6752      0.0     348.4512      661.7376  0.0000  spi_master_clkgen_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_clkgen/add_x_2
+                                      113.4864      0.0     113.4864        0.0000  0.0000  spi_master_clkgen_0_DW01_inc_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_rxreg
+                                     4272.5231      0.1    1123.6752     2426.3711  0.0000  spi_master_rx_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_rxreg/DP_OP_23_143_9442
+                                      481.1184      0.0     481.1184        0.0000  0.0000  spi_master_rx_0_DP_OP_23_143_9442_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_rxreg/add_x_2
+                                      241.3584      0.0     241.3584        0.0000  0.0000  spi_master_rx_0_DW01_inc_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_txreg
+                                     4521.8735      0.1    1409.7888     2389.6079  0.0000  spi_master_tx_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_txreg/DP_OP_29_144_3557
+                                      481.1184      0.0     481.1184        0.0000  0.0000  spi_master_tx_0_DP_OP_29_144_3557_0
+inst_apb_subsystem/u_apb_spi_master_0/u_spictrl/u_txreg/add_x_3
+                                      241.3584      0.0     241.3584        0.0000  0.0000  spi_master_tx_0_DW01_inc_0
+inst_apb_subsystem/u_apb_spi_master_0/u_txfifo
+                                    18678.9019      0.4    6436.7567    12242.1452  0.0000  spi_master_fifo_DATA_WIDTH32_BUFFER_DEPTH10_0
+inst_apb_subsystem/u_apb_spi_master_1
+                                    58768.3714      1.3     199.8000        0.0000  0.0000  apb_spi_master_BUFFER_DEPTH10_APB_ADDR_WIDTH12_1
+inst_apb_subsystem/u_apb_spi_master_1/u_axiregs
+                                     8780.0110      0.2    3155.2416     5624.7694  0.0000  spi_master_apb_if_BUFFER_DEPTH10_APB_ADDR_WIDTH12_1
+inst_apb_subsystem/u_apb_spi_master_1/u_rxfifo
+                                    18678.9019      0.4    6436.7567    12242.1452  0.0000  spi_master_fifo_DATA_WIDTH32_BUFFER_DEPTH10_1
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl
+                                    12430.7566      0.3    2253.7440      258.9408  0.0000  spi_master_controller_1
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_clkgen
+                                     1123.6752      0.0     348.4512      661.7376  0.0000  spi_master_clkgen_1
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_clkgen/add_x_2
+                                      113.4864      0.0     113.4864        0.0000  0.0000  spi_master_clkgen_1_DW01_inc_0
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_rxreg
+                                     4272.5231      0.1    1123.6752     2426.3711  0.0000  spi_master_rx_1
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_rxreg/DP_OP_23_143_9442
+                                      481.1184      0.0     481.1184        0.0000  0.0000  spi_master_rx_1_DP_OP_23_143_9442_0
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_rxreg/add_x_2
+                                      241.3584      0.0     241.3584        0.0000  0.0000  spi_master_rx_1_DW01_inc_0
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_txreg
+                                     4521.8735      0.1    1409.7888     2389.6079  0.0000  spi_master_tx_1
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_txreg/DP_OP_29_144_3557
+                                      481.1184      0.0     481.1184        0.0000  0.0000  spi_master_tx_1_DP_OP_29_144_3557_0
+inst_apb_subsystem/u_apb_spi_master_1/u_spictrl/u_txreg/add_x_3
+                                      241.3584      0.0     241.3584        0.0000  0.0000  spi_master_tx_1_DW01_inc_0
+inst_apb_subsystem/u_apb_spi_master_1/u_txfifo
+                                    18678.9019      0.4    6436.7567    12242.1452  0.0000  spi_master_fifo_DATA_WIDTH32_BUFFER_DEPTH10_2
+inst_busmatrix                      41246.7112      0.9       0.0000        0.0000  0.0000  busmatrix
+inst_busmatrix/master_if_inst0       3690.7055      0.1     131.0688      257.3424  0.0000  master_if_0
+inst_busmatrix/master_if_inst0/arbiter_inst
+                                      393.2064      0.0     135.8640      257.3424  0.0000  arbiter_0
+inst_busmatrix/master_if_inst0/multiplexer_inst0
+                                     1631.9664      0.0    1631.9664        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE46_0
+inst_busmatrix/master_if_inst0/multiplexer_inst1
+                                     1277.1216      0.0    1277.1216        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE32_0
+inst_busmatrix/master_if_inst1       3756.2399      0.1     103.8960      257.3424  0.0000  master_if_4
+inst_busmatrix/master_if_inst1/arbiter_inst
+                                      396.4032      0.0     139.0608      257.3424  0.0000  arbiter_4
+inst_busmatrix/master_if_inst1/multiplexer_inst0
+                                     1568.0304      0.0    1568.0304        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE46_4
+inst_busmatrix/master_if_inst1/multiplexer_inst1
+                                     1430.5680      0.0    1430.5680        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE32_4
+inst_busmatrix/master_if_inst2       3062.5343      0.1     135.8640      257.3424  0.0000  master_if_3
+inst_busmatrix/master_if_inst2/arbiter_inst
+                                      396.4032      0.0     139.0608      257.3424  0.0000  arbiter_3
+inst_busmatrix/master_if_inst2/multiplexer_inst0
+                                      967.0320      0.0     967.0320        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE46_3
+inst_busmatrix/master_if_inst2/multiplexer_inst1
+                                     1305.8928      0.0    1305.8928        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE32_3
+inst_busmatrix/master_if_inst3       3035.3615      0.1     135.8640      257.3424  0.0000  master_if_2
+inst_busmatrix/master_if_inst3/arbiter_inst
+                                      396.4032      0.0     139.0608      257.3424  0.0000  arbiter_2
+inst_busmatrix/master_if_inst3/multiplexer_inst0
+                                      967.0320      0.0     967.0320        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE46_2
+inst_busmatrix/master_if_inst3/multiplexer_inst1
+                                     1278.7200      0.0    1278.7200        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE32_2
+inst_busmatrix/master_if_inst4       2739.6575      0.1     131.0688      257.3424  0.0000  master_if_1
+inst_busmatrix/master_if_inst4/arbiter_inst
+                                      393.2064      0.0     135.8640      257.3424  0.0000  arbiter_1
+inst_busmatrix/master_if_inst4/multiplexer_inst0
+                                      680.9184      0.0     680.9184        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE46_1
+inst_busmatrix/master_if_inst4/multiplexer_inst1
+                                     1277.1216      0.0    1277.1216        0.0000  0.0000  multiplexer_MUX_SIZE7_MUX_INPUT_SIZE32_1
+inst_busmatrix/slave_if_inst0        3816.9791      0.1      44.7552        0.0000  0.0000  slave_if_0
+inst_busmatrix/slave_if_inst0/multiplexer_inst0
+                                      115.0848      0.0     115.0848        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_0
+inst_busmatrix/slave_if_inst0/multiplexer_inst1
+                                     1043.7552      0.0    1043.7552        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32_0
+inst_busmatrix/slave_if_inst0/req_register_inst
+                                     2613.3839      0.1    1104.4944     1508.8896  0.0000  req_register_0
+inst_busmatrix/slave_if_inst1        3876.1199      0.1      44.7552        0.0000  0.0000  slave_if_6
+inst_busmatrix/slave_if_inst1/multiplexer_inst0
+                                      115.0848      0.0     115.0848        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_6
+inst_busmatrix/slave_if_inst1/multiplexer_inst1
+                                     1043.7552      0.0    1043.7552        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32_6
+inst_busmatrix/slave_if_inst1/req_register_inst
+                                     2672.5247      0.1    1126.8720     1545.6528  0.0000  req_register_6
+inst_busmatrix/slave_if_inst2        4021.5743      0.1      44.7552        0.0000  0.0000  slave_if_5
+inst_busmatrix/slave_if_inst2/multiplexer_inst0
+                                      131.0688      0.0     131.0688        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_5
+inst_busmatrix/slave_if_inst2/multiplexer_inst1
+                                     1043.7552      0.0    1043.7552        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32_5
+inst_busmatrix/slave_if_inst2/req_register_inst
+                                     2801.9951      0.1    1182.8160     1619.1791  0.0000  req_register_5
+inst_busmatrix/slave_if_inst3        2885.1119      0.1      44.7552        0.0000  0.0000  slave_if_4
+inst_busmatrix/slave_if_inst3/multiplexer_inst0
+                                      116.6832      0.0     116.6832        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_4
+inst_busmatrix/slave_if_inst3/req_register_inst
+                                     2723.6735      0.1    1141.2576     1582.4160  0.0000  req_register_4
+inst_busmatrix/slave_if_inst4        3134.4623      0.1      44.7552        0.0000  0.0000  slave_if_3
+inst_busmatrix/slave_if_inst4/multiplexer_inst0
+                                      116.6832      0.0     116.6832        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_3
+inst_busmatrix/slave_if_inst4/multiplexer_inst1
+                                      308.4912      0.0     308.4912        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32_3
+inst_busmatrix/slave_if_inst4/req_register_inst
+                                     2664.5327      0.1    1118.8800     1545.6528  0.0000  req_register_3
+inst_busmatrix/slave_if_inst5        3241.5551      0.1      44.7552        0.0000  0.0000  slave_if_2
+inst_busmatrix/slave_if_inst5/multiplexer_inst0
+                                      131.0688      0.0     131.0688        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_2
+inst_busmatrix/slave_if_inst5/multiplexer_inst1
+                                      308.4912      0.0     308.4912        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32_2
+inst_busmatrix/slave_if_inst5/req_register_inst
+                                     2757.2399      0.1    1174.8240     1582.4160  0.0000  req_register_2
+inst_busmatrix/slave_if_inst6        3986.4095      0.1      44.7552        0.0000  0.0000  slave_if_1
+inst_busmatrix/slave_if_inst6/multiplexer_inst0
+                                      115.0848      0.0     115.0848        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3_1
+inst_busmatrix/slave_if_inst6/multiplexer_inst1
+                                     1043.7552      0.0    1043.7552        0.0000  0.0000  multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32_1
+inst_busmatrix/slave_if_inst6/req_register_inst
+                                     2782.8143      0.1    1163.6352     1619.1791  0.0000  req_register_1
+inst_cmsdk_ahb_to_sram               4656.1391      0.1    1914.8832     2741.2559  0.0000  cmsdk_ahb_to_sram_AW32
+inst_data_core2ahb                   3820.1759      0.1    1283.5152     2536.6607  0.0000  core2ahb_2
+inst_ibex_top                      185615.7950      4.2      22.3776       36.7632  0.0000  ibex_top_1_00000002_1a110800_1a110808
+inst_ibex_top/core_clock_gate_i        30.3696      0.0       0.0000        0.0000  0.0000  prim_clock_gating
+inst_ibex_top/core_clock_gate_i/gen_generic.u_impl_generic
+                                       30.3696      0.0       7.9920       22.3776  0.0000  prim_generic_clock_gating
+inst_ibex_top/gen_rams.gen_rams_inner[0].gen_noscramble_rams.data_bank
+                                        4.7952      0.0       4.7952        0.0000  0.0000  prim_ram_1p_s00000040_s00000100_s00000040_0
+inst_ibex_top/gen_rams.gen_rams_inner[0].gen_noscramble_rams.tag_bank
+                                        4.7952      0.0       4.7952        0.0000  0.0000  prim_ram_1p_s00000016_s00000100_s00000016_0
+inst_ibex_top/gen_rams.gen_rams_inner[1].gen_noscramble_rams.data_bank
+                                        4.7952      0.0       4.7952        0.0000  0.0000  prim_ram_1p_s00000040_s00000100_s00000040_1
+inst_ibex_top/gen_rams.gen_rams_inner[1].gen_noscramble_rams.tag_bank
+                                        4.7952      0.0       4.7952        0.0000  0.0000  prim_ram_1p_s00000016_s00000100_s00000016_1
+inst_ibex_top/gen_regfile_ff.register_file_i
+                                    61960.3760      1.4   25491.2828    36469.0933  0.0000  ibex_register_file_ff_0_00000020_0_0_00000000
+inst_ibex_top/u_ibex_core          123546.7278      2.8     110.2896        0.0000  0.0000  ibex_core_0_00000000_00000004_00000000_00000028_0_2_0_0_0_1_0_00000020_00000016_00000040_0_1_00000002_0_ac533bf4_0_0_0_00000020_0_00000020_1a110800_1a110808
+inst_ibex_top/u_ibex_core/cs_registers_i
+                                    36227.7353      0.8    9472.1183      148.6512  0.0000  ibex_cs_registers_1_00000002_0_0_0_1_00000000_00000028_0_00000000_00000004_0_2_0
+inst_ibex_top/u_ibex_core/cs_registers_i/gen_trigger_regs.g_dbg_tmatch_reg[0].u_tmatch_control_csr
+                                       52.7472      0.0      15.9840       36.7632  0.0000  ibex_csr_00000001_0_0_2
+inst_ibex_top/u_ibex_core/cs_registers_i/gen_trigger_regs.g_dbg_tmatch_reg[0].u_tmatch_value_csr
+                                     1545.6528      0.0     369.2304     1176.4224  0.0000  ibex_csr_32_0_0_2
+inst_ibex_top/u_ibex_core/cs_registers_i/gen_trigger_regs.g_dbg_tmatch_reg[1].u_tmatch_control_csr
+                                       52.7472      0.0      15.9840       36.7632  0.0000  ibex_csr_00000001_0_0_1
+inst_ibex_top/u_ibex_core/cs_registers_i/gen_trigger_regs.g_dbg_tmatch_reg[1].u_tmatch_value_csr
+                                     1539.2592      0.0     362.8368     1176.4224  0.0000  ibex_csr_32_0_0_1
+inst_ibex_top/u_ibex_core/cs_registers_i/gen_trigger_regs.u_tselect_csr
+                                       52.7472      0.0      15.9840       36.7632  0.0000  ibex_csr_00000001_0_0_0
+inst_ibex_top/u_ibex_core/cs_registers_i/mcycle_counter_i
+                                     4457.9376      0.1    1096.5024     2352.8447  0.0000  ibex_counter_CounterWidth64
+inst_ibex_top/u_ibex_core/cs_registers_i/mcycle_counter_i/add_x_1
+                                     1008.5904      0.0    1008.5904        0.0000  0.0000  ibex_counter_CounterWidth64_DW01_inc_0
+inst_ibex_top/u_ibex_core/cs_registers_i/minstret_counter_i
+                                     4464.3312      0.1    1102.8960     2352.8447  0.0000  ibex_counter_CounterWidth64_ProvideValUpd1
+inst_ibex_top/u_ibex_core/cs_registers_i/minstret_counter_i/add_x_1
+                                     1008.5904      0.0    1008.5904        0.0000  0.0000  ibex_counter_CounterWidth64_ProvideValUpd1_DW01_inc_0
+inst_ibex_top/u_ibex_core/cs_registers_i/u_cpuctrl_csr
+                                      148.6512      0.0      38.3616      110.2896  0.0000  ibex_csr_8_0_0
+inst_ibex_top/u_ibex_core/cs_registers_i/u_dcsr_csr
+                                      484.3152      0.0     116.6832      367.6320  0.0000  ibex_csr_32_0_40000003
+inst_ibex_top/u_ibex_core/cs_registers_i/u_depc_csr
+                                     1491.3072      0.0     351.6480     1139.6592  0.0000  ibex_csr_32_0_0_6
+inst_ibex_top/u_ibex_core/cs_registers_i/u_dscratch0_csr
+                                     1545.6528      0.0     369.2304     1176.4224  0.0000  ibex_csr_32_0_0_5
+inst_ibex_top/u_ibex_core/cs_registers_i/u_dscratch1_csr
+                                     1552.0464      0.0     375.6240     1176.4224  0.0000  ibex_csr_32_0_0_4
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mcause_csr
+                                      340.4592      0.0      83.1168      257.3424  0.0000  ibex_csr_7_0_0_0
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mepc_csr
+                                     1491.3072      0.0     351.6480     1139.6592  0.0000  ibex_csr_32_0_0_0
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mie_csr
+                                      867.9312      0.0     206.1936      661.7376  0.0000  ibex_csr_18_0_0
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mscratch_csr
+                                     1545.6528      0.0     369.2304     1176.4224  0.0000  ibex_csr_32_0_0_8
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mstack_cause_csr
+                                      340.4592      0.0      83.1168      257.3424  0.0000  ibex_csr_7_0_0_1
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mstack_csr
+                                      148.6512      0.0      38.3616      110.2896  0.0000  ibex_csr_3_0_4
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mstack_epc_csr
+                                     1491.3072      0.0     351.6480     1139.6592  0.0000  ibex_csr_32_0_0_3
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mstatus_csr
+                                      292.5072      0.0      71.9280      220.5792  0.0000  ibex_csr_6_0_10
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mtval_csr
+                                     1545.6528      0.0     369.2304     1176.4224  0.0000  ibex_csr_32_0_0_7
+inst_ibex_top/u_ibex_core/cs_registers_i/u_mtvec_csr
+                                     1155.6432      0.0     273.3264      882.3168  0.0000  ibex_csr_32_0_00000001
+inst_ibex_top/u_ibex_core/ex_block_i
+                                    28246.9245      0.6    1027.7712        0.0000  0.0000  ibex_ex_block_2_0_0
+inst_ibex_top/u_ibex_core/ex_block_i/alu_i
+                                     6452.7407      0.1    5538.4559        0.0000  0.0000  ibex_alu_RV32B0
+inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4
+                                      914.2848      0.0     914.2848        0.0000  0.0000  ibex_alu_RV32B0_DW01_add_0
+inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i
+                                    20766.4126      0.5    9785.4047     2757.2399  0.0000  ibex_multdiv_fast_RV32M2
+inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/DP_OP_75_145_6124
+                                     8223.7680      0.2    8223.7680        0.0000  0.0000  ibex_multdiv_fast_RV32M2_DP_OP_75_145_6124_0
+inst_ibex_top/u_ibex_core/id_stage_i
+                                     9379.4110      0.2    3514.8815     2536.6607  0.0000  ibex_id_stage_0_2_0_0_0_0_0_0
+inst_ibex_top/u_ibex_core/id_stage_i/controller_i
+                                     1801.3968      0.0    1432.1664      369.2304  0.0000  ibex_controller_0_0_0
+inst_ibex_top/u_ibex_core/id_stage_i/controller_i/add_x_23
+                                        0.0000      0.0       0.0000        0.0000  0.0000  ibex_controller_0_0_0_DW01_add_0
+inst_ibex_top/u_ibex_core/id_stage_i/decoder_i
+                                     1526.4720      0.0    1526.4720        0.0000  0.0000  ibex_decoder_0_2_0_0
+inst_ibex_top/u_ibex_core/if_stage_i
+                                    43452.5036      1.0    1149.2496     4294.9007  0.0000  ibex_if_stage_1a110800_1a110808_0_1_0_00000020_00000016_00000040_0_0_ac533bf4_0_0_00000020
+inst_ibex_top/u_ibex_core/if_stage_i/compressed_decoder_i
+                                     1643.1552      0.0    1643.1552        0.0000  0.0000  ibex_compressed_decoder
+inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i
+                                    36365.1981      0.8   17483.2990    17814.1679  0.0000  ibex_icache_0_0_00000020_00000016_00000040
+inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1
+                                      449.1504      0.0     449.1504        0.0000  0.0000  ibex_icache_0_0_00000020_00000016_00000040_DW01_add_1
+inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_100
+                                      505.0944      0.0     505.0944        0.0000  0.0000  ibex_icache_0_0_00000020_00000016_00000040_DW01_add_0
+inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_107
+                                      113.4864      0.0     113.4864        0.0000  0.0000  ibex_icache_0_0_00000020_00000016_00000040_DW01_inc_0
+inst_ibex_top/u_ibex_core/load_store_unit_i
+                                     5755.8383      0.1    3326.2703     2429.5679  0.0000  ibex_load_store_unit_0_00000020
+inst_ibex_top/u_ibex_core/wb_stage_i
+                                      374.0256      0.0     374.0256        0.0000  0.0000  ibex_wb_stage_0_0
+inst_ibex_top/u_rf_rdata_a_ecc_buf
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_buf_s00000020_0
+inst_ibex_top/u_rf_rdata_a_ecc_buf/gen_generic.u_impl_generic
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_generic_buf_Width32_0
+inst_ibex_top/u_rf_rdata_b_ecc_buf
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_buf_s00000020_1
+inst_ibex_top/u_rf_rdata_b_ecc_buf/gen_generic.u_impl_generic
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_generic_buf_Width32_1
+inst_instr_core2ahb                  2175.4223      0.0     851.9472     1323.4752  0.0000  core2ahb_0
+isp                                469013.7089     10.7       4.7952        0.0000  0.0000  isp_top
+isp/demosaic_i0                    468053.0705     10.7   12253.3343    22104.2729  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0
+isp/demosaic_i0/DP_OP_107_219_2841
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_107_219_2841_0
+isp/demosaic_i0/DP_OP_108_243_86      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_108_243_86_0
+isp/demosaic_i0/DP_OP_109_234_4155
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_109_234_4155_0
+isp/demosaic_i0/DP_OP_110_252_7963
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_110_252_7963_0
+isp/demosaic_i0/DP_OP_111_246_6261
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_111_246_6261_0
+isp/demosaic_i0/DP_OP_112_258_3506
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_112_258_3506_0
+isp/demosaic_i0/DP_OP_113_207_1804
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_113_207_1804_0
+isp/demosaic_i0/DP_OP_114_222_9016
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_114_222_9016_0
+isp/demosaic_i0/DP_OP_115_213_7314
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_115_213_7314_0
+isp/demosaic_i0/DP_OP_116_231_4559
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_116_231_4559_0
+isp/demosaic_i0/DP_OP_117_216_2857
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_117_216_2857_0
+isp/demosaic_i0/DP_OP_118_237_102     246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_118_237_102_0
+isp/demosaic_i0/DP_OP_119_225_3723
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_119_225_3723_0
+isp/demosaic_i0/DP_OP_120_249_7915
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_120_249_7915_0
+isp/demosaic_i0/DP_OP_121_240_6213
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_121_240_6213_0
+isp/demosaic_i0/DP_OP_122_255_3458
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_122_255_3458_0
+isp/demosaic_i0/DP_OP_123_210_1756
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_123_210_1756_0
+isp/demosaic_i0/DP_OP_124_228_8968
+                                      246.1536      0.0     246.1536        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_124_228_8968_0
+isp/demosaic_i0/DP_OP_395_136_3437
+                                     1488.1104      0.0    1488.1104        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_395_136_3437_0
+isp/demosaic_i0/DP_OP_396_137_5356
+                                     1048.5504      0.0    1048.5504        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_396_137_5356_0
+isp/demosaic_i0/DP_OP_397_138_5356
+                                     1048.5504      0.0    1048.5504        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_397_138_5356_0
+isp/demosaic_i0/DP_OP_398_139_4097
+                                      632.9664      0.0     632.9664        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_398_139_4097_0
+isp/demosaic_i0/DP_OP_399_140_4097
+                                      632.9664      0.0     632.9664        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_399_140_4097_0
+isp/demosaic_i0/DP_OP_400_141_9502
+                                     1309.0896      0.0    1309.0896        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_400_141_9502_0
+isp/demosaic_i0/DP_OP_401_142_5618
+                                      656.9424      0.0     656.9424        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DP_OP_401_142_5618_0
+isp/demosaic_i0/add_x_12              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_13
+isp/demosaic_i0/add_x_13              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_12
+isp/demosaic_i0/add_x_16              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_11
+isp/demosaic_i0/add_x_17              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_10
+isp/demosaic_i0/add_x_20              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_9
+isp/demosaic_i0/add_x_21              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_8
+isp/demosaic_i0/add_x_24              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_7
+isp/demosaic_i0/add_x_25              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_6
+isp/demosaic_i0/add_x_28              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_5
+isp/demosaic_i0/add_x_29              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_4
+isp/demosaic_i0/add_x_32              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_3
+isp/demosaic_i0/add_x_33              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_2
+isp/demosaic_i0/add_x_36              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_1
+isp/demosaic_i0/add_x_37              209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_0
+isp/demosaic_i0/add_x_4               209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_17
+isp/demosaic_i0/add_x_5               209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_16
+isp/demosaic_i0/add_x_8               209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_15
+isp/demosaic_i0/add_x_9               209.3904      0.0     209.3904        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_add_14
+isp/demosaic_i0/linebuffer         418144.6296      9.5     175.8240      690.5088  0.0000  shift_register_BITS8_WIDTH256_LINES4
+isp/demosaic_i0/linebuffer/add_x_4
+                                      113.4864      0.0     113.4864        0.0000  0.0000  shift_register_BITS8_WIDTH256_LINES4_DW01_inc_0
+isp/demosaic_i0/linebuffer/gen_ram_inst[0].u_ram
+                                   104292.4014      2.4   15907.2764    88385.1250  0.0000  simple_dp_ram_DW8_AW8_SZ255_0
+isp/demosaic_i0/linebuffer/gen_ram_inst[1].u_ram
+                                   104290.8030      2.4   15905.6780    88385.1250  0.0000  simple_dp_ram_DW8_AW8_SZ255_3
+isp/demosaic_i0/linebuffer/gen_ram_inst[2].u_ram
+                                   104290.8030      2.4   15905.6780    88385.1250  0.0000  simple_dp_ram_DW8_AW8_SZ255_2
+isp/demosaic_i0/linebuffer/gen_ram_inst[3].u_ram
+                                   104290.8030      2.4   15905.6780    88385.1250  0.0000  simple_dp_ram_DW8_AW8_SZ255_1
+isp/demosaic_i0/sub_x_66              266.9328      0.0     266.9328        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_sub_1
+isp/demosaic_i0/sub_x_67              266.9328      0.0     266.9328        0.0000  0.0000  isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0_DW01_sub_0
+isp/mux_demosaic_i0                   955.8432      0.0       0.0000      955.8432  0.0000  vid_mux_BITS24
+isp_dma_top                       3255929.5552     74.3    3415.7807     6618.9742  0.0000  isp_dma
+isp_dma_top/isp_to_wdma           2422389.5440     55.3  339520.9307  2078517.7686  0.0000  isp2wdma
+isp_dma_top/isp_to_wdma/DP_OP_45_133_4587
+                                     1395.4032      0.0    1395.4032        0.0000  0.0000  isp2wdma_DP_OP_45_133_4587_0
+isp_dma_top/isp_to_wdma/DP_OP_46_134_7774
+                                      999.0000      0.0     999.0000        0.0000  0.0000  isp2wdma_DP_OP_46_134_7774_0
+isp_dma_top/isp_to_wdma/add_x_1       497.1024      0.0     497.1024        0.0000  0.0000  isp2wdma_DW01_inc_2
+isp_dma_top/isp_to_wdma/add_x_2       497.1024      0.0     497.1024        0.0000  0.0000  isp2wdma_DW01_inc_1
+isp_dma_top/isp_to_wdma/add_x_3       497.1024      0.0     497.1024        0.0000  0.0000  isp2wdma_DW01_inc_0
+isp_dma_top/isp_to_wdma/add_x_4       465.1344      0.0     465.1344        0.0000  0.0000  isp2wdma_DW01_add_0
+isp_dma_top/rdma_to_isp            823505.2562     18.8  123110.3633   696729.7617  0.0000  rdma2isp
+isp_dma_top/rdma_to_isp/DP_OP_45_135_5750
+                                      999.0000      0.0     999.0000        0.0000  0.0000  rdma2isp_DP_OP_45_135_5750_0
+isp_dma_top/rdma_to_isp/add_x_2       497.1024      0.0     497.1024        0.0000  0.0000  rdma2isp_DW01_inc_2
+isp_dma_top/rdma_to_isp/add_x_3       465.1344      0.0     465.1344        0.0000  0.0000  rdma2isp_DW01_add_0
+isp_dma_top/rdma_to_isp/add_x_4       497.1024      0.0     497.1024        0.0000  0.0000  rdma2isp_DW01_inc_1
+isp_dma_top/rdma_to_isp/add_x_5       497.1024      0.0     497.1024        0.0000  0.0000  rdma2isp_DW01_inc_0
+isp_dma_top/rdma_to_isp/lt_x_1        709.6896      0.0     709.6896        0.0000  0.0000  rdma2isp_DW_cmp_0
+soc_dma                             91589.9165      2.1       4.7952        0.0000  0.0000  dma
+soc_dma/i_udma_ahb_mux               1564.8336      0.0    1454.5440      110.2896  0.0000  dma_ahb_mux
+soc_dma/i_udma_arbiter                289.3104      0.0     142.2576      147.0528  0.0000  dma_arbiter
+soc_dma/i_udma_ch0                  23068.1083      0.5    8287.7039    11852.1356  0.0000  dma_channel_0
+soc_dma/i_udma_ch0/DP_OP_334_183_8090
+                                      319.6800      0.0     319.6800        0.0000  0.0000  dma_channel_0_DP_OP_334_183_8090_0
+soc_dma/i_udma_ch0/DP_OP_36_158_7978
+                                      533.8656      0.0     533.8656        0.0000  0.0000  dma_channel_0_DP_OP_36_158_7978_0
+soc_dma/i_udma_ch0/add_x_13           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_0_DW01_inc_1
+soc_dma/i_udma_ch0/add_x_20           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_0_DW01_inc_0
+soc_dma/i_udma_ch0/i_rx_state_machine
+                                      537.0624      0.0     351.6480      185.4144  0.0000  dma_rx_sm_0
+soc_dma/i_udma_ch0/i_tx_state_machine
+                                      607.3920      0.0     423.5760      183.8160  0.0000  dma_tx_sm_0
+soc_dma/i_udma_ch1                  23068.1083      0.5    8287.7039    11852.1356  0.0000  dma_channel_3
+soc_dma/i_udma_ch1/DP_OP_334_179_4246
+                                      319.6800      0.0     319.6800        0.0000  0.0000  dma_channel_3_DP_OP_334_179_4246_0
+soc_dma/i_udma_ch1/DP_OP_36_154_7740
+                                      533.8656      0.0     533.8656        0.0000  0.0000  dma_channel_3_DP_OP_36_154_7740_0
+soc_dma/i_udma_ch1/add_x_13           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_3_DW01_inc_1
+soc_dma/i_udma_ch1/add_x_20           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_3_DW01_inc_0
+soc_dma/i_udma_ch1/i_rx_state_machine
+                                      537.0624      0.0     351.6480      185.4144  0.0000  dma_rx_sm_3
+soc_dma/i_udma_ch1/i_tx_state_machine
+                                      607.3920      0.0     423.5760      183.8160  0.0000  dma_tx_sm_3
+soc_dma/i_udma_ch2                  23068.1083      0.5    8287.7039    11852.1356  0.0000  dma_channel_2
+soc_dma/i_udma_ch2/DP_OP_334_175_2205
+                                      319.6800      0.0     319.6800        0.0000  0.0000  dma_channel_2_DP_OP_334_175_2205_0
+soc_dma/i_udma_ch2/DP_OP_36_150_5699
+                                      533.8656      0.0     533.8656        0.0000  0.0000  dma_channel_2_DP_OP_36_150_5699_0
+soc_dma/i_udma_ch2/add_x_13           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_2_DW01_inc_1
+soc_dma/i_udma_ch2/add_x_20           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_2_DW01_inc_0
+soc_dma/i_udma_ch2/i_rx_state_machine
+                                      537.0624      0.0     351.6480      185.4144  0.0000  dma_rx_sm_2
+soc_dma/i_udma_ch2/i_tx_state_machine
+                                      607.3920      0.0     423.5760      183.8160  0.0000  dma_tx_sm_2
+soc_dma/i_udma_ch3                  15741.0429      0.4    4622.5727     8210.9805  0.0000  dma_channel_1
+soc_dma/i_udma_ch3/DP_OP_334_171_8328
+                                      319.6800      0.0     319.6800        0.0000  0.0000  dma_channel_1_DP_OP_334_171_8328_0
+soc_dma/i_udma_ch3/DP_OP_36_146_1855
+                                      533.8656      0.0     533.8656        0.0000  0.0000  dma_channel_1_DP_OP_36_146_1855_0
+soc_dma/i_udma_ch3/add_x_13           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_1_DW01_inc_1
+soc_dma/i_udma_ch3/add_x_20           465.1344      0.0     465.1344        0.0000  0.0000  dma_channel_1_DW01_inc_0
+soc_dma/i_udma_ch3/i_rx_state_machine
+                                      541.8576      0.0     356.4432      185.4144  0.0000  dma_rx_sm_1
+soc_dma/i_udma_ch3/i_tx_state_machine
+                                      581.8176      0.0     398.0016      183.8160  0.0000  dma_tx_sm_1
+soc_dma/i_udma_config                3916.0799      0.1    3070.5263      845.5536  0.0000  dma_ahb_config
+soc_dma/i_udma_int_control            869.5296      0.0     281.3184      588.2112  0.0000  dma_int_control
+u_cnn_top                           53861.2840      1.2       0.0000        0.0000  0.0000  cnn_top
+u_cnn_top/u_cnn                     46543.8090      1.1   10848.3407    13313.0732  0.0000  cnn
+u_cnn_top/u_cnn/DP_OP_241_163_3682
+                                      220.5792      0.0     220.5792        0.0000  0.0000  cnn_DP_OP_241_163_3682_0
+u_cnn_top/u_cnn/DP_OP_243_168_9799
+                                      672.9264      0.0     672.9264        0.0000  0.0000  cnn_DP_OP_243_168_9799_0
+u_cnn_top/u_cnn/DP_OP_265_267_9746
+                                      604.1952      0.0     604.1952        0.0000  0.0000  cnn_DP_OP_265_267_9746_0
+u_cnn_top/u_cnn/DP_OP_268_264_3875
+                                      604.1952      0.0     604.1952        0.0000  0.0000  cnn_DP_OP_268_264_3875_0
+u_cnn_top/u_cnn/DP_OP_271_187_1752
+                                      212.5872      0.0     212.5872        0.0000  0.0000  cnn_DP_OP_271_187_1752_0
+u_cnn_top/u_cnn/DP_OP_273_123_2238
+                                     2549.4480      0.1    2549.4480        0.0000  0.0000  cnn_DP_OP_273_123_2238_0
+u_cnn_top/u_cnn/DP_OP_274_124_3813
+                                      199.8000      0.0     199.8000        0.0000  0.0000  cnn_DP_OP_274_124_3813_0
+u_cnn_top/u_cnn/DP_OP_275_125_8175
+                                      449.1504      0.0     449.1504        0.0000  0.0000  cnn_DP_OP_275_125_8175_0
+u_cnn_top/u_cnn/DP_OP_276_126_5106
+                                      225.3744      0.0     225.3744        0.0000  0.0000  cnn_DP_OP_276_126_5106_0
+u_cnn_top/u_cnn/DP_OP_277_127_5106
+                                      225.3744      0.0     225.3744        0.0000  0.0000  cnn_DP_OP_277_127_5106_0
+u_cnn_top/u_cnn/DP_OP_278_128_249     469.9296      0.0     469.9296        0.0000  0.0000  cnn_DP_OP_278_128_249_0
+u_cnn_top/u_cnn/DP_OP_279_129_249     469.9296      0.0     469.9296        0.0000  0.0000  cnn_DP_OP_279_129_249_0
+u_cnn_top/u_cnn/DP_OP_279_196_8118
+                                      797.6016      0.0     797.6016        0.0000  0.0000  cnn_DP_OP_279_196_8118_0
+u_cnn_top/u_cnn/DP_OP_280_130_249     469.9296      0.0     469.9296        0.0000  0.0000  cnn_DP_OP_280_130_249_0
+u_cnn_top/u_cnn/DP_OP_281_131_487     481.1184      0.0     481.1184        0.0000  0.0000  cnn_DP_OP_281_131_487_0
+u_cnn_top/u_cnn/DP_OP_54_261_4626     329.2704      0.0     329.2704        0.0000  0.0000  cnn_DP_OP_54_261_4626_0
+u_cnn_top/u_cnn/add_x_36              113.4864      0.0     113.4864        0.0000  0.0000  cnn_DW01_inc_0
+u_cnn_top/u_cnn/add_x_4               241.3584      0.0     241.3584        0.0000  0.0000  cnn_DW01_inc_2
+u_cnn_top/u_cnn/add_x_6               241.3584      0.0     241.3584        0.0000  0.0000  cnn_DW01_inc_1
+u_cnn_top/u_cnn/sub_x_61              281.3184      0.0     281.3184        0.0000  0.0000  cnn_DW01_dec_0
+u_cnn_top/u_cnn/u_conv               9315.4752      0.2       0.0000        0.0000  0.0000  conv
+u_cnn_top/u_cnn/u_conv/DP_OP_27_122_4838
+                                     9315.4752      0.2    9315.4752        0.0000  0.0000  conv_DP_OP_27_122_4838_0
+u_cnn_top/u_cnn/u_final_res           581.8176      0.0       9.5904        0.0000  0.0000  final_res
+u_cnn_top/u_cnn/u_final_res/gt_x_1
+                                      572.2272      0.0     572.2272        0.0000  0.0000  final_res_DW_cmp_0
+u_cnn_top/u_cnn/u_line_mul           1892.5056      0.0       0.0000        0.0000  0.0000  line_mul
+u_cnn_top/u_cnn/u_line_mul/mult_x_1
+                                     1892.5056      0.0    1892.5056        0.0000  0.0000  line_mul_DW_mult_uns_0
+u_cnn_top/u_cnn/u_max_pool            733.6656      0.0     733.6656        0.0000  0.0000  max_pool
+u_cnn_top/u_csr                      7317.4750      0.2    2606.9904     4710.4847  0.0000  csr
+u_dm_wrapper                        80345.1728      1.8     151.8480      514.6848  0.0000  dm_wrapper
+u_dm_wrapper/inst_dm_core2ahb        3938.4575      0.1    1328.2704     2610.1871  0.0000  core2ahb_1
+u_dm_wrapper/u_dm_top               75740.1825      1.7       4.7952        0.0000  0.0000  dm_top
+u_dm_wrapper/u_dm_top/dap           26511.0619      0.6    2045.9520     4306.0895  0.0000  dmi_jtag_00000001
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc
+                                    17409.7725      0.4       6.3936        0.0000  0.0000  dmi_cdc
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req
+                                     9598.3918      0.2    1518.4800     7629.1631  0.0000  prim_fifo_async_Width41_Depth4
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_rptr
+                                      225.3744      0.0       4.7952        0.0000  0.0000  prim_flop_2sync_s00000003_3
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_rptr/u_prim_cdc_rand_delay
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_cdc_rand_delay_DataWidth3_UseSourceClock0_LatencyPs1000_JitterPs1000_3
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_rptr/u_sync_1
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_6
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_rptr/u_sync_1/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_6
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_rptr/u_sync_2
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_5
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_rptr/u_sync_2/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_5
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr
+                                      225.3744      0.0       4.7952        0.0000  0.0000  prim_flop_2sync_s00000003_0
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr/u_prim_cdc_rand_delay
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_cdc_rand_delay_DataWidth3_UseSourceClock0_LatencyPs1000_JitterPs1000_0
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr/u_sync_1
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_0
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr/u_sync_1/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_0
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr/u_sync_2
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_7
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr/u_sync_2/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_7
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp
+                                     7804.9871      0.2    1278.7200     6075.5183  0.0000  prim_fifo_async_Width34_Depth4
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_rptr
+                                      225.3744      0.0       4.7952        0.0000  0.0000  prim_flop_2sync_s00000003_1
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_rptr/u_prim_cdc_rand_delay
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_cdc_rand_delay_DataWidth3_UseSourceClock0_LatencyPs1000_JitterPs1000_1
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_rptr/u_sync_1
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_2
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_rptr/u_sync_1/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_2
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_rptr/u_sync_2
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_1
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_rptr/u_sync_2/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_1
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_wptr
+                                      225.3744      0.0       4.7952        0.0000  0.0000  prim_flop_2sync_s00000003_2
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_wptr/u_prim_cdc_rand_delay
+                                        0.0000      0.0       0.0000        0.0000  0.0000  prim_cdc_rand_delay_DataWidth3_UseSourceClock0_LatencyPs1000_JitterPs1000_2
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_wptr/u_sync_1
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_4
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_wptr/u_sync_1/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_4
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_wptr/u_sync_2
+                                      110.2896      0.0       0.0000        0.0000  0.0000  prim_flop_3_0_3
+u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_resp/sync_wptr/u_sync_2/gen_generic.u_impl_generic
+                                      110.2896      0.0       0.0000      110.2896  0.0000  prim_generic_flop_3_0_3
+u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap
+                                     2749.2479      0.1     946.2528     1802.9951  0.0000  dmi_jtag_tap_5_00000001
+u_dm_wrapper/u_dm_top/i_dm_csrs     37388.1737      0.9   14243.3423    19583.5962  0.0000  dm_csrs_1_32_1
+u_dm_wrapper/u_dm_top/i_dm_csrs/i_fifo
+                                     3561.2351      0.1     490.7088     2798.7984  0.0000  prim_fifo_sync_32_0_2
+u_dm_wrapper/u_dm_top/i_dm_csrs/i_fifo/gen_normal_fifo.u_fifo_cnt
+                                      271.7280      0.0     124.6752      147.0528  0.0000  prim_fifo_sync_cnt_s00000002_s00000002_0
+u_dm_wrapper/u_dm_top/i_dm_mem      10525.4638      0.2    6766.0271     2573.4239  0.0000  dm_mem_1_32_1_1
+u_dm_wrapper/u_dm_top/i_dm_mem/gen_rom_snd_scratch.i_debug_rom
+                                     1186.0128      0.0     970.2288      215.7840  0.0000  debug_rom
+u_dm_wrapper/u_dm_top/i_dm_sba       1310.6880      0.0     669.7296      110.2896  0.0000  dm_sba_BusWidth32
+u_dm_wrapper/u_dm_top/i_dm_sba/DP_OP_34_270_5992
+                                      530.6688      0.0     530.6688        0.0000  0.0000  dm_sba_BusWidth32_DP_OP_34_270_5992_1
+--------------------------------  ------------  -------  -----------  ------------  ------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                    888205.2887  3493493.3495  0.0000
+
+1

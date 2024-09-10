@@ -1,0 +1,1467 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: myhost (RHEL64)
+Current time: Thu Sep 28 07:50:10 2023
+
+Loading db file '/eda/synopsys/fm/L-2016.03-SP1/libraries/syn/gtech.db'
+rtlvssyn
+date
+Thu Sep 28 07:50:10 2023
+set SOC_DIR $env(SOC_DIR)
+/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc
+set verification_clock_gate_hold_mode low
+low
+set verification_failing_point_limit 0
+0
+set hdlin_error_on_mismatch_message false
+Info:  Use of 'hdlin_error_on_mismatch_message' is deprecated,  using 'set_mismatch_message_filter -warn' instead.
+false
+set hdlin_unresolved_modules "black_box"
+black_box
+set design soc_top
+soc_top
+read_db ${SOC_DIR}/../dc/lib/sky130_fd_sc_hs__ss_150C_1v60.db
+Loading db file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/dc/lib/sky130_fd_sc_hs__ss_150C_1v60.db'
+1
+set rtl_list ""
+source -echo $SOC_DIR/../flow/filelist/rtl_list.tcl
+set search_path [ concat $search_path     $SOC_DIR/ip/apb_subsystem/rtl/i2c     $SOC_DIR/ip/apb_subsystem/rtl/ahb2apb     $SOC_DIR/ip/include     $SOC_DIR/ip/apb_subsystem/rtl/uart     $SOC_DIR/ip/busmatrix     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl     $SOC_DIR/ibex/vendor/lowrisc_ip/dv/sv/dv_utils     $SOC_DIR/ibex/rtl/     $SOC_DIR/ip/dma     $SOC_DIR/ip/isp     $SOC_DIR/ip/apb_subsystem/i2c     $SOC_DIR/ip/apb_subsystem/qspi     $SOC_DIR/ip/apb_subsystem/uart     $SOC_DIR/ip/dm 
+]
+set rtl_list [ concat                 $SOC_DIR/ibex/dv/uvm/core_ibex/common/prim/prim_pkg.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_pkg.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_ram_1p.sv     $SOC_DIR/ibex/dv/uvm/core_ibex/common/prim/prim_ram_1p.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_clock_gating.sv     $SOC_DIR/ibex/dv/uvm/core_ibex/common/prim/prim_clock_gating.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_buf.sv     $SOC_DIR/ibex/dv/uvm/core_ibex/common/prim/prim_buf.sv               $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv          $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cdc_rand_delay.sv               $SOC_DIR/ibex/rtl/ibex_pkg.sv     $SOC_DIR/ibex/rtl/ibex_alu.sv     $SOC_DIR/ibex/rtl/ibex_compressed_decoder.sv     $SOC_DIR/ibex/rtl/ibex_controller.sv     $SOC_DIR/ibex/rtl/ibex_csr.sv     $SOC_DIR/ibex/rtl/ibex_cs_registers.sv     $SOC_DIR/ibex/rtl/ibex_counter.sv     $SOC_DIR/ibex/rtl/ibex_decoder.sv     $SOC_DIR/ibex/rtl/ibex_ex_block.sv     $SOC_DIR/ibex/rtl/ibex_wb_stage.sv     $SOC_DIR/ibex/rtl/ibex_id_stage.sv     $SOC_DIR/ibex/rtl/ibex_icache.sv     $SOC_DIR/ibex/rtl/ibex_if_stage.sv     $SOC_DIR/ibex/rtl/ibex_load_store_unit.sv     $SOC_DIR/ibex/rtl/ibex_multdiv_slow.sv     $SOC_DIR/ibex/rtl/ibex_multdiv_fast.sv     $SOC_DIR/ibex/rtl/ibex_prefetch_buffer.sv     $SOC_DIR/ibex/rtl/ibex_fetch_fifo.sv     $SOC_DIR/ibex/rtl/ibex_register_file_ff.sv     $SOC_DIR/ibex/rtl/ibex_core.sv     $SOC_DIR/ibex/rtl/ibex_top.sv          $SOC_DIR/ip/dma/dma_ahb_config.v     $SOC_DIR/ip/dma/dma_ahb_mux.v     $SOC_DIR/ip/dma/dma_arbiter.v     $SOC_DIR/ip/dma/dma_int_control.v     $SOC_DIR/ip/dma/dma_rx_sm.v     $SOC_DIR/ip/dma/dma_tx_sm.v     $SOC_DIR/ip/dma/dma.v     $SOC_DIR/ip/dma/dma_channel.v          $SOC_DIR/ip/isp/isp_demosaic_lite.v     $SOC_DIR/ip/isp/isp_dgain.v     $SOC_DIR/ip/isp/isp_top.v     $SOC_DIR/ip/isp/isp_utils.v     $SOC_DIR/ip/isp/isp_dma.v     $SOC_DIR/ip/isp/rdma2isp.v     $SOC_DIR/ip/isp/isp2wdma.v                         $SOC_DIR/ip/include/ahb2apb_defines.v     $SOC_DIR/ip/include/SoC_amba-defines.v     $SOC_DIR/ip/pad/pin_mux_rf.v     $SOC_DIR/ip/pad/gnrl_io_pad.v     $SOC_DIR/ip/pad/pin_mux.v     $SOC_DIR/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v     $SOC_DIR/ip/apb_subsystem/rtl/i2c/i2c_master_byte_ctrl.v     $SOC_DIR/ip/apb_subsystem/rtl/i2c/timescale.v     $SOC_DIR/ip/apb_subsystem/rtl/i2c/i2c_master_top.v     $SOC_DIR/ip/apb_subsystem/rtl/i2c/i2c_master_bit_ctrl.v     $SOC_DIR/ip/apb_subsystem/rtl/ahb2apb/ahb2apb.v     $SOC_DIR/ip/apb_subsystem/rtl/apb_subsystem.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/spi_master_fifo.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/spi_master_tx.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/spi_master_clkgen.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/spi_master_apb_if.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/spi_master_controller.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/spi_master_rx.v     $SOC_DIR/ip/apb_subsystem/rtl/qspi/apb_spi_master.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_defines.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/raminfr_hubing.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_apb.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_rfifo_hubing.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_transmitter.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_sync_flops.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_tfifo_hubing.v     $SOC_DIR/ip/apb_subsystem/rtl/uart/uart_receiver.v     $SOC_DIR/ip/apb_subsystem/rtl/pwm/pwm_apb.sv     $SOC_DIR/ip/apb_subsystem/rtl/pwm/pwm.sv          $SOC_DIR/ip/busmatrix/arbiter.v     $SOC_DIR/ip/busmatrix/master_if.v     $SOC_DIR/ip/busmatrix/multiplexer.v     $SOC_DIR/ip/busmatrix/req_register.v     $SOC_DIR/ip/busmatrix/slave_if.v     $SOC_DIR/ip/busmatrix/busmatrix.v                    $SOC_DIR/ip/dm/dm_pkg.sv     $SOC_DIR/ip/dm/dm_csrs.sv     $SOC_DIR/ip/dm/dmi_cdc.sv     $SOC_DIR/ip/dm/dmi_intf.sv     $SOC_DIR/ip/dm/dmi_jtag.sv     $SOC_DIR/ip/dm/dm_mem.sv     $SOC_DIR/ip/dm/dm_sba.sv     $SOC_DIR/ip/dm/dm_top.sv     $SOC_DIR/ip/dm/debug_rom/debug_rom.sv     $SOC_DIR/ip/dm/dmi_jtag_tap.sv     $SOC_DIR/ip/dm/dm_wrapper.sv          $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync_cnt.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_flop_2sync.sv     $SOC_DIR/ibex/dv/uvm/core_ibex/common/prim/prim_flop.sv     $SOC_DIR/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_flop.sv          $SOC_DIR/ip/cnn_v1/line_mul.sv     $SOC_DIR/ip/cnn_v1/final_res.sv     $SOC_DIR/ip/cnn_v1/max_pool.sv     $SOC_DIR/ip/cnn_v1/conv.sv     $SOC_DIR/ip/cnn_v1/csr.sv     $SOC_DIR/ip/cnn_v1/cnn.sv     $SOC_DIR/ip/cnn_v1/cnn_top.sv          $SOC_DIR/top/core2ahb.v      $SOC_DIR/top/cmsdk_ahb_to_sram.v      $SOC_DIR/top/top.sv        
+]
+/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_pkg.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_pkg.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_ram_1p.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_ram_1p.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_clock_gating.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_clock_gating.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_buf.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_buf.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cdc_rand_delay.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_pkg.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_alu.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_compressed_decoder.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_controller.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_csr.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_cs_registers.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_counter.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_decoder.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_ex_block.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_wb_stage.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_id_stage.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_icache.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_if_stage.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_load_store_unit.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_multdiv_slow.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_multdiv_fast.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_prefetch_buffer.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_fetch_fifo.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_register_file_ff.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_core.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_top.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_ahb_config.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_ahb_mux.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_arbiter.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_int_control.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_rx_sm.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_tx_sm.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_channel.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_demosaic_lite.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dgain.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_top.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_utils.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/rdma2isp.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp2wdma.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/include/ahb2apb_defines.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/include/SoC_amba-defines.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/pad/pin_mux_rf.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/pad/gnrl_io_pad.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/pad/pin_mux.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_byte_ctrl.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_top.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_bit_ctrl.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/ahb2apb/ahb2apb.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/apb_subsystem.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_fifo.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_tx.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_clkgen.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_apb_if.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_controller.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_rx.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/apb_spi_master.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/raminfr_hubing.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_apb.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_rfifo_hubing.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_transmitter.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_sync_flops.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_tfifo_hubing.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_receiver.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/arbiter.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/master_if.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/multiplexer.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/req_register.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/slave_if.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/busmatrix.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_pkg.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_csrs.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_cdc.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_intf.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_jtag.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_mem.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_sba.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_top.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/debug_rom/debug_rom.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_jtag_tap.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_wrapper.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync_cnt.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_flop_2sync.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_flop.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_flop.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/line_mul.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/final_res.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/max_pool.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/conv.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/csr.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/cnn.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/cnn_top.sv /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/top/core2ahb.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/top/cmsdk_ahb_to_sram.v /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/top/top.sv
+set_svf $SOC_DIR/../flow/dc/outputs/soc_syn.svf
+SVF set to '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/../flow/dc/outputs/soc_syn.svf'.
+1
+if { ${stage} == "rtlvssyn" || ${stage} == "rtlvspnr" } {
+	read_sverilog -container r -define { SYNTHESIS XCELIUM DV_FCOV_DISABLE SYNTHESIS_MEMORY_BLACK_BOXING TECH_HH90  } -libname WORK $rtl_list
+} elseif {${stage} == "synvspnr" } {
+    read_sverilog -container r -libname WORK ../dc/outputs/netlist.v
+}
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_pkg.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_pkg.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_ram_1p.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert_dummy_macros.svh'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert_sec_cm.svh'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_flop_macros.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_ram_1p.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_clock_gating.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_clock_gating.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_buf.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_buf.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cdc_rand_delay.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_pkg.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_alu.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_compressed_decoder.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_controller.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_csr.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_cs_registers.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_pmp_reset_default.svh'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_counter.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_decoder.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_ex_block.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_wb_stage.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_id_stage.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_icache.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_if_stage.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_load_store_unit.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_multdiv_slow.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_multdiv_fast.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_prefetch_buffer.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_fetch_fifo.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_register_file_ff.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_core.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_top.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_top.sv Line: 503)  (FMR_VLOG-038)
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_ahb_config.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_ahb_mux.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_arbiter.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_int_control.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_rx_sm.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_tx_sm.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_channel.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dma/dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_demosaic_lite.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dgain.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_top.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_utils.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v'
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v Line: 97)  (FMR_VLOG-038)
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v Line: 98)  (FMR_VLOG-038)
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v Line: 99)  (FMR_VLOG-038)
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v Line: 100)  (FMR_VLOG-038)
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v Line: 101)  (FMR_VLOG-038)
+Warning: The 'declaration initial assignment' construct is not supported.  It will be ignored. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma.v Line: 102)  (FMR_VLOG-038)
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/rdma2isp.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp2wdma.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_dma_defs.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/include/ahb2apb_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/include/SoC_amba-defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/pad/pin_mux_rf.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/pad/gnrl_io_pad.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/pad/pin_mux.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_byte_ctrl.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_top.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_bit_ctrl.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/ahb2apb/ahb2apb.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/apb_subsystem.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/include/SoC_amba-defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_fifo.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_tx.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_clkgen.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_apb_if.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_controller.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_rx.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/apb_spi_master.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/raminfr_hubing.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_apb.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_rfifo_hubing.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_transmitter.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_sync_flops.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_tfifo_hubing.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_receiver.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/timescale.v'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/uart/uart_defines.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/arbiter.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/master_if.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/multiplexer.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/req_register.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/slave_if.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/busmatrix/busmatrix.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_pkg.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_csrs.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_cdc.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_intf.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_jtag.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_mem.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_sba.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_top.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/debug_rom/debug_rom.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dmi_jtag_tap.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_wrapper.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync_cnt.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Warning: Use of signed'() and unsigned'() may cause a simulation and synthesis mismatch. (Signal: <unknown> Block: /prim_fifo_sync_cnt File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync_cnt.sv Line: 29)  (FMR_VLOG-089)
+Warning: Use of signed'() and unsigned'() may cause a simulation and synthesis mismatch. (Signal: <unknown> Block: /prim_fifo_sync_cnt File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync_cnt.sv Line: 30)  (FMR_VLOG-089)
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_flop_2sync.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/dv/uvm/core_ibex/common/prim/prim_flop.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_flop.sv'
+Loading include file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/line_mul.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/final_res.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/max_pool.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/conv.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/csr.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/cnn.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/cnn_v1/cnn_top.sv'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/top/core2ahb.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/top/cmsdk_ahb_to_sram.v'
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/top/top.sv'
+Current container set to 'r'
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+set_top r:/WORK/$design
+Setting top design to 'r:/WORK/soc_top'
+Status:   Elaborating design soc_top   ...  
+Status:   Elaborating design dm_wrapper   ...  
+Status:   Elaborating design dm_top   ...  
+Status:   Elaborating design dm_csrs  NrHarts=1, BusWidth=32, SelectableHarts=1'd1 ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: abstractauto_q Block: /dm_csrs/csr_read_write File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_csrs.sv Line: 293)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: abstractauto_q Block: /dm_csrs/csr_read_write File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_csrs.sv Line: 311)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: abstractauto_q Block: /dm_csrs/csr_read_write File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_csrs.sv Line: 361)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: abstractauto_q Block: /dm_csrs/csr_read_write File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_csrs.sv Line: 420)  (FMR_ELAB-147)
+Information: Created design named 'dm_csrs_1_32_1'. (FE-LINK-13)
+Status:   Elaborating design prim_fifo_sync  Width=32, Pass=1'b0, Depth=2 ...  
+Warning: Unsigned to signed assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync.sv Line: 17)  (FMR_VLOG-057)
+Warning: Unsigned to signed assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync.sv Line: 61)  (FMR_VLOG-057)
+Information: Created design named 'prim_fifo_sync_32_0_2'. (FE-LINK-13)
+Status:   Elaborating design prim_fifo_sync_cnt  Width=32'd2, Depth=32'd2, Secure=1'b0 ...  
+Information: Created design named 'prim_fifo_sync_cnt_00000002_00000002_0'. (FE-LINK-13)
+Status:   Elaborating design dm_sba  BusWidth=32 ...  
+Information: Created design named 'dm_sba_BusWidth32'. (FE-LINK-13)
+Status:   Elaborating design dm_mem  NrHarts=1, BusWidth=32, SelectableHarts=1'd1, DmBaseAddress=1 ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: data_i Block: /dm_mem/p_rw_logic File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_mem.sv Line: 298)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: data_i Block: /dm_mem/p_rw_logic File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_mem.sv Line: 300)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: progbuf Block: /dm_mem/p_rw_logic File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/dm/dm_mem.sv Line: 306)  (FMR_ELAB-147)
+Information: Created design named 'dm_mem_1_32_1_1'. (FE-LINK-13)
+Status:   Elaborating design debug_rom   ...  
+Status:   Elaborating design dmi_jtag  IdcodeValue=32'h00000001 ...  
+Information: Created design named 'dmi_jtag_00000001'. (FE-LINK-13)
+Status:   Elaborating design dmi_jtag_tap  IrLength=5, IdcodeValue=32'h00000001 ...  
+Information: Created design named 'dmi_jtag_tap_5_00000001'. (FE-LINK-13)
+Status:   Elaborating design dmi_cdc   ...  
+Status:   Elaborating design prim_fifo_async  Width=41, Depth=4 ...  
+Warning: Unsigned to signed assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async.sv Line: 240)  (FMR_VLOG-057)
+Information: Created design named 'prim_fifo_async_Width41_Depth4'. (FE-LINK-13)
+Status:   Elaborating design prim_flop_2sync  Width=32'd3 ...  
+Information: Created design named 'prim_flop_2sync_00000003'. (FE-LINK-13)
+Status:   Elaborating design prim_cdc_rand_delay  DataWidth=3, UseSourceClock=0, LatencyPs=1000, JitterPs=1000 ...  
+Information: Created design named 'prim_cdc_rand_delay_DataWidth3_UseSourceClock0_LatencyPs1000_JitterPs1000'. (FE-LINK-13)
+Status:   Elaborating design prim_flop  Width=3, ResetValue=3'd0 ...  
+Information: Created design named 'prim_flop_3_0'. (FE-LINK-13)
+Status:   Elaborating design prim_generic_flop  ResetValue=3'd0, Width=3 ...  
+Information: Created design named 'prim_generic_flop_3_0'. (FE-LINK-13)
+Status:   Elaborating design prim_fifo_async  Width=34, Depth=4 ...  
+Warning: Unsigned to signed assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async.sv Line: 240)  (FMR_VLOG-057)
+Information: Created design named 'prim_fifo_async_Width34_Depth4'. (FE-LINK-13)
+Status:   Elaborating design core2ahb   ...  
+Status:   Elaborating design ibex_top  DbgTriggerEn=1'd1, DbgHwBreakNum=32'd2, DmHaltAddr=32'd437323776, DmExceptionAddr=32'd437323784 ...  
+Information: Created design named 'ibex_top_1_00000002_1a110800_1a110808'. (FE-LINK-13)
+Status:   Elaborating design prim_clock_gating   ...  
+Status:   Elaborating design prim_generic_clock_gating   ...  
+Status:   Elaborating design prim_buf  Width=4 ...  
+Information: Created design named 'prim_buf_Width4'. (FE-LINK-13)
+Status:   Elaborating design prim_generic_buf  Width=4 ...  
+Information: Created design named 'prim_generic_buf_Width4'. (FE-LINK-13)
+Status:   Elaborating design prim_buf  Width=32'd32 ...  
+Information: Created design named 'prim_buf_00000020'. (FE-LINK-13)
+Status:   Elaborating design prim_generic_buf  Width=32 ...  
+Information: Created design named 'prim_generic_buf_Width32'. (FE-LINK-13)
+Status:   Elaborating design ibex_core  PMPEnable=1'b0, PMPGranularity=32'd0, PMPNumRegions=32'd4, MHPMCounterNum=32'd0, MHPMCounterWidth=32'd40, RV32E=1'b0, RV32M=2, RV32B=0, BranchTargetALU=1'b0, WritebackStage=1'b0, ICache=1'b1, ICacheECC=1'b0, BusSizeECC=32'd32, TagSizeECC=32'd22, LineSizeECC=32'd64, BranchPredictor=1'b0, DbgTriggerEn=1'd1, DbgHwBreakNum=32'd2, ResetAll=1'd0, RndCnstLfsrSeed=32'd2891135988, RndCnstLfsrPerm=160'd172472284505947085933645530377016818106808982253, SecureIbex=1'b0, DummyInstructions=1'd0, RegFileECC=1'd0, RegFileDataWidth=32'd32, MemECC=1'd0, MemDataWidth=32'd32, DmHaltAddr=32'd437323776, DmExceptionAddr=32'd437323784 ...  
+Information: Created design named 'ibex_core_0_00000000_00000004_00000000_00000028_0_2_0_0_0_1_0_00000020_00000016_00000040_0_1_00000002_0_ac533bf4_1e35ecba467fd1b12e958152c04fa43878a8daed_0_0_0_00000020_0_00000020_1a110800_1a110808'. (FE-LINK-13)
+Status:   Elaborating design ibex_if_stage  DmHaltAddr=32'd437323776, DmExceptionAddr=32'd437323784, DummyInstructions=1'd0, ICache=1'b1, ICacheECC=1'b0, BusSizeECC=32'd32, TagSizeECC=32'd22, LineSizeECC=32'd64, PCIncrCheck=1'd0, ResetAll=1'd0, RndCnstLfsrSeed=32'd2891135988, RndCnstLfsrPerm=160'd172472284505947085933645530377016818106808982253, BranchPredictor=1'b0, MemECC=1'd0, MemDataWidth=32'd32 ...  
+Information: Created design named 'ibex_if_stage_1a110800_1a110808_0_1_0_00000020_00000016_00000040_0_0_ac533bf4_1e35ecba467fd1b12e958152c04fa43878a8daed_0_0_00000020'. (FE-LINK-13)
+Status:   Elaborating design ibex_icache  ICacheECC=1'b0, ResetAll=1'd0, BusSizeECC=32'd32, TagSizeECC=32'd22, LineSizeECC=32'd64 ...  
+Information: Created design named 'ibex_icache_0_0_00000020_00000016_00000040'. (FE-LINK-13)
+Status:   Elaborating design ibex_compressed_decoder   ...  
+Status:   Elaborating design ibex_id_stage  RV32E=1'b0, RV32M=2, RV32B=0, DataIndTiming=1'd0, BranchTargetALU=1'b0, WritebackStage=1'b0, BranchPredictor=1'b0, MemECC=1'd0 ...  
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_id_stage File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_id_stage.sv Line: 805)  (FMR_ELAB-116)
+Information: Created design named 'ibex_id_stage_0_2_0_0_0_0_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_decoder  RV32E=1'b0, RV32M=2, RV32B=0, BranchTargetALU=1'b0 ...  
+Information: Created design named 'ibex_decoder_0_2_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_controller  WritebackStage=1'b0, BranchPredictor=1'b0, MemECC=1'd0 ...  
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_controller File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_controller.sv Line: 739)  (FMR_ELAB-116)
+Information: Created design named 'ibex_controller_0_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_ex_block  RV32M=2, RV32B=0, BranchTargetALU=1'b0 ...  
+Information: Created design named 'ibex_ex_block_2_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_alu  RV32B=0 ...  
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_alu File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_alu.sv Line: 85)  (FMR_ELAB-116)
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_alu File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_alu.sv Line: 97)  (FMR_ELAB-116)
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_alu File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_alu.sv Line: 392)  (FMR_ELAB-116)
+Information: Created design named 'ibex_alu_RV32B0'. (FE-LINK-13)
+Status:   Elaborating design ibex_multdiv_fast  RV32M=2 ...  
+Information: Created design named 'ibex_multdiv_fast_RV32M2'. (FE-LINK-13)
+Status:   Elaborating design ibex_load_store_unit  MemECC=1'd0, MemDataWidth=32'd32 ...  
+Information: Created design named 'ibex_load_store_unit_0_00000020'. (FE-LINK-13)
+Status:   Elaborating design ibex_wb_stage  ResetAll=1'd0, WritebackStage=1'b0 ...  
+Information: Created design named 'ibex_wb_stage_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_cs_registers  DbgTriggerEn=1'd1, DbgHwBreakNum=32'd2, DataIndTiming=1'd0, DummyInstructions=1'd0, ShadowCSR=1'd0, ICache=1'b1, MHPMCounterNum=32'd0, MHPMCounterWidth=32'd40, PMPEnable=1'b0, PMPGranularity=32'd0, PMPNumRegions=32'd4, RV32E=1'b0, RV32M=2, RV32B=0 ...  
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_cs_registers File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_cs_registers.sv Line: 664)  (FMR_ELAB-116)
+Warning: You are using the parallel_case directive but some items may overlap. (Signal: <unknown> Block: /ibex_cs_registers File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ibex/rtl/ibex_cs_registers.sv Line: 667)  (FMR_ELAB-116)
+Information: Created design named 'ibex_cs_registers_1_00000002_0_0_0_1_00000000_00000028_0_00000000_00000004_0_2_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=6, ShadowCopy=1'd0, ResetValue=6'd16 ...  
+Information: Created design named 'ibex_csr_6_0_10'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=32, ShadowCopy=1'b0, ResetValue=1'd0 ...  
+Information: Created design named 'ibex_csr_32_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=18, ShadowCopy=1'b0, ResetValue=1'd0 ...  
+Information: Created design named 'ibex_csr_18_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=7, ShadowCopy=1'b0, ResetValue=1'd0 ...  
+Information: Created design named 'ibex_csr_7_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=32, ShadowCopy=1'd0, ResetValue=32'd1 ...  
+Information: Created design named 'ibex_csr_32_0_00000001'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=32, ShadowCopy=1'b0, ResetValue=32'd1073741827 ...  
+Information: Created design named 'ibex_csr_32_0_40000003'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=3, ShadowCopy=1'b0, ResetValue=3'd4 ...  
+Information: Created design named 'ibex_csr_3_0_4'. (FE-LINK-13)
+Status:   Elaborating design ibex_counter  CounterWidth=64 ...  
+Information: Created design named 'ibex_counter_CounterWidth64'. (FE-LINK-13)
+Status:   Elaborating design ibex_counter  CounterWidth=64, ProvideValUpd=1 ...  
+Information: Created design named 'ibex_counter_CounterWidth64_ProvideValUpd1'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=32'd1, ShadowCopy=1'b0, ResetValue=1'd0 ...  
+Information: Created design named 'ibex_csr_00000001_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_csr  Width=8, ShadowCopy=1'd0, ResetValue=1'd0 ...  
+Information: Created design named 'ibex_csr_8_0_0'. (FE-LINK-13)
+Status:   Elaborating design ibex_register_file_ff  RV32E=1'b0, DataWidth=32'd32, DummyInstructions=1'd0, WrenCheck=1'd0, WordZeroVal=32'd0 ...  
+Information: Created design named 'ibex_register_file_ff_0_00000020_0_0_00000000'. (FE-LINK-13)
+Status:   Elaborating design prim_ram_1p  Width=32'd22, Depth=32'd256, DataBitsPerMask=32'd22 ...  
+Information: Created design named 'prim_ram_1p_00000016_00000100_00000016'. (FE-LINK-13)
+Status:   Elaborating design prim_generic_ram_1p  Depth=256, MemInitFile=1'd0, Width=22, DataBitsPerMask=22 ...  
+Information: Created design named 'prim_generic_ram_1p_22_256_22_0'. (FE-LINK-13)
+Status:   Elaborating design prim_ram_1p  Width=32'd64, Depth=32'd256, DataBitsPerMask=32'd64 ...  
+Information: Created design named 'prim_ram_1p_00000040_00000100_00000040'. (FE-LINK-13)
+Status:   Elaborating design prim_generic_ram_1p  Depth=256, MemInitFile=1'd0, Width=64, DataBitsPerMask=64 ...  
+Information: Created design named 'prim_generic_ram_1p_64_256_64_0'. (FE-LINK-13)
+Status:   Elaborating design busmatrix   ...  
+Status:   Elaborating design slave_if   ...  
+Status:   Elaborating design req_register   ...  
+Status:   Elaborating design multiplexer  5, 3 ...  
+Information: Created design named 'multiplexer_MUX_SIZE5_MUX_INPUT_SIZE3'. (FE-LINK-13)
+Status:   Elaborating design multiplexer  5, 32 ...  
+Information: Created design named 'multiplexer_MUX_SIZE5_MUX_INPUT_SIZE32'. (FE-LINK-13)
+Status:   Elaborating design master_if   ...  
+Status:   Elaborating design arbiter   ...  
+Status:   Elaborating design multiplexer  7, 46 ...  
+Information: Created design named 'multiplexer_MUX_SIZE7_MUX_INPUT_SIZE46'. (FE-LINK-13)
+Status:   Elaborating design multiplexer  7, 32 ...  
+Information: Created design named 'multiplexer_MUX_SIZE7_MUX_INPUT_SIZE32'. (FE-LINK-13)
+Status:   Elaborating design cmsdk_ahb_to_sram  AW=32 ...  
+Information: Created design named 'cmsdk_ahb_to_sram_AW32'. (FE-LINK-13)
+Warning: Cannot link cell '/WORK/soc_top/inst_sram' to its reference design 'sram'. (FE-LINK-2)
+Status:   Elaborating design apb_subsystem   ...  
+Status:   Elaborating design ahb2apb  32'h20000000, 32'h2000ffff, 32'h20010000, 32'h2001ffff, 32'h20020000, 32'h2002ffff, 32'h20030000, 32'h2003ffff, 32'h20040000, 32'h2004ffff, 32'h20050000, 32'h2005ffff, 32'h20060000, 32'h2006ffff, 32'h20070000, 32'h2007ffff, 32'h20080000, 32'h2008ffff ...  
+Warning: Variable(s) is(are) being read asynchronously. This may cause simulation-synthesis mismatches. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/ahb2apb/ahb2apb.v Line: 218)  (FMR_VLOG-100)
+Information: Created design named 'ahb2apb_20000000_2000ffff_20010000_2001ffff_20020000_2002ffff_20030000_2003ffff_20040000_2004ffff_20050000_2005ffff_20060000_2006ffff_20070000_2007ffff_20080000_2008ffff'. (FE-LINK-13)
+Status:   Elaborating design apb_spi_master  BUFFER_DEPTH=10, APB_ADDR_WIDTH=12 ...  
+Information: Created design named 'apb_spi_master_BUFFER_DEPTH10_APB_ADDR_WIDTH12'. (FE-LINK-13)
+Status:   Elaborating design spi_master_apb_if  BUFFER_DEPTH=10, APB_ADDR_WIDTH=12 ...  
+Information: Created design named 'spi_master_apb_if_BUFFER_DEPTH10_APB_ADDR_WIDTH12'. (FE-LINK-13)
+Status:   Elaborating design spi_master_fifo  DATA_WIDTH=32, BUFFER_DEPTH=10 ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: buffer Block: /spi_master_fifo File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/qspi/spi_master_fifo.v Line: 99)  (FMR_ELAB-147)
+Information: Created design named 'spi_master_fifo_DATA_WIDTH32_BUFFER_DEPTH10'. (FE-LINK-13)
+Status:   Elaborating design spi_master_controller   ...  
+Status:   Elaborating design spi_master_clkgen   ...  
+Status:   Elaborating design spi_master_tx   ...  
+Status:   Elaborating design spi_master_rx   ...  
+Status:   Elaborating design uart_apb   ...  
+Status:   Elaborating design uart_transmitter   ...  
+Status:   Elaborating design uart_tfifo_hubing   ...  
+Status:   Elaborating design raminfr_hubing   ...  
+Status:   Elaborating design uart_sync_flops  width=1, init_value=1'b1 ...  
+Information: Created design named 'uart_sync_flops_1_1'. (FE-LINK-13)
+Status:   Elaborating design uart_receiver   ...  
+Status:   Elaborating design uart_rfifo_hubing   ...  
+Status:   Elaborating design pwm_apb   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: counter_q Block: /pwm_apb File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv Line: 76)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: pulse_width_q Block: /pwm_apb File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv Line: 78)  (FMR_ELAB-147)
+Warning: Signed to unsigned assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv Line: 33)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv Line: 33)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv Line: 33)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/pwm/pwm_apb.sv Line: 33)  (FMR_VLOG-063)
+Status:   Elaborating design pwm  CtrSize=32 ...  
+Information: Created design named 'pwm_CtrSize32'. (FE-LINK-13)
+Status:   Elaborating design i2c_master_top   ...  
+Status:   Elaborating design i2c_master_byte_ctrl   ...  
+Status:   Elaborating design i2c_master_bit_ctrl   ...  
+Warning: Variable(s) is(are) being read asynchronously. This may cause simulation-synthesis mismatches. (File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/apb_subsystem/rtl/i2c/i2c_master_bit_ctrl.v Line: 182)  (FMR_VLOG-100)
+Status:   Elaborating design pin_mux_rf   ...  
+Status:   Elaborating design apb2pinmux   ...  
+Status:   Elaborating design pin_mux   ...  
+Status:   Elaborating design gnrl_io_pad   ...  
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Status:   Elaborating design isp_top   ...  
+Status:   Elaborating design isp_demosaic  8, 256, 10, 0 ...  
+Information: Created design named 'isp_demosaic_BITS8_WIDTH256_HEIGHT10_BAYER0'. (FE-LINK-13)
+Status:   Elaborating design shift_register  8, 256, 4 ...  
+Information: Created design named 'shift_register_BITS8_WIDTH256_LINES4'. (FE-LINK-13)
+Status:   Elaborating design simple_dp_ram  8, 8, 255 ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: mem Block: /simple_dp_ram File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp_utils.v Line: 25)  (FMR_ELAB-147)
+Information: Created design named 'simple_dp_ram_DW8_AW8_SZ255'. (FE-LINK-13)
+Status:   Elaborating design vid_mux  24 ...  
+Information: Created design named 'vid_mux_BITS24'. (FE-LINK-13)
+Status:   Elaborating design isp_dma   ...  
+Status:   Elaborating design rdma2isp   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: rdma_fifo Block: /rdma2isp File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/rdma2isp.v Line: 176)  (FMR_ELAB-147)
+Status:   Elaborating design isp2wdma   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: wdma_fifo Block: /isp2wdma File: /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/ip/isp/isp2wdma.v Line: 147)  (FMR_ELAB-147)
+Status:   Elaborating design dma   ...  
+Status:   Elaborating design dma_ahb_config   ...  
+Status:   Elaborating design dma_int_control   ...  
+Status:   Elaborating design dma_arbiter   ...  
+Status:   Elaborating design dma_ahb_mux   ...  
+Status:   Elaborating design dma_channel   ...  
+Status:   Elaborating design dma_rx_sm   ...  
+Status:   Elaborating design dma_tx_sm   ...  
+Status:   Elaborating design cnn_top   ...  
+Status:   Elaborating design csr   ...  
+Status:   Elaborating design cnn   ...  
+Status:   Elaborating design conv   ...  
+Status:   Elaborating design max_pool   ...  
+Status:   Elaborating design line_mul   ...  
+Status:   Elaborating design final_res   ...  
+Warning: Cannot link cell '/WORK/cnn_top/u_mini_ram' to its reference design 'mini_ram'. (FE-LINK-2)
+Status:  Implementing inferred operators...
+Status:  Creating black-box designs...
+Created technology library 'FM_BBOX' in container 'r' for black-box designs
+Created black-box design 'sram' in library 'FM_BBOX'
+Created black-box design 'RCMCU_PLBMUX' in library 'FM_BBOX'
+Created black-box design 'mini_ram' in library 'FM_BBOX'
+Warning: 3 blackbox designs were created for missing references. (FM-064)
+Status:  Attempting to resolve unlinked cells by using black-boxes...
+Warning: 153 black-box pins of unknown direction found; see formality.log for list (FM-230)
+
+************ Library Checking Summary ************
+Warning:  374 unlinked power cell(s) with unread pg pins.
+Warning:  68 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design set to 'r:/WORK/soc_top' with warnings
+   ATTENTION: RTL interpretation messages were produced during link.
+              Verification results may disagree with a logic simulator.
+
+************ RTL Interpretation Summary ************
+************ Design: r:/WORK/soc_top
+13 FMR_ELAB-147 messages produced   
+2 FMR_VLOG-089 messages produced    (Utilized signed'() and unsigned'())
+7 FMR_ELAB-116 messages produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+Reference design set to 'r:/WORK/soc_top'
+1
+if { ${stage} == "rtlvspnr" || ${stage} == "synvspnr" } {
+    ##TODO
+	read_sverilog -container i -libname WORK ../dc/outputs/netlist.v 
+} elseif {${stage} == "rtlvssyn" } {
+    read_sverilog -container i -libname WORK ../dc/outputs/netlist.v
+}
+Loading verilog file '/home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/flow/dc/outputs/netlist.v'
+Current container set to 'i'
+1
+set_top i:/WORK/$design
+Setting top design to 'i:/WORK/soc_top'
+Warning: Cannot link cell '/WORK/soc_top/inst_sram' to its reference design 'sram'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_0/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_23/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_22/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_21/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_20/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_19/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_18/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_17/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_16/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_15/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_14/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_13/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_12/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_11/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_10/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_9/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_8/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_7/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_6/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_5/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_4/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_3/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_2/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/gnrl_io_pad_1/u_pad' to its reference design 'RCMCU_PLBMUX'. (FE-LINK-2)
+Warning: Cannot link cell '/WORK/cnn_top/u_mini_ram' to its reference design 'mini_ram'. (FE-LINK-2)
+Status:  Implementing inferred operators...
+Status:  Creating black-box designs...
+Created technology library 'FM_BBOX' in container 'i' for black-box designs
+Created black-box design 'sram' in library 'FM_BBOX'
+Created black-box design 'RCMCU_PLBMUX' in library 'FM_BBOX'
+Created black-box design 'mini_ram' in library 'FM_BBOX'
+Warning: 3 blackbox designs were created for missing references. (FM-064)
+Status:  Attempting to resolve unlinked cells by using black-boxes...
+Warning: 452 black-box pins of unknown direction found; see formality.log for list (FM-230)
+
+************ Library Checking Summary ************
+Warning:  374 unlinked power cell(s) with unread pg pins.
+Warning:  68 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design set to 'i:/WORK/soc_top' with warnings
+Implementation design set to 'i:/WORK/soc_top'
+1
+match
+Reference design is 'r:/WORK/soc_top'
+Implementation design is 'i:/WORK/soc_top'
+Status:  Checking designs...
+    Warning: Design r:/FM_BBOX/sram is a black box and there are cells referencing it (FM-160)
+    Warning: Design r:/WORK/prim_generic_ram_1p_22_256_22_0 is a black box and there are cells referencing it (FM-160)
+    Warning: Design r:/WORK/prim_generic_ram_1p_64_256_64_0 is a black box and there are cells referencing it (FM-160)
+    Warning: Design r:/FM_BBOX/RCMCU_PLBMUX is a black box and there are cells referencing it (FM-160)
+    Warning: Design r:/FM_BBOX/mini_ram is a black box and there are cells referencing it (FM-160)
+    Warning: Design i:/FM_BBOX/sram is a black box and there are cells referencing it (FM-160)
+    Warning: Design i:/WORK/prim_generic_ram_1p_Width22_Depth256_DataBitsPerMask22_MemInitFile is a black box and there are cells referencing it (FM-160)
+    Warning: Design i:/WORK/prim_generic_ram_1p_Width64_Depth256_DataBitsPerMask64_MemInitFile is a black box and there are cells referencing it (FM-160)
+    Warning: Design i:/FM_BBOX/RCMCU_PLBMUX is a black box and there are cells referencing it (FM-160)
+    Warning: Design i:/FM_BBOX/mini_ram is a black box and there are cells referencing it (FM-160)
+    Warning: 186 (6180) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+    Info:  48 (48) multiply-driven nets found in reference (implementation) design; see formality.log for list.
+    Warning: 5 (30) black-box references found in reference (implementation) design; see formality.log for list (FM-182)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+Warning:  Starting up fm_e1_exec... FAILED
+.
+.
+    Info:  Attempting to modify down-design of instance "inst_apb_subsystem/u_apb_spi_master_0" from design "apb_spi_master_BUFFER_DEPTH10_APB_ADDR_WIDTH12_0" to design "FM_uniq_245".
+    Info:  Attempting to modify down-design of instance "u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr" from design "prim_flop_2sync_s00000003_0" to design "FM_uniq_168".
+    Info:  Attempting to modify down-design of instance "u_dm_wrapper/u_dm_top/dap/i_dmi_cdc/i_cdc_req/sync_wptr" from design "FM_uniq_168" to design "prim_flop_2sync_s00000003_0".
+    Info:  Attempting to modify down-design of instance "inst_apb_subsystem/u_apb_spi_master_0" from design "FM_uniq_245" to design "apb_spi_master_BUFFER_DEPTH10_APB_ADDR_WIDTH12_0".
+........................
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          1          0          0          0          1
+boundary            :         26          0          0          0         26
+boundary_netlist    :          1          0          0          0          1
+change_names        :        349         24          0          0        373
+constraints         :          5          1          0          0          6
+datapath            :         19          7          0          0         26
+environment         :          3          0          0          0          3
+instance_map        :        139          2          0          0        141
+mark                :        118          0          0          0        118
+merge               :         72         17          0          0         89
+multiplier          :          1          2          0          0          3
+reg_constant        :      16290         24          0          0      16314
+reg_merging         :          0          4          0          0          4
+replace             :        140         91          0          0        231
+ungroup             :         36          2          0          0         38
+uniquify            :         21          9          0          0         30
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/soc/../flow/dc/outputs/soc_syn.svf
+
+SVF files produced:
+  /home/cxjl03/github/SOC_V3.0/SOC_V3/To_Customer/flow/fm/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 83182 Compare points matched by name    
+ 40 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 228 Matched primary inputs, black-box outputs    
+ 85(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 64985(0) Unmatched reference(implementation) unread points    
+----------------------------------------------------------------------------------------    
+Unmatched Objects                                                        REF        IMPL    
+----------------------------------------------------------------------------------------    
+ Cut-points (Cut)                                                         45           0    
+ Registers                                                                40           0    
+   DFF                                                                    40           0    
+****************************************************************************************
+
+1
+verify
+Reference design is 'r:/WORK/soc_top'
+Implementation design is 'i:/WORK/soc_top'
+    
+*********************************** Matching Results ***********************************    
+ 83182 Compare points matched by name    
+ 40 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 228 Matched primary inputs, black-box outputs    
+ 85(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 64985(0) Unmatched reference(implementation) unread points    
+----------------------------------------------------------------------------------------    
+Unmatched Objects                                                        REF        IMPL    
+----------------------------------------------------------------------------------------    
+ Cut-points (Cut)                                                         45           0    
+ Registers                                                                40           0    
+   DFF                                                                    40           0    
+****************************************************************************************
+
+Status:  Verifying...
+........
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[31] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[27] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[24] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[26] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[25] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[30] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[28] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[29] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[5] failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_ahb2apb/hrdata_reg[6] failed (is not equivalent)
+.......
+    Compare point soc_dma/i_udma_ch2/data_count_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/data_count_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/data_count_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/data_count_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_tx_state_machine/dma_write_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_tx_state_machine/dma_write_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_tx_state_machine/dma_write_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_tx_state_machine/dma_write_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/read_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/write_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_rx_state_machine/dma_read_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_rx_state_machine/dma_read_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_rx_state_machine/dma_read_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/taddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/data_count_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/taddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/data_count_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/write_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/read_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_rx_state_machine/dma_read_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_rx_state_machine/dma_read_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_rx_state_machine/dma_read_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_rx_state_machine/dma_read_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_rx_state_machine/dma_read_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/data_count_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/data_count_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/data_count_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/data_count_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/data_count_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_tx_state_machine/dma_write_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_tx_state_machine/dma_write_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_tx_state_machine/dma_write_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_tx_state_machine/dma_write_state_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/write_complete_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/read_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/data_count_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_tx_state_machine/dma_write_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_tx_state_machine/dma_write_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_rx_state_machine/dma_read_state_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/data_count_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/data_count_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/data_count_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/read_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_rx_state_machine/dma_read_state_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/i_rx_state_machine/dma_read_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_rx_state_machine/dma_read_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/abort_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/abort_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/abort_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/abort_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/write_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/data_count_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/write_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/write_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/write_pntr_reg[2] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_cs_reg[2] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_cs_reg[1] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[0] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[1] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[2] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[2] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[3] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[7] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[0] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[1] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[4] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_data_buf_reg[6] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[10] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[3] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[4] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[5] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[6] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[7] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[8] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[9] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[11] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[12] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[13] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[14] failed (is not equivalent)
+    Compare point u_cnn_top/u_cnn/dma_rd_cnt_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/read_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_tx_state_machine/dma_write_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/i_tx_state_machine/dma_write_state_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/write_complete_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/saddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/taddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/read_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_sadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/saddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/read_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_tx_state_machine/dma_write_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/i_tx_state_machine/dma_write_state_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/write_complete_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/saddr_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/read_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/saddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_sadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_sadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_sadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/taddr_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/dma_tadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/taddr_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_tx_state_machine/dma_write_state_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/i_tx_state_machine/dma_write_state_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/write_complete_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/dma_tadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/dma_tadd_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[16] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[31] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[30] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[29] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[28] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[27] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[26] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[25] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[24] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[23] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[22] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[21] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[20] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[19] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[18] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/dma_tadd_reg[17] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/write_pntr_reg[0] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/write_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/write_pntr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/xfer_size_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/write_pntr_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/write_pntr_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[1] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[2] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[3] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[4] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/xfer_size_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[7] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[9] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[11] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/xfer_size_reg[15] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[5] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[6] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[8] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[10] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[12] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[13] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[14] failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/xfer_size_reg[15] failed (is not equivalent)
+............... 720F/0A/82474P/28U (99% Verification completed) 09/28/23 09:32 4621MB/6138.60sec
+.............................. 720F/0A/82475P/27U (99% Verification completed) 09/28/23 10:02 4621MB/7940.54sec
+.............................. 720F/0A/82475P/27U (99% Verification completed) 09/28/23 10:32 4621MB/9742.94sec
+.............................. 720F/0A/82475P/27U (99% Verification completed) 09/28/23 11:02 4621MB/11547.06sec
+.............................. 720F/0A/82475P/27U (99% Verification completed) 09/28/23 11:32 4621MB/13347.92sec
+.............................. 720F/0A/82475P/27U (99% Verification completed) 09/28/23 12:02 4621MB/15150.84sec
+...............
+    Compare point inst_apb_subsystem/i_i2c_master0_top/byte_controller/bit_controller/dout_onebit_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master1_top/byte_controller/bit_controller/dout_onebit_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master0_top/byte_controller/bit_controller/sSDA_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master1_top/byte_controller/bit_controller/sSDA_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master0_top/byte_controller/bit_controller/slave_wait_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master1_top/byte_controller/bit_controller/slave_wait_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master0_top/byte_controller/bit_controller/sto_condition_reg failed (is not equivalent)
+    Compare point inst_apb_subsystem/i_i2c_master1_top/byte_controller/bit_controller/sto_condition_reg failed (is not equivalent)
+    Compare point pad[10] failed (is not equivalent)
+    Compare point pad[11] failed (is not equivalent)
+    Compare point pad[12] failed (is not equivalent)
+    Compare point pad[13] failed (is not equivalent)
+    Compare point pad[14] failed (is not equivalent)
+    Compare point pad[15] failed (is not equivalent)
+    Compare point pad[16] failed (is not equivalent)
+    Compare point pad[17] failed (is not equivalent)
+    Compare point pad[18] failed (is not equivalent)
+    Compare point pad[19] failed (is not equivalent)
+    Compare point pad[1] failed (is not equivalent)
+    Compare point pad[20] failed (is not equivalent)
+    Compare point pad[21] failed (is not equivalent)
+    Compare point pad[22] failed (is not equivalent)
+    Compare point pad[23] failed (is not equivalent)
+    Compare point pad[24] failed (is not equivalent)
+    Compare point pad[2] failed (is not equivalent)
+    Compare point pad[3] failed (is not equivalent)
+    Compare point pad[4] failed (is not equivalent)
+    Compare point pad[5] failed (is not equivalent)
+    Compare point pad[6] failed (is not equivalent)
+    Compare point pad[7] failed (is not equivalent)
+    Compare point pad[8] failed (is not equivalent)
+    Compare point pad[9] failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[17].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[19].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[20].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[3].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[4].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[5].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[6].x_gnrl_io_pad/u_pad/OE failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[10].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[11].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[12].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[14].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[15].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[17].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[18].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[19].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[1].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[20].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[21].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[22].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[23].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[24].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[2].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[3].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[4].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[5].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[6].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[7].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[8].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point chip_pin_mux/gnrl_io_pad_inst[9].x_gnrl_io_pad/u_pad/YA failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch0/byte_access_next_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch1/byte_access_next_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch2/byte_access_next_reg failed (is not equivalent)
+    Compare point soc_dma/i_udma_ch3/byte_access_next_reg failed (is not equivalent)
+    
+Status:  Matching hierarchy...
+.
+    
+    
+Status:  Verifying...
+.............. 720F/0A/82497P/5U (99% Verification completed) 09/28/23 12:32 4621MB/16952.75sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 13:03 4621MB/18765.92sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 13:33 4621MB/20565.74sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 14:03 4621MB/22365.00sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 14:33 4621MB/24164.07sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 15:03 4621MB/25963.29sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 15:33 4621MB/27762.49sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 16:03 4622MB/29572.07sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 16:33 4622MB/31378.28sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 17:03 4622MB/33190.18sec
+.............................. 720F/0A/82498P/4U (99% Verification completed) 09/28/23 17:33 4622MB/34994.24sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 18:03 4622MB/36794.31sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 18:33 4622MB/38593.51sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 19:03 4622MB/40392.76sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 19:33 4622MB/42191.99sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 20:03 4622MB/43999.53sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 20:33 4622MB/45801.54sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 21:03 4622MB/47606.04sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 21:34 4622MB/49406.31sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 22:04 4622MB/51206.17sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 22:34 4622MB/53005.29sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 23:04 4622MB/54804.47sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/28/23 23:34 4622MB/56603.66sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/29/23 00:04 4622MB/58402.78sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/29/23 00:34 4622MB/60204.47sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/29/23 01:04 4622MB/62005.27sec
+.............................. 720F/0A/82499P/3U (99% Verification completed) 09/29/23 01:34 4622MB/63811.85sec
+...................
+    Compare point u_cnn_top/u_cnn/wdata_reg[5] is aborted
+    Compare point u_cnn_top/u_cnn/wdata_reg[6] is aborted
+    Compare point u_cnn_top/u_cnn/wdata_reg[7] is aborted
+
+************ RTL Interpretation Summary ************
+************ Design: r:/WORK/soc_top
+19 FMR_ELAB-147 messages produced   
+2 FMR_VLOG-089 messages produced    (Utilized signed'() and unsigned'())
+7 FMR_ELAB-116 messages produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+
+********************************* Verification Results *********************************
+Verification FAILED
+   ATTENTION: RTL interpretation messages were produced during link
+              of reference design.
+              Verification results may disagree with a logic simulator.
+   ATTENTION: 703 failing compare points have unmatched undriven signals in their
+                reference fan-in.  To report such failing points, use
+                "report_failing_points -inputs unmatched -inputs undriven".
+              To read about undriven signal handling, use
+                "man verification_set_undriven_signals".
+----------------------------------------------------------------------------------------
+ Reference design: r:/WORK/soc_top
+ Implementation design: i:/WORK/soc_top
+ 82499 Passing compare points
+ 720 Failing compare points
+ 3 Aborted compare points
+ 0 Unverified compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)         784       0       0       0       0   81696      19   82499
+Failing (not equivalent)      32       0       0       0      24     664       0     720
+Aborted
+  Hard  (too complex)          0       0       0       0       0       0       3       3
+Not Compared
+  Clock-gate LAT                                                               1       1
+  Unread                       0       0       0       0       0      65       0      65
+****************************************************************************************
+Info:  Try the analyze_points command to see if Formality can determine potential
+causes, or suggest next steps for a FAILED or INCONCLUSIVE verification.
+See the man page for analyze_points usage and options.
+Information: Auto session is saved at 'formality_auto.fss'. (FM-559)
+Info:  Session containers saved as read-only.
+0
+date
+Fri Sep 29 01:54:13 2023
+#write_fm_report $design syn2dft
+#exit
+fm_shell (verify)> start_gui 
+     1  set stage rtlvssyn
+     2  source -echo -verbose ./fm.tcl
+     3  start_gui

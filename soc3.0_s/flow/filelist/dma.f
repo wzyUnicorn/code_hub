@@ -1,0 +1,9 @@
++incdir+$SOC_DIR/sim/output/ip/dma
+$SOC_DIR/sim/output/ip/dma/dma_ahb_config.v
+$SOC_DIR/sim/output/ip/dma/dma_ahb_mux.v
+$SOC_DIR/sim/output/ip/dma/dma_arbiter.v
+$SOC_DIR/sim/output/ip/dma/dma_int_control.v
+$SOC_DIR/sim/output/ip/dma/dma_rx_sm.v
+$SOC_DIR/sim/output/ip/dma/dma_tx_sm.v
+$SOC_DIR/sim/output/ip/dma/dma.v
+$SOC_DIR/sim/output/ip/dma/dma_channel.v

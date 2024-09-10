@@ -1,0 +1,284 @@
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating design information... (UID-85)
+Warning: Design 'soc_top' contains 5 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : soc_top
+Version: N-2017.09-SP5
+Date   : Wed Jul 26 07:33:43 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: max_auto   Library: sky130_fd_sc_hs__ss_150C_1v60
+Wire Load Model Mode: top
+
+  Startpoint: inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/md_state_q_reg[2]
+              (rising edge-triggered flip-flop clocked by cpu_clk)
+  Endpoint: inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/prefetch_addr_q_reg[31]
+            (rising edge-triggered flip-flop clocked by cpu_clk)
+  Path Group: cpu_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock cpu_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/md_state_q_reg[2]/CLK (sky130_fd_sc_hs__dfrtp_1)
+                                                          0.00 #     0.00 r
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/md_state_q_reg[2]/Q (sky130_fd_sc_hs__dfrtp_1)
+                                                          0.53       0.53 r
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U442/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.25       0.77 f
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U778/Y (sky130_fd_sc_hs__nand2_2)
+                                                          0.11       0.89 r
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U195/X (sky130_fd_sc_hs__buf_2)
+                                                          0.55       1.44 r
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U933/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.29       1.73 f
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U461/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.68       2.41 r
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U780/Y (sky130_fd_sc_hs__a21oi_1)
+                                                          0.26       2.67 f
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U774/Y (sky130_fd_sc_hs__a21boi_1)
+                                                          0.15       2.81 f
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/U775/Y (sky130_fd_sc_hs__o21ai_1)
+                                                          0.09       2.91 r
+  inst_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast.multdiv_i/alu_operand_b_o[3] (ibex_multdiv_fast_RV32M2)
+                                                          0.00       2.91 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/multdiv_operand_b_i[3] (ibex_alu_RV32B0)
+                                                          0.00       2.91 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/U498/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.15       3.05 f
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/U433/Y (sky130_fd_sc_hs__nand3_2)
+                                                          0.11       3.17 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/B[3] (ibex_alu_RV32B0_DW01_add_1)
+                                                          0.00       3.17 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U370/Y (sky130_fd_sc_hs__nor2_2)
+                                                          0.11       3.27 f
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U412/Y (sky130_fd_sc_hs__nor2_1)
+                                                          0.16       3.43 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U399/Y (sky130_fd_sc_hs__a21oi_2)
+                                                          0.16       3.59 f
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U408/Y (sky130_fd_sc_hs__nor2_1)
+                                                          0.15       3.74 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U407/Y (sky130_fd_sc_hs__nor2_2)
+                                                          0.11       3.85 f
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U363/Y (sky130_fd_sc_hs__o21ai_1)
+                                                          0.18       4.04 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/U414/Y (sky130_fd_sc_hs__xnor2_1)
+                                                          0.21       4.24 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/add_x_4/SUM[7] (ibex_alu_RV32B0_DW01_add_1)
+                                                          0.00       4.24 r
+  inst_ibex_top/u_ibex_core/ex_block_i/alu_i/adder_result_o[6] (ibex_alu_RV32B0)
+                                                          0.00       4.24 r
+  inst_ibex_top/u_ibex_core/ex_block_i/branch_target_o[6] (ibex_ex_block_2_0_0)
+                                                          0.00       4.24 r
+  inst_ibex_top/u_ibex_core/if_stage_i/branch_target_ex_i[6] (ibex_if_stage_1a110800_1a110808_0_1_0_00000020_00000016_00000040_0_0_ac533bf4_0_0_00000020)
+                                                          0.00       4.24 r
+  inst_ibex_top/u_ibex_core/if_stage_i/U57/Y (sky130_fd_sc_hs__a21boi_1)
+                                                          0.15       4.39 f
+  inst_ibex_top/u_ibex_core/if_stage_i/U77/Y (sky130_fd_sc_hs__nor2_2)
+                                                          0.12       4.51 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/addr_i[6] (ibex_icache_0_0_00000020_00000016_00000040)
+                                                          0.00       4.51 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/U944/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.10       4.62 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/U1474/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.24       4.85 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/A[6] (ibex_icache_0_0_00000020_00000016_00000040_DW01_add_1)
+                                                          0.00       4.85 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U42/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.10       4.95 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U41/Y (sky130_fd_sc_hs__nor2_1)
+                                                          0.14       5.09 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U25/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.23       5.32 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U74/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       5.41 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U73/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       5.48 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U23/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.18       5.66 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U22/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       5.87 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U40/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.13       6.00 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U37/Y (sky130_fd_sc_hs__nor2_1)
+                                                          0.14       6.14 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U19/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       6.35 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U18/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.19       6.54 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U17/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.19       6.73 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U16/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       6.94 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U36/X (sky130_fd_sc_hs__and2_1)
+                                                          0.17       7.10 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U14/COUT (sky130_fd_sc_hs__ha_2)
+                                                          0.21       7.32 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U48/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       7.39 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U47/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       7.47 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U12/COUT (sky130_fd_sc_hs__ha_2)
+                                                          0.21       7.68 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U52/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       7.75 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U51/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       7.83 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U35/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       8.03 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U56/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       8.12 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U55/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       8.19 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U8/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       8.40 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U60/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       8.48 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U59/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       8.56 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U6/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       8.76 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U64/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       8.85 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U63/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       8.92 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U34/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.21       9.13 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U68/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.08       9.21 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U67/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.07       9.29 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U2/COUT (sky130_fd_sc_hs__ha_1)
+                                                          0.19       9.48 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/U80/X (sky130_fd_sc_hs__xor2_1)
+                                                          0.19       9.66 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/add_x_1/SUM[31] (ibex_icache_0_0_00000020_00000016_00000040_DW01_add_1)
+                                                          0.00       9.66 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/U1782/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.10       9.76 f
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/U1780/Y (sky130_fd_sc_hs__nand2_1)
+                                                          0.05       9.81 r
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/prefetch_addr_q_reg[31]/D (sky130_fd_sc_hs__dfxtp_1)
+                                                          0.00       9.81 r
+  data arrival time                                                  9.81
+
+  clock cpu_clk (rise edge)                              10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.05       9.95
+  inst_ibex_top/u_ibex_core/if_stage_i/gen_icache.icache_i/prefetch_addr_q_reg[31]/CLK (sky130_fd_sc_hs__dfxtp_1)
+                                                          0.00       9.95 r
+  library setup time                                     -0.14       9.81
+  data required time                                                 9.81
+  --------------------------------------------------------------------------
+  data required time                                                 9.81
+  data arrival time                                                 -9.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: pad[13] (input port clocked by pclk)
+  Endpoint: u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/tap_state_q_reg[2]
+            (rising edge-triggered flip-flop clocked by dm_clk)
+  Path Group: dm_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock pclk (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  input external delay                                    4.50      44.50 r
+  pad[13] (inout)                                         0.00      44.50 r
+  chip_pin_mux/pad[13] (pin_mux)                          0.00      44.50 r
+  chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/pad (gnrl_io_pad_12)
+                                                          0.00      44.50 r
+  chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/U3/X (sky130_fd_sc_hs__and2_1)
+                                                          0.18      44.68 r
+  chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/pad_i_ival (gnrl_io_pad_12)
+                                                          0.00      44.68 r
+  chip_pin_mux/U21/Y (sky130_fd_sc_hs__nand2_1)           0.10      44.77 f
+  chip_pin_mux/U9/Y (sky130_fd_sc_hs__nor2b_1)            0.34      45.12 r
+  chip_pin_mux/tms_i (pin_mux)                            0.00      45.12 r
+  u_dm_wrapper/tms_i (dm_wrapper)                         0.00      45.12 r
+  u_dm_wrapper/u_dm_top/tms_i (dm_top)                    0.00      45.12 r
+  u_dm_wrapper/u_dm_top/dap/tms_i (dmi_jtag_00000001)     0.00      45.12 r
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/tms_i (dmi_jtag_tap_5_00000001)
+                                                          0.00      45.12 r
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/U9/Y (sky130_fd_sc_hs__inv_1)
+                                                          0.19      45.31 f
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/U15/Y (sky130_fd_sc_hs__o32ai_1)
+                                                          0.32      45.63 r
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/U13/Y (sky130_fd_sc_hs__nand4b_1)
+                                                          0.18      45.81 f
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/tap_state_q_reg[2]/D (sky130_fd_sc_hs__dfbbp_1)
+                                                          0.00      45.81 f
+  data arrival time                                                 45.81
+
+  clock dm_clk (rise edge)                               50.00      50.00
+  clock network delay (ideal)                             0.00      50.00
+  clock uncertainty                                      -0.05      49.95
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/tap_state_q_reg[2]/CLK (sky130_fd_sc_hs__dfbbp_1)
+                                                          0.00      49.95 r
+  library setup time                                     -0.31      49.64
+  data required time                                                49.64
+  --------------------------------------------------------------------------
+  data required time                                                49.64
+  data arrival time                                                -45.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.83
+
+
+  Startpoint: u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/td_o_reg
+              (rising edge-triggered flip-flop clocked by dm_clk')
+  Endpoint: pad[16] (output port clocked by pclk)
+  Path Group: pclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dm_clk' (rise edge)                              75.00      75.00
+  clock network delay (ideal)                             0.00      75.00
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/td_o_reg/CLK (sky130_fd_sc_hs__dfbbp_1)
+                                                          0.00      75.00 r
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/td_o_reg/Q (sky130_fd_sc_hs__dfbbp_1)
+                                                          0.63      75.63 r
+  u_dm_wrapper/u_dm_top/dap/i_dmi_jtag_tap/td_o (dmi_jtag_tap_5_00000001)
+                                                          0.00      75.63 r
+  u_dm_wrapper/u_dm_top/dap/td_o (dmi_jtag_00000001)      0.00      75.63 r
+  u_dm_wrapper/u_dm_top/td_o (dm_top)                     0.00      75.63 r
+  u_dm_wrapper/td_o (dm_wrapper)                          0.00      75.63 r
+  chip_pin_mux/td_o (pin_mux)                             0.00      75.63 r
+  chip_pin_mux/U40/Y (sky130_fd_sc_hs__a222oi_1)          0.13      75.75 f
+  chip_pin_mux/U7/Y (sky130_fd_sc_hs__nor2_1)             0.12      75.87 r
+  chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/pad_o_oval (gnrl_io_pad_9)
+                                                          0.00      75.87 r
+  chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/U2/Y (sky130_fd_sc_hs__clkinv_1)
+                                                          0.09      75.96 f
+  chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/pad_tri/Z (sky130_fd_sc_hs__einvn_1)
+                                                          0.33      76.29 r
+  chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/pad (gnrl_io_pad_9)
+                                                          0.00      76.29 r
+  chip_pin_mux/pad[16] (pin_mux)                          0.00      76.29 r
+  pad[16] (inout)                                         0.00      76.29 r
+  data arrival time                                                 76.29
+
+  clock pclk (rise edge)                                 80.00      80.00
+  clock network delay (ideal)                             0.00      80.00
+  clock uncertainty                                      -0.05      79.95
+  output external delay                                  -3.00      76.95
+  data required time                                                76.95
+  --------------------------------------------------------------------------
+  data required time                                                76.95
+  data arrival time                                                -76.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.66
+
+
+1

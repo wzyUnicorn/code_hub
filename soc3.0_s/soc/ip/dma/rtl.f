@@ -1,0 +1,9 @@
++incdr+./
+dma_ahb_config.v
+dma_ahb_mux.v
+dma_arbiter.v
+dma_int_control.v
+dma_rx_sm.v
+dma_tx_sm.v
+dma.v
+dma_channel.v

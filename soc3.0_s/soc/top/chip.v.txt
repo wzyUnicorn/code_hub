@@ -1,0 +1,265 @@
+//  ==========================================================================
+//
+//                          CONFIDENTIAL
+//  Copyright (c) 
+//  All Rights Reserved.
+//
+//  ==========================================================================
+//****************************************************************************
+//* File Name        :
+//* Author           : 
+//* Version          :1.0
+//* Generated Time   :2022-11-20
+//* Modified Time    : 
+//* Functions        : 
+//**************************************************************************
+module chip(/*AUTOARG*/
+   // Inouts
+   pad
+   );
+
+//****************************************************************************
+//Port Declaration.
+//****************************************************************************
+/*AUTOINPUT*/
+/*AUTOOUTPUT*/
+/*AUTOINOUT*/
+// Beginning of automatic inouts (from unused autoinst inouts)
+inout [PAD_NUM:1]       pad;                    // To/From pin_mux_top_inst of pin_mux_top.v
+// End of automatics
+//****************************************************************************
+//Signal Declaration.
+//****************************************************************************
+/*AUTOWIRE*/
+// Beginning of automatic wires (for undeclared instantiated-module outputs)
+wire                    clk_cpu;                // From pin_mux_top_inst of pin_mux_top.v
+wire                    i2c0_scl_pad_i;         // From pin_mux_top_inst of pin_mux_top.v
+wire                    i2c0_scl_pad_o;         // From top_inst of top.v
+wire                    i2c0_scl_padoen_o;      // From top_inst of top.v
+wire                    i2c0_sda_pad_i;         // From pin_mux_top_inst of pin_mux_top.v
+wire                    i2c0_sda_pad_o;         // From top_inst of top.v
+wire                    i2c0_sda_padoen_o;      // From top_inst of top.v
+wire                    i2c1_scl_pad_i;         // From pin_mux_top_inst of pin_mux_top.v
+wire                    i2c1_scl_pad_o;         // From top_inst of top.v
+wire                    i2c1_scl_padoen_o;      // From top_inst of top.v
+wire                    i2c1_sda_pad_i;         // From pin_mux_top_inst of pin_mux_top.v
+wire                    i2c1_sda_pad_o;         // From top_inst of top.v
+wire                    i2c1_sda_padoen_o;      // From top_inst of top.v
+wire                    pclk;                   // From pin_mux_top_inst of pin_mux_top.v
+wire                    prest_n;                // From pin_mux_top_inst of pin_mux_top.v
+wire [2:0]              r_io_reuse_pad1;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad10;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad11;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad12;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad13;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad14;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad15;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad16;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad17;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad18;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad19;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad2;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad20;       // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad3;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad4;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad5;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad6;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad7;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad8;        // From top_inst of top.v
+wire [2:0]              r_io_reuse_pad9;        // From top_inst of top.v
+wire                    rst_n_cpu;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi0_clk;               // From top_inst of top.v
+wire                    spi0_csn0;              // From top_inst of top.v
+wire                    spi0_csn1;              // From top_inst of top.v
+wire                    spi0_csn2;              // From top_inst of top.v
+wire                    spi0_csn3;              // From top_inst of top.v
+wire                    spi0_oe0;               // From top_inst of top.v
+wire                    spi0_oe1;               // From top_inst of top.v
+wire                    spi0_oe2;               // From top_inst of top.v
+wire                    spi0_oe3;               // From top_inst of top.v
+wire                    spi0_sdi0;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi0_sdi1;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi0_sdi2;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi0_sdi3;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi0_sdo0;              // From top_inst of top.v
+wire                    spi0_sdo1;              // From top_inst of top.v
+wire                    spi0_sdo2;              // From top_inst of top.v
+wire                    spi0_sdo3;              // From top_inst of top.v
+wire                    spi1_clk;               // From top_inst of top.v
+wire                    spi1_csn0;              // From top_inst of top.v
+wire                    spi1_csn1;              // From top_inst of top.v
+wire                    spi1_csn2;              // From top_inst of top.v
+wire                    spi1_csn3;              // From top_inst of top.v
+wire                    spi1_oe0;               // From top_inst of top.v
+wire                    spi1_oe1;               // From top_inst of top.v
+wire                    spi1_oe2;               // From top_inst of top.v
+wire                    spi1_oe3;               // From top_inst of top.v
+wire                    spi1_sdi0;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi1_sdi1;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi1_sdi2;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi1_sdi3;              // From pin_mux_top_inst of pin_mux_top.v
+wire                    spi1_sdo0;              // From top_inst of top.v
+wire                    spi1_sdo1;              // From top_inst of top.v
+wire                    spi1_sdo2;              // From top_inst of top.v
+wire                    spi1_sdo3;              // From top_inst of top.v
+wire                    ua_rxd;                 // From pin_mux_top_inst of pin_mux_top.v
+wire                    ua_txd;                 // From top_inst of top.v
+// End of automatics
+/*AUTOREG*/
+//****************************************************************************
+//Instance Declaration.
+//****************************************************************************
+pin_mux pin_mux_inst(/*AUTOINST*/
+                             // Outputs
+                             .clk_cpu           (clk_cpu),
+                             .i2c0_scl_pad_i    (i2c0_scl_pad_i),
+                             .i2c0_sda_pad_i    (i2c0_sda_pad_i),
+                             .i2c1_scl_pad_i    (i2c1_scl_pad_i),
+                             .i2c1_sda_pad_i    (i2c1_sda_pad_i),
+                             .pclk              (pclk),
+                             .prest_n           (prest_n),
+                             .rst_n_cpu         (rst_n_cpu),
+                             .spi0_sdi0         (spi0_sdi0),
+                             .spi0_sdi1         (spi0_sdi1),
+                             .spi0_sdi2         (spi0_sdi2),
+                             .spi0_sdi3         (spi0_sdi3),
+                             .spi1_sdi0         (spi1_sdi0),
+                             .spi1_sdi1         (spi1_sdi1),
+                             .spi1_sdi2         (spi1_sdi2),
+                             .spi1_sdi3         (spi1_sdi3),
+                             .ua_rxd            (ua_rxd),
+                             // Inouts
+                             .pad               (pad[PAD_NUM:1]),
+                             // Inputs
+                             .i2c0_scl_pad_o    (i2c0_scl_pad_o),
+                             .i2c0_scl_padoen_o (i2c0_scl_padoen_o),
+                             .i2c0_sda_pad_o    (i2c0_sda_pad_o),
+                             .i2c0_sda_padoen_o (i2c0_sda_padoen_o),
+                             .i2c1_scl_pad_o    (i2c1_scl_pad_o),
+                             .i2c1_scl_padoen_o (i2c1_scl_padoen_o),
+                             .i2c1_sda_pad_o    (i2c1_sda_pad_o),
+                             .i2c1_sda_padoen_o (i2c1_sda_padoen_o),
+                             .spi0_clk          (spi0_clk),
+                             .spi0_csn0         (spi0_csn0),
+                             .spi0_csn1         (spi0_csn1),
+                             .spi0_csn2         (spi0_csn2),
+                             .spi0_csn3         (spi0_csn3),
+                             .spi0_oe0          (spi0_oe0),
+                             .spi0_oe1          (spi0_oe1),
+                             .spi0_oe2          (spi0_oe2),
+                             .spi0_oe3          (spi0_oe3),
+                             .spi0_sdo0         (spi0_sdo0),
+                             .spi0_sdo1         (spi0_sdo1),
+                             .spi0_sdo2         (spi0_sdo2),
+                             .spi0_sdo3         (spi0_sdo3),
+                             .spi1_clk          (spi1_clk),
+                             .spi1_csn0         (spi1_csn0),
+                             .spi1_csn1         (spi1_csn1),
+                             .spi1_csn2         (spi1_csn2),
+                             .spi1_csn3         (spi1_csn3),
+                             .spi1_oe0          (spi1_oe0),
+                             .spi1_oe1          (spi1_oe1),
+                             .spi1_oe2          (spi1_oe2),
+                             .spi1_oe3          (spi1_oe3),
+                             .spi1_sdo0         (spi1_sdo0),
+                             .spi1_sdo1         (spi1_sdo1),
+                             .spi1_sdo2         (spi1_sdo2),
+                             .spi1_sdo3         (spi1_sdo3),
+                             .ua_txd            (ua_txd),
+                             .r_io_reuse_pad1   (r_io_reuse_pad1[2:0]),
+                             .r_io_reuse_pad10  (r_io_reuse_pad10[2:0]),
+                             .r_io_reuse_pad11  (r_io_reuse_pad11[2:0]),
+                             .r_io_reuse_pad12  (r_io_reuse_pad12[2:0]),
+                             .r_io_reuse_pad13  (r_io_reuse_pad13[2:0]),
+                             .r_io_reuse_pad14  (r_io_reuse_pad14[2:0]),
+                             .r_io_reuse_pad15  (r_io_reuse_pad15[2:0]),
+                             .r_io_reuse_pad16  (r_io_reuse_pad16[2:0]),
+                             .r_io_reuse_pad17  (r_io_reuse_pad17[2:0]),
+                             .r_io_reuse_pad18  (r_io_reuse_pad18[2:0]),
+                             .r_io_reuse_pad19  (r_io_reuse_pad19[2:0]),
+                             .r_io_reuse_pad2   (r_io_reuse_pad2[2:0]),
+                             .r_io_reuse_pad20  (r_io_reuse_pad20[2:0]),
+                             .r_io_reuse_pad3   (r_io_reuse_pad3[2:0]),
+                             .r_io_reuse_pad4   (r_io_reuse_pad4[2:0]),
+                             .r_io_reuse_pad5   (r_io_reuse_pad5[2:0]),
+                             .r_io_reuse_pad6   (r_io_reuse_pad6[2:0]),
+                             .r_io_reuse_pad7   (r_io_reuse_pad7[2:0]),
+                             .r_io_reuse_pad8   (r_io_reuse_pad8[2:0]),
+                             .r_io_reuse_pad9   (r_io_reuse_pad9[2:0]));
+top top_inst(/*AUTOINST*/
+             // Outputs
+             .spi0_clk                  (spi0_clk),
+             .spi0_csn0                 (spi0_csn0),
+             .spi0_csn1                 (spi0_csn1),
+             .spi0_csn2                 (spi0_csn2),
+             .spi0_csn3                 (spi0_csn3),
+             .spi0_sdo0                 (spi0_sdo0),
+             .spi0_sdo1                 (spi0_sdo1),
+             .spi0_sdo2                 (spi0_sdo2),
+             .spi0_sdo3                 (spi0_sdo3),
+             .spi0_oe0                  (spi0_oe0),
+             .spi0_oe1                  (spi0_oe1),
+             .spi0_oe2                  (spi0_oe2),
+             .spi0_oe3                  (spi0_oe3),
+             .spi1_clk                  (spi1_clk),
+             .spi1_csn0                 (spi1_csn0),
+             .spi1_csn1                 (spi1_csn1),
+             .spi1_csn2                 (spi1_csn2),
+             .spi1_csn3                 (spi1_csn3),
+             .spi1_sdo0                 (spi1_sdo0),
+             .spi1_sdo1                 (spi1_sdo1),
+             .spi1_sdo2                 (spi1_sdo2),
+             .spi1_sdo3                 (spi1_sdo3),
+             .spi1_oe0                  (spi1_oe0),
+             .spi1_oe1                  (spi1_oe1),
+             .spi1_oe2                  (spi1_oe2),
+             .spi1_oe3                  (spi1_oe3),
+             .ua_txd                    (ua_txd),
+             .i2c0_scl_pad_o            (i2c0_scl_pad_o),
+             .i2c0_scl_padoen_o         (i2c0_scl_padoen_o),
+             .i2c0_sda_pad_o            (i2c0_sda_pad_o),
+             .i2c0_sda_padoen_o         (i2c0_sda_padoen_o),
+             .i2c1_scl_pad_o            (i2c1_scl_pad_o),
+             .i2c1_scl_padoen_o         (i2c1_scl_padoen_o),
+             .i2c1_sda_pad_o            (i2c1_sda_pad_o),
+             .i2c1_sda_padoen_o         (i2c1_sda_padoen_o),
+             .r_io_reuse_pad1           (r_io_reuse_pad1[2:0]),
+             .r_io_reuse_pad10          (r_io_reuse_pad10[2:0]),
+             .r_io_reuse_pad11          (r_io_reuse_pad11[2:0]),
+             .r_io_reuse_pad12          (r_io_reuse_pad12[2:0]),
+             .r_io_reuse_pad13          (r_io_reuse_pad13[2:0]),
+             .r_io_reuse_pad14          (r_io_reuse_pad14[2:0]),
+             .r_io_reuse_pad15          (r_io_reuse_pad15[2:0]),
+             .r_io_reuse_pad16          (r_io_reuse_pad16[2:0]),
+             .r_io_reuse_pad17          (r_io_reuse_pad17[2:0]),
+             .r_io_reuse_pad18          (r_io_reuse_pad18[2:0]),
+             .r_io_reuse_pad19          (r_io_reuse_pad19[2:0]),
+             .r_io_reuse_pad2           (r_io_reuse_pad2[2:0]),
+             .r_io_reuse_pad20          (r_io_reuse_pad20[2:0]),
+             .r_io_reuse_pad3           (r_io_reuse_pad3[2:0]),
+             .r_io_reuse_pad4           (r_io_reuse_pad4[2:0]),
+             .r_io_reuse_pad5           (r_io_reuse_pad5[2:0]),
+             .r_io_reuse_pad6           (r_io_reuse_pad6[2:0]),
+             .r_io_reuse_pad7           (r_io_reuse_pad7[2:0]),
+             .r_io_reuse_pad8           (r_io_reuse_pad8[2:0]),
+             .r_io_reuse_pad9           (r_io_reuse_pad9[2:0]),
+             // Inputs
+             .clk_cpu                   (clk_cpu),
+             .rst_n_cpu                 (rst_n_cpu),
+             .pclk                      (pclk),
+             .prest_n                   (prest_n),
+             .spi0_sdi0                 (spi0_sdi0),
+             .spi0_sdi1                 (spi0_sdi1),
+             .spi0_sdi2                 (spi0_sdi2),
+             .spi0_sdi3                 (spi0_sdi3),
+             .spi1_sdi0                 (spi1_sdi0),
+             .spi1_sdi1                 (spi1_sdi1),
+             .spi1_sdi2                 (spi1_sdi2),
+             .spi1_sdi3                 (spi1_sdi3),
+             .ua_rxd                    (ua_rxd),
+             .i2c0_scl_pad_i            (i2c0_scl_pad_i),
+             .i2c0_sda_pad_i            (i2c0_sda_pad_i),
+             .i2c1_scl_pad_i            (i2c1_scl_pad_i),
+             .i2c1_sda_pad_i            (i2c1_sda_pad_i));
+
+endmodule

@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : soc_top
+Version: N-2017.09-SP5
+Date   : Wed Oct  4 15:36:10 2023
+****************************************
+
+
+Library(s) Used:
+
+    sky130_fd_sc_hs__ss_150C_1v60 (File: /root/pwd/work/github/SOC_V3.0_final4/To_Customer/dc/lib/sky130_fd_sc_hs__ss_150C_1v60.db)
+
+
+Operating Conditions: max_auto   Library: sky130_fd_sc_hs__ss_150C_1v60
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.6  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  15.9257 mW   (24%)
+  Net Switching Power  =  51.2887 mW   (76%)
+                         ---------
+Total Dynamic Power    =  67.2144 mW  (100%)
+
+Cell Leakage Power     = 860.2521 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000        8.1489e-03            0.0000        8.1489e-03  (   0.00%)
+clock_network  4.6713e-02           32.0518        7.2842e+06           39.3828  (   4.25%)
+register          15.8382        2.8088e-03        7.5721e+08          773.0503  (  83.35%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.2645e-02           19.2186        9.5759e+07          115.0197  (  12.40%)
+--------------------------------------------------------------------------------------------------
+Total             15.9275 mW        51.2814 mW     8.6025e+08 nW       927.4609 mW
+1

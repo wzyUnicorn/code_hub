@@ -1,0 +1,5 @@
+Design Compiler use library ".db", skywater-pdk library format is ".lib" .
+Use library compiler convert the format.
+step1: lc_shell &
+step2: read_lib lib_name.lib
+step3: write_lib -format db lib_name -output lib_name.db

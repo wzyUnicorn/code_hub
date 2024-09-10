@@ -1,0 +1,12 @@
+dm_csrs.sv
+dmi_bscane_tap.sv
+dmi_cdc.sv
+dmi_intf.sv
+dmi_jtag.sv
+dmi_jtag_tap.sv
+dmi_test.sv
+dm_mem.sv
+dm_obi_top.sv
+dm_pkg.sv
+dm_sba.sv
+dm_top.sv
