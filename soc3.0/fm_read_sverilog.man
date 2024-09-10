@@ -1,0 +1,258 @@
+2.  Synopsys Commands                                        Command Reference
+                                 read_sverilog
+
+NAME
+       read_sverilog
+              Reads one or more SystemVerilog files.
+
+SYNTAX
+       status read_sverilog
+              [ -container container_name | -r | -i ]
+              [ -libname libname ]
+              [ -work_library libname ]
+              [ -uses design_libs_list]
+              [ -L design_libs_list]
+              [ -technology_library ]
+              [ -f VCS_option_file ]
+              [ -F VCS_option_file ]
+              [ -vcs "VCS options" ]
+              [ -define define ]
+              [ -3.1a | -05 | -09 | -12 ]
+              [ -extra_library_cells cell_list ]
+              [ filenames ]
+
+   Data Types
+              container_name string
+              libname string
+              VCS_option_file string
+              "VCS options" string
+              define string
+              design_list string
+              filenames string
+
+ARGUMENTS
+       -container container_name
+              Specifies  the container into which the SystemVerilog designs or
+              cell descriptions are read. The specified container  is  set  as
+              the current container.
+
+       -r     Sets  the  default  reference container as the current container
+              and reads the SystemVerilog designs or  cell  descriptions  into
+              it.
+
+       -i     Sets  the  default  implementation container as the current con-
+              tainer and reads the SystemVerilog designs or cell  descriptions
+              into it.
+
+       -libname libname
+              Names  the  design library or technology library into which Sys-
+              temVerilog designs or cell descriptions are read. You can  spec-
+              ify any alphanumeric string for the libname argument.
+
+       -work_library library_name
+              Same behavior as the -libname option.
+
+       -technology_library
+              Specifies that the file that is read in is a technology library.
+              When you use this option, specify a container by using  the  -r,
+              -i, or -container option.
+
+       -uses design_libs_list
+              The  list  of libraries used to find the references if Formality
+              could not resolve the reference from working library.  Libraries
+              from  -uses liblist are used only if parent library doesn't have
+              searched design. If the design is not found in library  list  of
+              -uses, search is continued using default search order.
+
+       -L design_libs_list
+              The  list  of  libraries  used to find the references. Libraries
+              from -L liblist are  used  even  if  parent  library  does  have
+              design/interface.  If the reference is not found in library list
+              of -L, search is canceled and error message is issued.
+
+       -f VCS_option_file
+              Specifies that the file is a VCS option file, which contains VCS
+              options or Verilog files.
+
+       -F VCS_option_file
+              Same  as  the  -f option but allows you to specify a path to the
+              file and the source files listed in the file do not have  to  be
+              absolute pathnames.
+
+       -vcs   Specifies that the string enclosed within quotation marks is VCS
+              options or Verilog files.
+
+       -define define
+              Sets the define option before reading  the  first  SystemVerilog
+              file.   The define argument might consist of a single value or a
+              space-delimited list of values enclosed within braces.
+
+       -3.1a | -05 | -09 | -12
+              Specifies the standard to use for language  interpretation.  The
+              default  is  -12,  which  specifies the IEEE Standard 1800-2012.
+              Note that setting the hdlin_sv_packages variable to "none" spec-
+              ifies the "-3.1a" standard.
+
+       -extra_library_cells cell_list
+              Specifies  the  list of design names(may be unused) to be elabo-
+              rated. If called before set_top, the cells in cell_list will  be
+              elaborated  during  the  subsequent set_top command even if they
+              are not included in the top design hierarchy. This is  in  addi-
+              tion  to  the  normal  behavior of read_verilog. If the cells in
+              cell_list already exist then they will be overwritten, which  is
+              the  current behavior of read_sverilog.  If called after set_top
+              in setup mode, or anytime in match or verify mode, the cells  in
+              cell_list (and only those designs) will be elaborated as part of
+              the read_sverilog command. If the  library  already  exists,  it
+              will  only  be  possible  to add designs to it; that is, it will
+              only be possible to elaborate designs that have  not  previously
+              been elaborated. It will not be possible to overwrite any exist-
+              ing design. Attempting to  overwrite  an  existing  design  will
+              result in an error message.
+
+       file_list
+              Specifies one or more SystemVerilog files to read.
+
+DESCRIPTION
+       Use  this  command to read one or more SystemVerilog files. Designs are
+       read into design libraries, and Verilog library cell  descriptions  are
+       read  in  as  technology libraries. By default, the tool places designs
+       into the default design library named WORK, and cell descriptions  into
+       the  default  technology  library  named  TECH_WORK.  The  command,  by
+       default, detects if files are in compressed gzip format and reads them.
+
+       If  a  specified  library  does  not exist, the tool creates it. If the
+       library exists, it overwrites the existing designs or cell descriptions
+       with  the designs or cell descriptions that are read. Designs linked to
+       any overwritten designs are unlinked.
+
+       The following list describes how to use the read_sverilog command.
+       o Reading designs into a specific container - To read  designs  into  a
+       specific  container, do not use the -technology_library option. Instead
+       use the -r, -i, or -container options. If the specified container  does
+       not  exist,  the  tool creates the container and sets it as the current
+       container. The syntax to use the command is:
+            read_sverilog  -container c_name file
+
+       o Reading unshared technology libraries - To read a technology  library
+       into  a  specific container, use the -technology_library option and the
+       -r, -i, or -container options. If  the  specified  container  does  not
+       exist,  the  tool creates the container and sets it as the current con-
+       tainer. The syntax to use the command is:
+            read_sverilog  -technology_library -container c_name tech_file
+
+       o Renaming a technology library - To rename a technology library, spec-
+       ify the -libname, or the -work_library, and -technology_library options
+       along with the -r, -i, or -container options. By default,  the  command
+       reads  cell  descriptions  into  the  default  technology library named
+       TECH_WORK. The syntax to use the command is:
+            read_sverilog -technology_library -r -libname my_tech_lib tech_lib
+
+       o Renaming a design library - To rename a design library,  specify  the
+       -libname or -work_library option and do not use the -technology_library
+       option. By default, the command reads designs into the  default  design
+       library named WORK. The syntax to use the command is:
+            read_sverilog  -libname my_design_lib file
+
+       o  VCS  options  - The read_sverilog command supports some VCS options:
+       -v, -y, -f, +define, +libext and +incdir. Some VCS options are  irrele-
+       vant,  therefore  recognized  but  ignored:  -P  and  all the other '+'
+       options. The syntax of the command is:
+            read_sverilog  -vcs "VCS options"
+            read_sverilog  -f VCS_option_file
+            read_sverilog  -F VCS_option_file
+
+   Special Behavior in the Library Verification Mode:
+       The library_verification command preprocesses all Verilog library cells
+       into  specified  container.  The  container  library  names are handled
+       internally by the tool. The only options that are valid in the  library
+       verification mode are -r, -i, and -technology_library.
+
+            fm_shell> read_sverilog -r vlg_cells.v
+            Loading verilog file 'vlg_cells.v '
+            Preprocessing library 'vlg_cells.v' ...
+            Total cells found: 5
+            1
+
+EXAMPLES
+       This  example  reads a SystemVerilog design into the Formality environ-
+       ment. In this case, the -container option creates  the  container  ref.
+       The design files are read into a default design library named WORK, and
+       the newly created container is established as the current container.
+            fm_shell> read_sverilog -c ref p0.sv
+            Loading verilog file '/u/formality/designs/p0.sv'
+            No target library specified, default is WORK
+            Created container 'ref'
+            Current container set to 'ref'
+            1
+            fm_shell> report_design_libraries
+
+            Number of
+            Designs     Design Library
+            ---------  --------------
+                1        ref:/WORK
+            1
+            fm_shell>
+
+       This example reads a SystemVerilog design into the  current  container.
+       Here, the -libname option renames the design library to my_lib.
+            fm_shell> read_sverilog -libname my_lib p0.sv
+            Loading verilog file '/u/formality/designs/p0.sv'
+            1
+            fm_shell> report_design_libraries -short
+            Number of
+            Designs      Design Library
+            ---------    --------------
+                1        ref:/my_lib
+            1
+            fm_shell>
+
+       This example reads a technology library into container 'ref'.
+            fm_shell (setup)> read_sverilog -technology_library -container ref lib.v
+            Loading verilog file '/u/formality/libraries/lib.v '
+            No target library specified, default is TECH_WORK
+            Created container 'ref'
+            Current container set to 'ref'
+            1
+            fm_shell (setup)> report_libraries -short
+
+            Number of
+            Cells        Shared    Technology Library
+            ---------    ------    ------------------
+                 83       Yes      GTECH
+
+                 83       Yes      i:/GTECH
+
+                 83       Yes      r:/GTECH
+
+                 83       Yes      ref:/GTECH
+                  1       No       ref:/TECH_WORK
+
+            1
+
+            fm_shell> create_container impl
+            Created container 'impl'
+            Current container set to 'impl'
+            1
+            fm_shell> report_libraries -short
+            Number of
+            Cells       Shared    Technology Library
+            ---------   ------    ------------------
+                1       Yes       TECH_WORK
+                79      Yes       gtech
+
+                1       Yes       impl:/TECH_WORK
+                79      Yes       impl:/gtech
+                1       Yes       ref:/TECH_WORK
+                79      Yes       ref:/gtech
+            1
+            fm_shell>
+
+SEE ALSO
+       read_verilog(2)
+       report_designs(2)
+       report_design_libraries(2)
+       report_libraries(2)
+
+                            Version K-2015.06
+          Copyright (c) 1988-2015 Synopsys, Inc. All rights reserved.

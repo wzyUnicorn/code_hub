@@ -1,0 +1,2 @@
+// SVA binding
+bind pin_mux sva_checker chk (.*);

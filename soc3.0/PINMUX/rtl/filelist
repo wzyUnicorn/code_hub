@@ -1,0 +1,9 @@
+../../rtl/TPPADLRCMCUDB.v
+../../rtl/pin_mux_rf.v
+../../rtl/gnrl_io_pad.v
+../../rtl/pin_mux.v
+ 
+-sverilog 
+../../FPV/assertion/pinmux.sva 
+../../FPV/assertion/pinmux_vlog_bind.sva 
++define+INLINE_SVA

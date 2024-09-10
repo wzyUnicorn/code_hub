@@ -1,0 +1,9 @@
++incdir+$PRJ_ROOT/../ip/dma
+$PRJ_ROOT/output/ip/dma/dma_ahb_config.v
+$PRJ_ROOT/output/ip/dma/dma_ahb_mux.v
+$PRJ_ROOT/output/ip/dma/dma_arbiter.v
+$PRJ_ROOT/output/ip/dma/dma_int_control.v
+$PRJ_ROOT/output/ip/dma/dma_rx_sm.v
+$PRJ_ROOT/output/ip/dma/dma_tx_sm.v
+$PRJ_ROOT/output/ip/dma/dma.v
+$PRJ_ROOT/output/ip/dma/dma_channel.v

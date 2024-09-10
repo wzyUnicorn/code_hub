@@ -1,0 +1,159 @@
+block cnn {
+    bytes 1;
+    register CNN_CTRL0 {
+        bytes 4;
+        field  START {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }
+        field  CLEAR {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }
+    }
+
+    register CNN_CTRL1 {
+        bytes 4;
+        field  MODE {
+               bits 3;
+               access rw;
+               reset 3'b0;
+            }
+    }
+
+
+    register CNN_COUNT0 {
+        bytes 4;
+        field  POOL_COUNT {
+               bits 16;
+               access rw;
+               reset 16'b0;
+            }
+
+        field  CONV_COUNT @16 {
+               bits 16;
+               access rw;
+               reset 16'b0;
+            }
+    }    
+
+    register CNN_COUNT1 {
+        bytes 4;
+        field  LINE_COUNT {
+               bits 16;
+               access rw;
+               reset 16'b0;
+            }
+    }
+
+    register  CNN_STATUS {
+        bytes 4;
+        field  DONE  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }     
+        field  UNDERFLOW  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }  
+        field  OVERFLOW  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }  
+    }
+
+    register  CNN_DMA_EN {
+        bytes 4;
+        field  DOUT_EN  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }      
+
+        field  RSV_0  {
+               bits 14;
+               access ro;
+               reset 14'b0;
+            }   
+
+        field  DIN_EN  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }  
+
+        field  RSV_1  {
+               bits 14;
+               access ro;
+               reset 14'b0;
+            }  
+
+    }
+
+    register  CNN_SRC_ADDR {
+        bytes 4;
+        field  SRC_ADDR  {
+               bits 32;
+               access rw;
+               reset 32'b0;
+            } 
+    }
+
+    register  CNN_DST_ADDR {
+        bytes 4;
+        field  DST_ADDR  {
+               bits 32;
+               access rw;
+               reset 32'b0;
+            } 
+    }
+
+
+    register  CNN_INT_EN {
+        bytes 4;
+        field  DONE_INT_EN  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            } 
+
+        field  UNDERFLOW_INT_EN  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            } 
+
+        field  OVERFLOW_INT_EN  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            } 
+
+    }
+
+    register  CNN_INT {
+        bytes 4;
+        field  DONE_INT  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }     
+        field  UNDERFLOW_INT @8 {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }       
+        field  OVERFFLOW_INT @16 {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }   
+    }
+
+
+}

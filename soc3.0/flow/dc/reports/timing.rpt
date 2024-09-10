@@ -1,0 +1,380 @@
+Warning: Design 'soc_top' has '26' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: Design 'soc_top' contains 4 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : soc_top
+Version: N-2017.09-SP5
+Date   : Wed Oct  4 15:36:09 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: max_auto   Library: sky130_fd_sc_hs__ss_150C_1v60
+Wire Load Model Mode: top
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[24].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[24].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[24].x_gnrl_io_pad/pad (gnrl_io_pad_1)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[24] (pin_mux)                          0.00       0.00 r
+  pad[24] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[23].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[23].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[23].x_gnrl_io_pad/pad (gnrl_io_pad_2)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[23] (pin_mux)                          0.00       0.00 r
+  pad[23] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[22].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[22].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[22].x_gnrl_io_pad/pad (gnrl_io_pad_3)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[22] (pin_mux)                          0.00       0.00 r
+  pad[22] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[21].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[21] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[21].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[21].x_gnrl_io_pad/pad (gnrl_io_pad_4)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[21] (pin_mux)                          0.00       0.00 r
+  pad[21] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[20].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[20] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[20].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[20].x_gnrl_io_pad/pad (gnrl_io_pad_5)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[20] (pin_mux)                          0.00       0.00 r
+  pad[20] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[19].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[19] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[19].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[19].x_gnrl_io_pad/pad (gnrl_io_pad_6)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[19] (pin_mux)                          0.00       0.00 r
+  pad[19] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[18].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[18] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[18].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[18].x_gnrl_io_pad/pad (gnrl_io_pad_7)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[18] (pin_mux)                          0.00       0.00 r
+  pad[18] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[17].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[17] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[17].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[17].x_gnrl_io_pad/pad (gnrl_io_pad_8)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[17] (pin_mux)                          0.00       0.00 r
+  pad[17] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[16] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[16].x_gnrl_io_pad/pad (gnrl_io_pad_9)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[16] (pin_mux)                          0.00       0.00 r
+  pad[16] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[15].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[15] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[15].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[15].x_gnrl_io_pad/pad (gnrl_io_pad_10)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[15] (pin_mux)                          0.00       0.00 r
+  pad[15] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[14].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[14].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[14].x_gnrl_io_pad/pad (gnrl_io_pad_11)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[14] (pin_mux)                          0.00       0.00 r
+  pad[14] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[13] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[13].x_gnrl_io_pad/pad (gnrl_io_pad_12)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[13] (pin_mux)                          0.00       0.00 r
+  pad[13] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[12].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[12].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[12].x_gnrl_io_pad/pad (gnrl_io_pad_13)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[12] (pin_mux)                          0.00       0.00 r
+  pad[12] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[11].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[11] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[11].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[11].x_gnrl_io_pad/pad (gnrl_io_pad_14)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[11] (pin_mux)                          0.00       0.00 r
+  pad[11] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[10].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[10] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[10].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[10].x_gnrl_io_pad/pad (gnrl_io_pad_15)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[10] (pin_mux)                          0.00       0.00 r
+  pad[10] (inout)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[9].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[9] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[9].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[9].x_gnrl_io_pad/pad (gnrl_io_pad_16)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[9] (pin_mux)                           0.00       0.00 r
+  pad[9] (inout)                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[8].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[8] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[8].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[8].x_gnrl_io_pad/pad (gnrl_io_pad_17)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[8] (pin_mux)                           0.00       0.00 r
+  pad[8] (inout)                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[7].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[7] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[7].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[7].x_gnrl_io_pad/pad (gnrl_io_pad_18)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[7] (pin_mux)                           0.00       0.00 r
+  pad[7] (inout)                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[6].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[6] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[6].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[6].x_gnrl_io_pad/pad (gnrl_io_pad_19)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[6] (pin_mux)                           0.00       0.00 r
+  pad[6] (inout)                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: chip_pin_mux/gnrl_io_pad_inst[5].x_gnrl_io_pad/u_pad/PAD (internal pin)
+  Endpoint: pad[5] (output port clocked by pclk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  chip_pin_mux/gnrl_io_pad_inst[5].x_gnrl_io_pad/u_pad/PAD (RCMCU_PLBMUX)
+                                                          0.00       0.00 r
+  chip_pin_mux/gnrl_io_pad_inst[5].x_gnrl_io_pad/pad (gnrl_io_pad_20)
+                                                          0.00       0.00 r
+  chip_pin_mux/pad[5] (pin_mux)                           0.00       0.00 r
+  pad[5] (inout)                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

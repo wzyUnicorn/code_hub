@@ -1,0 +1,43 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 2
+     - # proven       : 1
+     - # falsified    : 1
+
+   > Vacuity
+     - # found        : 4
+     - # non_vacuous  : 4
+
+   > Cover
+     - # found        : 2
+     - # covered      : 2
+
+   > Constraint
+     - # found        : 4
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 2
+     [  0] falsified   (depth=1)    (non_vacuous)  -  pin_mux.chk.assert_spi0_csn0_cannot_map_to_pad_3
+     [  1] proven                   (non_vacuous)  -  pin_mux.chk.assert_spi0_csn0_pad_2_15
+
+   > Cover
+     # Cover: 2
+     [  4] covered     (depth=1)                   -  pin_mux.chk.cov_spi0_csn0_pad15
+     [  5] covered     (depth=1)                   -  pin_mux.chk.cov_spi0_csn0_pad2
+
+   > Constraint
+     # Constraint: 4
+     [  2] constrained              (non_vacuous)  -  pin_mux.chk.assume_i2c_signal
+     [  3] constrained              (non_vacuous)  -  pin_mux.chk.assume_qspi0_signal
+     [  6] constrained                             -  constant_6 - cpu_reset_n==0
+     [  7] constrained                             -  constant_7 - apb_reset_n==0
+
+
+

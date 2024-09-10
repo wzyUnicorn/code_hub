@@ -1,0 +1,169 @@
+block qspi {
+    bytes 4;
+    register SPI_CTRL {
+        bytes 4;
+        field  RD {
+               bits 1;
+               access wo;
+               reset 1'b0;
+            }
+        field  WR {
+               bits 1;
+               access wo;
+               reset 1'b0;
+            }
+        field  QRD {
+               bits 1;
+               access wo;
+               reset 1'b0;
+            }
+        field  QWR {
+               bits 1;
+               access wo;
+               reset 1'b0;
+            }
+        field  SRST {
+               bits 1;
+               access wo;
+               reset 1'b0;
+            }
+        field  CS @8 {
+               bits 4;
+               access wo;
+               reset 4'b0;
+            }
+    }
+
+    register SPI_STATUS {
+        bytes 4;
+        field  STATUS {
+               bits 7;
+               access ro;
+               reset 7'b0;
+            }
+
+        field  RXELEMS @16 {
+               bits 5;
+               access ro;
+               reset 5'b0;
+            }
+
+        field  TXELEMS @24 {
+               bits 5;
+               access ro;
+               reset 5'b0;
+            }
+    }    
+
+    register  SPI_CLKDIV {
+        bytes 4;
+        field  CLKDIV  {
+               bits 8;
+               access rw;
+               reset 8'b0;
+            }        
+    }
+
+    register  SPI_CMD {
+        bytes 4;
+        field  CMD  {
+               bits 32;
+               access rw;
+               reset 32'b0;
+            }        
+    }
+
+    register  SPI_ADR {
+        bytes 4;
+        field  ADR  {
+               bits 32;
+               access rw;
+               reset 32'b0;
+            }        
+    }
+
+    register  SPI_LEN {
+        bytes 4;
+        field  CMDLEN  {
+               bits 6;
+               access rw;
+               reset 6'b0;
+            }     
+        field  ADDRLEN @8 {
+               bits 6;
+               access rw;
+               reset 6'b0;
+            }       
+        field  DATALEN @16 {
+               bits 16;
+               access rw;
+               reset 16'b0;
+            }   
+    }
+
+    register  SPI_DUM {
+        bytes 4;
+        field  DUMMYRD  {
+               bits 16;
+               access rw;
+               reset 16'b0;
+            }     
+        field  DUMMYWR {
+               bits 16;
+               access rw;
+               reset 16'b0;
+            }       
+    }
+
+    register  SPI_TXFIFO {
+        bytes 4;
+        field  TX  {
+               bits 32;
+               access rw;
+               reset 32'b0;
+            }        
+    }
+
+    register  SPI_RXFIFO {
+        bytes 4;
+        field  RX  {
+               bits 32;
+               access rw;
+               reset 32'b0;
+            }        
+    }
+
+    register  SPI_INTCFG {
+        bytes 4;
+        field  TXTH  {
+               bits 5;
+               access rw;
+               reset 5'b0;
+            }     
+        field  RXTH @8 {
+               bits 5;
+               access rw;
+               reset 5'b0;
+            }      
+        field  EN @31 {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }               
+    }
+
+    register  SPI_INTSTA {
+        bytes 4;
+        field  TXINT  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }     
+        field  RXINT  {
+               bits 1;
+               access rw;
+               reset 1'b0;
+            }      
+    }
+
+}
