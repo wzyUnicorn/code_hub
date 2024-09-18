@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>230Club</title>
+        <style type="text/css">
+        body{background-image:url(Screenshoot.png);
+             background-size:cover;
+             background-repeat:no-repeat;
+             background-position:center;
+        }
+        </style>
+    </head>
+
+    <h3 align=";">
+        <span style="color:orange;front-size:30px;margin-left:600px">230</span>Club
+    </h3>
+
+    <style> 
+    .logo{
+       width:150px;
+       height:0,auto;
+       margin:0,auto;
+    }
+    </style>
+    
+    <style type="text/css">
+     thead{
+        position:sticky;
+        top:0;
+        background-color:#fff;
+     }
+    </style>
+   
+    <head>
+    <meta charset="utf-8">
+    <title>loginUI</title>
+    <style>
+      
+       body{
+          background-color:#74aabc;
+          background-repeat:no-repeat;
+          background-size:cover;
+		  margin-top:200px;
+       }
+       .login{
+          width:400px;
+          height:200px;
+          margin:auto;
+          margin-top:20px;
+          border-radius:5px;
+          overflow:hidden;
+       }
+       .input{
+          width:300px;
+          height:30px;
+          padding-left:10px;
+          margin-top:20px;
+          margin-left:50px;
+       }
+    </style>
+    </head>
+   
+    <body>
+       <div class="login">
+           <form>
+               <label for="username">username:</label>
+               <input type="text" id="username" name="username"><br><br>
+               <label for="password">password:</label>
+               <input type="password" id="password" name="password"><br><br>
+               <button type="button" onclick="login()">login</button>
+           </form>
+       </div>
+    </body>    
+</html>
+
+<script>
+function login() {
+   var username = document.getElementById("username").value;
+   var password = document.getElementById("password").value;
+   if (username = "admin" && password == "123456") {
+   window.location.href = "videolist.html";
+   }else if (username = "wangziyu" && password == "wangziyu666888") {
+   window.location.href = "videolist.html";
+   }else {
+    alert("username or password is error!!!");
+   }
+}
+</script>
