@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <video id="videoPlayer" controls>
+        <source src="bcsz.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <script>
+        var video = document.getElementById('videoPlayer');
+
+        function playVideo() {
+            video.play();
+        }
+
+        function pauseVideo() {
+            video.pause();
+        }
+
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Section at Bottom</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .comment-section {
+            margin-top: auto; /* Push the comment section to the bottom */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .comment-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        .comment-button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Your main content goes here -->
+        <p>快来评论区留下你的留言吧~</p>
+    </div>
+    <div class="comment-section">
+        <input type="text" class="comment-input" placeholder="Write a comment..." id="commentInput">
+        <button class="comment-button" onclick="addComment()">发布</button>
+        <div id="comments">
+            <!-- Comments will be added here -->
+        </div>
+    </div>
+
+    <script>
+        function addComment() {
+            var input = document.getElementById('commentInput');
+            var commentText = input.value.trim();
+            if (commentText) {
+                var commentsDiv = document.getElementById('comments');
+                var newComment = document.createElement('div');
+                newComment.textContent = commentText;
+                commentsDiv.appendChild(newComment);
+                input.value = ''; // Clear the input after adding the comment
+            } else {
+                alert('Please enter a comment.');
+            }
+        }
+    </script>
+<a href="videolist.html" style="display: block; text-align: center;">上一级</a>
+	
+</body>
