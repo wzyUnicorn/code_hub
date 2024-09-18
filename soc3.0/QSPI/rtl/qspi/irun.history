@@ -1,0 +1,3 @@
+s1(11Sep2024:16:42:39):  irun apb_spi_master.v spi_master_apb_if.v spi_master_clkgen.v spi_master_controller.v spi_master_fifo.v spi_master_rx.v spi_master_tx.v 
+s2(11Sep2024:16:43:01):  irun apb_spi_master.v spi_master_apb_if.v spi_master_clkgen.v spi_master_controller.v spi_master_fifo.v spi_master_rx.v spi_master_tx.v 
+s3(11Sep2024:16:43:29):  irun apb_spi_master.v spi_master_apb_if.v spi_master_clkgen.v spi_master_controller.v spi_master_fifo.v spi_master_rx.v spi_master_tx.v -gui 

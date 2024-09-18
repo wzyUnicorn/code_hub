@@ -1,0 +1,12 @@
+./qspi_data_length_test/simv.vdb 
+./qspi_read_test/simv.vdb
+./qspi_soft_reset_test/simv.vdb
+./qspi_abnormal_length_test/simv.vdb 
+./qspi_clk_test/simv.vdb 
+./qspi_interrupt_test/simv.vdb 
+./qspi_dummy_test/simv.vdb 
+./qspi_reg_rw_test/simv.vdb 
+./qspi_nquad_mode_test/simv.vdb
+./qspi_nquad_addr_data_test/simv.vdb 
+./qspi_send_addr_data_test/simv.vdb
+./qspi_rand_case_test/simv.vdb

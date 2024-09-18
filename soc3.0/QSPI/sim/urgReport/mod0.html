@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: spi_master_tx</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | asserts</div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_spi_master_tx'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_spi_master_tx')">spi_master_tx</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 90.28</td>
+<td class="s10 cl rt"><a href="mod0.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod0.html#Cond" > 95.83</a></td>
+<td class="s7 cl rt"><a href="mod0.html#Toggle" > 75.00</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/ICer/soc3.0/QSPI/sim/comp/../../rtl/qspi/spi_master_tx.v')">/home/ICer/soc3.0/QSPI/sim/comp/../../rtl/qspi/spi_master_tx.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod0.html#inst_tag_0"  onclick="showContent('inst_tag_0')">qspi_tb_top.dut.u_spictrl.u_txreg</a></td>
+<td class="s9 cl rt"> 90.28</td>
+<td class="s10 cl rt"><a href="mod0.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod0.html#Cond" > 95.83</a></td>
+<td class="s7 cl rt"><a href="mod0.html#Toggle" > 75.00</a></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_spi_master_tx'>
+<hr>
+<a name="inst_tag_0"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_0" >qspi_tb_top.dut.u_spictrl.u_txreg</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 90.28</td>
+<td class="s10 cl rt"><a href="mod0.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod0.html#Cond" > 95.83</a></td>
+<td class="s7 cl rt"><a href="mod0.html#Toggle" > 75.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 90.28</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 95.83</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 89.58</td>
+<td class="s9 cl rt"> 96.98</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s7 cl rt"> 71.77</td>
+<td><a href="mod3.html#inst_tag_3" >u_spictrl</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_spi_master_tx'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod0.html" >spi_master_tx</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>41</td><td>41</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>45</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>54</td><td>29</td><td>29</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>104</td><td>9</td><td>9</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+44                          always @(*) begin  
+45         1/1                  if (counter_in_upd)
+46         1/1                      counter_trgt_next = (en_quad_in ? {2'b00, counter_in[15:2]} : counter_in);
+47                              else
+48         1/1                      counter_trgt_next = counter_trgt;
+49                          end
+50                          
+51                          assign done = (counter == (counter_trgt - 1)) &amp;&amp; tx_edge;
+52                      
+53                          always @(*) begin
+54         1/1                  tx_NS         = tx_CS;
+55         1/1                  clk_en_o      = 1'b0;
+56         1/1                  data_int_next = data_int;
+57         1/1                  data_ready    = 1'b0;
+58         1/1                  counter_next  = counter;
+59                      
+60         1/1                  case (tx_CS)
+61                                  IDLE: begin
+62         1/1                          clk_en_o = 1'b0;
+63                      
+64         1/1                          if (en &amp;&amp; data_valid) begin
+65         1/1                              data_int_next = data;
+66         1/1                              data_ready    = 1'b1;
+67         1/1                              tx_NS         = TRANSMIT;
+68                                      end
+                        MISSING_ELSE
+69                                  end
+70                                  TRANSMIT: begin
+71         1/1                          clk_en_o = 1'b1;
+72                      
+73         1/1                          if (tx_edge) begin
+74         1/1                              counter_next  = counter + 1;
+75         1/1                              data_int_next = (en_quad_in ? {data_int[27:0], 4'b0000} : {data_int[30:0], 1'b0});
+76                      
+77         1/1                              if (tx_done) begin
+78         1/1                                  counter_next = 0;
+79                      
+80         1/1                                  if (en &amp;&amp; data_valid) begin
+81         1/1                                      data_int_next = data;
+82         1/1                                      data_ready    = 1'b1;
+83         1/1                                      tx_NS         = TRANSMIT;
+84                      			end else begin
+85         1/1                                      clk_en_o = 1'b0;
+86         1/1                                      tx_NS    = IDLE;
+87                                              end
+88         1/1          		    end else if (reg_done) begin
+89         1/1                                  if (data_valid) begin
+90         1/1                                      data_int_next = data;
+91         1/1                                      data_ready    = 1'b1;
+92                      			end else begin
+93         1/1                                      clk_en_o = 1'b0;
+94         1/1                                      tx_NS    = IDLE;
+95                                              end
+96                                          end
+                        MISSING_ELSE
+97                      	        end
+                        MISSING_ELSE
+98                                  end
+                        MISSING_DEFAULT
+99                              endcase
+100                         end
+101                     
+102                     
+103                         always @(posedge clk or negedge rstn) begin
+104        1/1                  if (~rstn) begin
+105        1/1                      counter      &lt;= 0;
+106        1/1                      counter_trgt &lt;= 'h8;
+107        1/1                      data_int     &lt;= 'h0;
+108        1/1                      tx_CS        &lt;= IDLE;
+109                     	end else begin
+110        1/1                      counter      &lt;= counter_next;
+111        1/1                      counter_trgt &lt;= counter_trgt_next;
+112        1/1                      data_int     &lt;= data_int_next;
+113        1/1                      tx_CS        &lt;= tx_NS;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod0.html" >spi_master_tx</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>24</td><td>23</td><td>95.83</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>24</td><td>23</td><td>95.83</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       35
+ EXPRESSION (en_quad_in ? data_int[28] : data_int[31])
+             -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       41
+ EXPRESSION ((((!en_quad_in)) &amp;&amp; (counter[4:0] == 5'b11111)) || (en_quad_in &amp;&amp; (counter[2:0] == 3'b111)))
+             -----------------------1-----------------------    --------------------2-------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       41
+ SUB-EXPRESSION (((!en_quad_in)) &amp;&amp; (counter[4:0] == 5'b11111))
+                 -------1-------    -------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       41
+ SUB-EXPRESSION (en_quad_in &amp;&amp; (counter[2:0] == 3'b111))
+                 -----1----    ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       46
+ EXPRESSION (en_quad_in ? ({2'b0, counter_in[15:2]}) : counter_in)
+             -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       51
+ EXPRESSION ((counter == (counter_trgt - 1)) &amp;&amp; tx_edge)
+             ---------------1---------------    ---2---
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       64
+ EXPRESSION (en &amp;&amp; data_valid)
+             -1    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       75
+ EXPRESSION (en_quad_in ? ({data_int[27:0], 4'b0}) : ({data_int[30:0], 1'b0}))
+             -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       80
+ EXPRESSION (en &amp;&amp; data_valid)
+             -1    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod0.html" >spi_master_tx</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">26</td>
+<td class="rt">20</td>
+<td class="rt">76.92 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">388</td>
+<td class="rt">291</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">145</td>
+<td class="rt">74.74 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">16</td>
+<td class="rt">14</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s8">
+<td>Port Bits</td>
+<td class="rt">124</td>
+<td class="rt">103</td>
+<td class="rt">83.06 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">62</td>
+<td class="rt">52</td>
+<td class="rt">83.87 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">62</td>
+<td class="rt">51</td>
+<td class="rt">82.26 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">10</td>
+<td class="rt">6</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">264</td>
+<td class="rt">188</td>
+<td class="rt">71.21 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">132</td>
+<td class="rt">94</td>
+<td class="rt">71.21 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">132</td>
+<td class="rt">94</td>
+<td class="rt">71.21 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rstn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tx_edge</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tx_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdo0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdo1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdo2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdo3</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>en_quad_in</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>counter_in[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>counter_in[7:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>counter_in[15:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>counter_in_upd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_ready</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>clk_en_o</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>data_int[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_int_next[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>counter[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>counter[15:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>counter_trgt[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>counter_trgt[15:7]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>counter_next[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>counter_next[15:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>counter_trgt_next[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>counter_trgt_next[15:7]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>reg_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tx_CS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tx_NS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_0">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_spi_master_tx">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

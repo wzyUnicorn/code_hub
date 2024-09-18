@@ -1,0 +1,13 @@
+Command Line: /home/synopsys/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -licdebug
+uname(Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64)
+License: Failed to check out Verdi, version 2018.09, rc = -97:
+License: 	The desired vendor daemon is down.
+License: 	Check the lmgrd log file, or try lmreread.
+License: 	Feature:       Verdi
+License: 	Vendor:Host:   IC_EDA
+License: 	License path:  27000@IC_EDA:
+License: 	FlexNet Licensing error:-97,121
+License: 	For further information, refer to the FlexNet Licensing documentation,
+License: 	available at "www.flexerasoftware.com".
+[ERROR] Could not checkout Verdi license. Use verdi -licdebug for more information.
+au time 0.886913 0.679571 0.085528 delta 115658752 115658752 total 540741632 540741632

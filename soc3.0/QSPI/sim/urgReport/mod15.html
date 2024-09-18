@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: qspi_device</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | asserts</div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_qspi_device'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_qspi_device')">qspi_device</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="s7 cl rt"> 75.48</td>
+<td class="s9 cl rt"><a href="mod15.html#Line" > 99.42</a></td>
+<td class="s8 cl rt"><a href="mod15.html#Cond" > 86.67</a></td>
+<td class="s4 cl rt"><a href="mod15.html#Toggle" > 40.35</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/ICer/soc3.0/QSPI/sim/comp/../../tb/env/qspi_device.sv')">/home/ICer/soc3.0/QSPI/sim/comp/../../tb/env/qspi_device.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_16"  onclick="showContent('inst_tag_16')">qspi_tb_top.device</a></td>
+<td class="s7 cl rt"> 75.48</td>
+<td class="s9 cl rt"><a href="mod15.html#Line" > 99.42</a></td>
+<td class="s8 cl rt"><a href="mod15.html#Cond" > 86.67</a></td>
+<td class="s4 cl rt"><a href="mod15.html#Toggle" > 40.35</a></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_qspi_device'>
+<hr>
+<a name="inst_tag_16"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_16" >qspi_tb_top.device</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="s7 cl rt"> 75.48</td>
+<td class="s9 cl rt"><a href="mod15.html#Line" > 99.42</a></td>
+<td class="s8 cl rt"><a href="mod15.html#Cond" > 86.67</a></td>
+<td class="s4 cl rt"><a href="mod15.html#Toggle" > 40.35</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td class="s7 cl rt"> 75.48</td>
+<td class="s9 cl rt"> 99.42</td>
+<td class="s8 cl rt"> 86.67</td>
+<td class="s4 cl rt"> 40.35</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.25</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 92.50</td>
+<td><a href="mod8.html#inst_tag_9" >qspi_tb_top</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_qspi_device'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod15.html" >qspi_device</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>172</td><td>171</td><td>99.42</td></tr>
+<tr class="s9"><td class="lf">ALWAYS</td><td>90</td><td>136</td><td>135</td><td>99.26</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>302</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>319</td><td>19</td><td>19</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+89                      begin
+90         1/1              case(device_state)
+91                          IDLE: begin
+92         1/1          		      $display(&quot;Device In IDLE&quot;);
+93         1/1          		      command_data_cnt = 0;
+94         1/1          		      addr_data_cnt = 0;
+95         1/1          		      data_cnt = 0;
+96         1/1          		      is_write = 0;
+97         1/1                        command = 0 ;
+98         1/1                        addr = 0;
+99         1/1                        sdata = 0;
+100        1/1                        sample_input_signal();
+101                     
+102        1/1                        if(command_width != 0) begin
+103        1/1          		          command = command &lt;&lt; vld_bit_cnt;
+104        1/1          		          for(int i=0;i&lt;vld_bit_cnt;i++) begin
+105        1/1          		              command[i] = sample_data[i];
+106                     	              end
+107        1/1                            command_data_cnt = command_data_cnt+vld_bit_cnt;
+108        1/1                            device_state = COMMAND;
+109                                   end
+110        1/1                        else  if(addr_width != 0) begin
+111        1/1          		          addr = addr &lt;&lt; vld_bit_cnt;
+112        1/1          		          for(int i=0;i&lt;vld_bit_cnt;i++) begin
+113        1/1          		              addr[i] = sample_data[i];
+114                     	              end
+115        1/1                            addr_data_cnt = addr_data_cnt+vld_bit_cnt;
+116        1/1                            device_state = ADDR;
+117        1/1                            is_write = ~spi_rw;
+118                                   end
+119                                   else  begin
+120        1/1          		          sdata = sdata &lt;&lt; vld_bit_cnt;
+121        1/1          		          for(int i=0;i&lt;vld_bit_cnt;i++) begin
+122        1/1          		              sdata[i] = sample_data[i];
+123                     	              end
+124        1/1                            sdata_cnt = sdata_cnt+vld_bit_cnt;
+125        1/1                            addr = 'ha55a;                            // write default address
+126                     
+127        1/1                            if((rdata_addr_dummy != 0)&amp;&amp;(spi_rw==1)) begin
+128        1/1                                device_state = RDATA_DUMMY;
+129        1/1                                sdata_cnt = 1;
+130                                       end
+131        1/1                            else if((wdata_addr_dummy != 0) &amp;&amp; (spi_rw==0)) begin
+132        1/1                                device_state = WDATA_DUMMY;
+133        1/1                                sdata_cnt = 1;
+134                                       end
+135                                       else begin
+136        1/1                                if(spi_rw==1) begin
+137        1/1                                    device_state = RDATA;
+138        1/1                                    sdata = data[addr];
+139        1/1                                    drive_output_signal();
+140        1/1          		                  sdata = sdata &lt;&lt; vld_bit_cnt;
+141                                           end
+142                                           else 
+143        1/1                                    device_state = WDATA;
+144                                       end
+145        1/1                            if(spi_rw == 1)
+146        1/1                                $display(&quot;Will read data from 'ha55a&quot;); 
+147                                       else
+148        1/1                                $display(&quot;Will write data to 'ha55a&quot;); 
+149                                   end
+150                     
+151                     	      end
+152                     	COMMAND: begin
+153        1/1          		  $display(&quot;Device In COMMAND&quot;);
+154        1/1                    sample_input_signal();
+155        1/1          		  command = command &lt;&lt; vld_bit_cnt;
+156                     
+157        1/1          		  for(int i=0;i&lt;vld_bit_cnt;i++) begin
+158        1/1          		      command[i] = sample_data[i];
+159                     	      end
+160                     
+161        1/1                    command_data_cnt = command_data_cnt+vld_bit_cnt;
+162        1/1          		  if(command_data_cnt==command_width) 
+163                                   begin
+164        1/1                           $display(&quot;Device get command %h&quot;,command); 
+165        1/1          		         case(command)
+166                     			     WRITE_ENABLE: begin
+167        1/1          			         write_enable =1; 
+168        1/1          			         device_state = IDLE;     
+169                     			     end     
+170                     			     WRITE_DISABLE: begin
+171        1/1          			         write_enable =0; 
+172        1/1          			         device_state = IDLE;        
+173                     		             end
+174                     			     READ_DATA:begin
+175        1/1                               if(addr_width != 0) begin
+176        1/1                                   device_state = ADDR;
+177        1/1          			             is_write = 0;
+178                                          end else begin
+179        1/1                                   addr = 'ha55a; 
+180        1/1                                   if(rdata_addr_dummy != 0)
+181        1/1                                       device_state = RDATA_DUMMY;
+182                                              else
+183        1/1                                       device_state = RDATA;
+184                                          end
+185                     			     end
+186                                      PAGE_PROGRAMMING:begin
+187        1/1                               if(addr_width != 0) begin
+188        1/1                                  device_state = ADDR;
+189        1/1          			            is_write = 1;
+190                                          end else begin
+191        1/1                                   addr = 'ha55a;
+192        1/1                                   if(wdata_addr_dummy != 0)
+193        1/1                                       device_state = WDATA_DUMMY;
+194                                              else
+195        1/1                                       device_state = WDATA;
+196                                          end
+197                     			     end
+198                     			     default: begin
+199        1/1          			         $warning(&quot;unsupport command %h \n&quot;,command);
+200        1/1          			         device_state = IDLE;
+201                     			     end
+202                     	             endcase
+203        1/1          		         command_data_cnt = 0;
+204                     	          end
+                        MISSING_ELSE
+205                     	      end
+206                     	ADDR: begin
+207        1/1          		  $display(&quot;Device In ADDR&quot;);
+208        1/1                    sample_input_signal();
+209        1/1          		  addr = addr &lt;&lt; vld_bit_cnt;
+210        1/1          		  for(int i=0;i&lt;vld_bit_cnt;i++) begin
+211        1/1          		      addr[i] = sample_data[i];
+212                     	      end
+213        1/1                    addr_data_cnt = addr_data_cnt+vld_bit_cnt;
+214        1/1          		  if(addr_data_cnt==addr_width)	 begin
+215        1/1          	          if(is_write) begin
+216        1/1                            if(wdata_addr_dummy != 0) begin
+217        1/1          		               device_state = WDATA_DUMMY;
+218                                       end else begin
+219        1/1          		               device_state = WDATA;
+220                                       end
+221        1/1                            sdata_cnt = 0;
+222                     		      end else begin
+223        1/1                            if(rdata_addr_dummy != 0) begin
+224        1/1          			         device_state = RDATA_DUMMY;
+225                                       end else begin
+226        1/1          			         device_state = RDATA;
+227                                       end
+228        1/1                            sdata_cnt = 0;
+229                     		      end
+230        1/1          		      addr_data_cnt = 0;
+231                     		  end 	  
+                        MISSING_ELSE
+232                     	      end
+233                     	WDATA_DUMMY: begin
+234        1/1          		  $display(&quot;Device In WDATA_DUMMY&quot;);
+235        1/1          		   sdata_cnt = sdata_cnt+1;
+236        1/1          		   if(sdata_cnt == wdata_addr_dummy) begin
+237        1/1          		       device_state = WDATA;
+238        1/1          		       sdata = 0; 
+239        1/1          		       sdata_cnt = 0; 
+240                     	       end
+                        MISSING_ELSE
+241                     	      end
+242                     	WDATA: begin
+243        1/1          		      $display(&quot;Device In WDATA&quot;);
+244        1/1                        sample_input_signal();
+245        1/1          		      sdata = sdata &lt;&lt; vld_bit_cnt;
+246        1/1          		      for(int i=0;i&lt;vld_bit_cnt;i++) begin
+247        1/1          		          sdata[i] = sample_data[i];
+248                     	          end
+249        1/1                        sdata_cnt = sdata_cnt+vld_bit_cnt;
+250        1/1                        $display(&quot;sdata_cnt %h sdata %h \n&quot;,sdata_cnt,sdata);
+251        1/1          		      if((sdata_cnt == data_width) || (sdata_cnt%32==0)) begin
+252        1/1                            data[addr] = sdata;
+253        1/1                            $display(&quot;Write data %h to addr %h&quot;,sdata,addr);
+254        1/1                            if((sdata_cnt%32==0) &amp;&amp;(sdata_cnt&lt;data_width)) begin
+255        1/1                                addr = addr + 4;
+256                                       end
+                        MISSING_ELSE
+257        1/1                            sdata = 0;
+258        1/1                            if(sdata_cnt == data_width) begin
+259        1/1          		              device_state = IDLE;
+260        1/1          		              sdata_cnt = 0; 
+261                                       end
+                        MISSING_ELSE
+262                     	          end
+                        MISSING_ELSE
+263                     	      end
+264                     	RDATA_DUMMY: begin
+265        1/1          		  $display(&quot;Device In RDATA_DUMMY&quot;);
+266        1/1                     sample_data = 0;
+267        1/1                     drive_output_signal();
+268        1/1          		   sdata = sdata &lt;&lt; vld_bit_cnt;
+269        1/1          		   sdata_cnt = sdata_cnt+1;
+270        1/1          		   if(sdata_cnt == rdata_addr_dummy) begin
+271        1/1          		       device_state = RDATA;
+272        1/1          		       sdata = 0; 
+273        1/1          		       sdata_cnt = 0; 
+274                     	       end
+                        MISSING_ELSE
+275                     	      end
+276                     	RDATA: begin
+277        1/1          		  $display(&quot;Device In RDATA&quot;);
+278        1/1          		   if(sdata_cnt%32==0) begin
+279        1/1          	            sdata = data[addr];
+280        1/1                          $display(&quot;read data %h from addr %h&quot;,sdata,addr);
+281                     		   end
+                        MISSING_ELSE
+282        1/1                     sample_data = sdata[31:28];
+283        1/1                     drive_output_signal();
+284        1/1          		   sdata = sdata &lt;&lt; vld_bit_cnt;
+285        1/1          		   sdata_cnt = sdata_cnt+vld_bit_cnt;
+286        1/1                     if((sdata_cnt%32==0)&amp;&amp;(sdata_cnt &lt; data_width)) begin
+287        1/1                         addr = addr+4;
+288                                end
+                        MISSING_ELSE
+289        1/1          		   if(sdata_cnt == data_width) begin
+290        1/1          		       device_state = IDLE;
+291        1/1          		       sdata = 0; 
+292        1/1          		       sdata_cnt = 0; 
+293                     	       end
+                        MISSING_ELSE
+294                     	      end
+295                     
+296        <font color = "red">0/1     ==>          default:;</font>
+297                         endcase
+298                     end
+299                     
+300                     
+301                     task sample_input_signal();
+302        1/1              vld_bit_cnt = 0;
+303        1/1              sample_data[0] =  spi_sdi0 &amp; (spi_csn0==0)&amp;(spi_oe0==1);
+304        1/1              sample_data[1] =  spi_sdi1 &amp; (spi_csn1==0)&amp;(spi_oe1==1);
+305        1/1              sample_data[2] =  spi_sdi2 &amp; (spi_csn2==0)&amp;(spi_oe2==1);
+306        1/1              sample_data[3] =  spi_sdi3 &amp; (spi_csn3==0)&amp;(spi_oe3==1);
+307        2/2              if((spi_csn0==0)&amp;&amp;(spi_oe0==1)) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+308        2/2              if((spi_csn1==0)&amp;&amp;(spi_oe1==1)) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+309        2/2              if((spi_csn2==0)&amp;&amp;(spi_oe2==1)) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+310        2/2              if((spi_csn3==0)&amp;&amp;(spi_oe3==1)) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+311        1/1              sample_vld_bit[0] = spi_csn0;
+312        1/1              sample_vld_bit[1] = spi_csn1;
+313        1/1              sample_vld_bit[2] = spi_csn2;
+314        1/1              sample_vld_bit[3] = spi_csn3;
+315                     endtask
+316                     
+317                     
+318                     task drive_output_signal();
+319        1/1              vld_bit_cnt = 0;
+320        1/1              $display(&quot;will drive data %h to port \n &quot;,sample_data);
+321                     
+322        1/1              if(spi_csn1==1 &amp;&amp; spi_csn2==1 &amp;&amp; spi_csn3==1 ) begin
+323        1/1                  spi_sdo0 = sample_data[3];
+324        1/1                  spi_sdo1 = 0;
+325        1/1                  spi_sdo2 = 0;
+326        1/1                  spi_sdo3 = 0;
+327                         end
+328                         else begin
+329        1/1                  spi_sdo0 = sample_data[0];
+330        1/1                  spi_sdo1 = sample_data[1];
+331        1/1                  spi_sdo2 = sample_data[2];
+332        1/1                  spi_sdo3 = sample_data[3];
+333                         end
+334                     
+335        2/2              if(spi_csn0==0) vld_bit_cnt = vld_bit_cnt+1;
+                   <font color = "red">==>  MISSING_ELSE</font>
+336        2/2              if(spi_csn1==0) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+337        2/2              if(spi_csn2==0) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+338        2/2              if(spi_csn3==0) vld_bit_cnt = vld_bit_cnt+1;
+                        MISSING_ELSE
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod15.html" >qspi_device</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s8"><td class="lf">Conditions</td><td>15</td><td>13</td><td>86.67</td></tr>
+<tr class="s8"><td class="lf">Logical</td><td>15</td><td>13</td><td>86.67</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       127
+ EXPRESSION ((rdata_addr_dummy != 0) &amp;&amp; (spi_rw == 1'b1))
+             -----------1-----------    --------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       131
+ EXPRESSION ((wdata_addr_dummy != 0) &amp;&amp; (spi_rw == 1'b0))
+             -----------1-----------    --------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       251
+ EXPRESSION ((sdata_cnt == data_width) || ((sdata_cnt % 32) == 0))
+             ------------1------------    -----------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       254
+ EXPRESSION (((sdata_cnt % 32) == 0) &amp;&amp; (sdata_cnt &lt; data_width))
+             -----------1-----------    ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       286
+ EXPRESSION (((sdata_cnt % 32) == 0) &amp;&amp; (sdata_cnt &lt; data_width))
+             -----------1-----------    ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod15.html" >qspi_device</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">24</td>
+<td class="rt">64.86 </td>
+</tr><tr class="s4">
+<td>Total Bits</td>
+<td class="rt">632</td>
+<td class="rt">255</td>
+<td class="rt">40.35 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">316</td>
+<td class="rt">133</td>
+<td class="rt">42.09 </td>
+</tr><tr class="s3">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">316</td>
+<td class="rt">122</td>
+<td class="rt">38.61 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">23</td>
+<td class="rt">18</td>
+<td class="rt">78.26 </td>
+</tr><tr class="s1">
+<td>Port Bits</td>
+<td class="rt">356</td>
+<td class="rt">68</td>
+<td class="rt">19.10 </td>
+</tr><tr class="s2">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">178</td>
+<td class="rt">37</td>
+<td class="rt">20.79 </td>
+</tr><tr class="s1">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">178</td>
+<td class="rt">31</td>
+<td class="rt">17.42 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s4">
+<td>Signals</td>
+<td class="rt">14</td>
+<td class="rt">6</td>
+<td class="rt">42.86 </td>
+</tr><tr class="s6">
+<td>Signal Bits</td>
+<td class="rt">276</td>
+<td class="rt">187</td>
+<td class="rt">67.75 </td>
+</tr><tr class="s6">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">138</td>
+<td class="rt">96</td>
+<td class="rt">69.57 </td>
+</tr><tr class="s6">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">138</td>
+<td class="rt">91</td>
+<td class="rt">65.94 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>spi_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_csn0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_csn1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_csn2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_csn3</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_sdo0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>spi_sdo1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>spi_sdo2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>spi_sdo3</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>spi_oe0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_oe1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_oe2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_oe3</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_sdi0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_sdi1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_sdi2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_sdi3</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>command_width[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>command_width[5:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>command_width[31:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>addr_width[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>addr_width[5:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>addr_width[31:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_width[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_width[4]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_width[7:5]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_width[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wdata_addr_dummy[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wdata_addr_dummy[4:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wdata_addr_dummy[31:5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rdata_addr_dummy[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rdata_addr_dummy[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rdata_addr_dummy[4:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rdata_addr_dummy[5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rdata_addr_dummy[31:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>spi_rw</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>first_data[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>command[15:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>command[31:16]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>addr[15:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sdata[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>device_state[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sample_data[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>vld_bit_cnt[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>vld_bit_cnt[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>vld_bit_cnt[2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>vld_bit_cnt[7:3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>command_data_cnt[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>command_data_cnt[7:5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>addr_data_cnt[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>addr_data_cnt[7:5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>sdata_cnt[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sdata_cnt[7]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>data_cnt[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>sample_vld_bit[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>write_enable</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>is_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_16">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_qspi_device">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+irun: 15.20-p001: (c) Copyright 1995-2016 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-p001: Started on Sep 11, 2024 at 16:58:46 CST
+irun
+	-f apb_filelist.f
+		+incdir+$PRJ_ROOT/output/ip/apb_subsystem/i2c
+		+incdir+$PRJ_ROOT/output/ip/apb_subsystem/qspi
+		+incdir+$PRJ_ROOT/output/ip/apb_subsystem/uart
+		/output/ip/include/ahb2apb_defines.v
+		/output/ip/include/SoC_amba-defines.v
+		/output/ip/pad/TPPADLRCMCUDB.v
+		/output/ip/pad/pin_mux_rf.v
+		/output/ip/pad/gnrl_io_pad.v
+		/output/ip/pad/pin_mux.v
+		/output/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v
+		/output/ip/apb_subsystem/rtl/i2c/i2c_master_byte_ctrl.v
+		/output/ip/apb_subsystem/rtl/i2c/timescale.v
+		/output/ip/apb_subsystem/rtl/i2c/i2c_master_top.v
+		/output/ip/apb_subsystem/rtl/i2c/i2c_master_bit_ctrl.v
+		/output/ip/apb_subsystem/rtl/ahb2apb/ahb2apb.v
+		/output/ip/apb_subsystem/rtl/apb_subsystem.v
+		/output/ip/apb_subsystem/rtl/qspi/spi_master_fifo.v
+		/output/ip/apb_subsystem/rtl/qspi/spi_master_tx.v
+		/output/ip/apb_subsystem/rtl/qspi/spi_master_clkgen.v
+		/output/ip/apb_subsystem/rtl/qspi/spi_master_apb_if.v
+		/output/ip/apb_subsystem/rtl/qspi/spi_master_controller.v
+		/output/ip/apb_subsystem/rtl/qspi/spi_master_rx.v
+		/output/ip/apb_subsystem/rtl/qspi/apb_spi_master.v
+		/output/ip/apb_subsystem/rtl/uart/uart_defines.v
+		/output/ip/apb_subsystem/rtl/uart/raminfr_hubing.v
+		/output/ip/apb_subsystem/rtl/uart/uart_apb.v
+		/output/ip/apb_subsystem/rtl/uart/uart_rfifo_hubing.v
+		/output/ip/apb_subsystem/rtl/uart/uart_transmitter.v
+		/output/ip/apb_subsystem/rtl/uart/uart_sync_flops.v
+		/output/ip/apb_subsystem/rtl/uart/uart_tfifo_hubing.v
+		/output/ip/apb_subsystem/rtl/uart/uart_receiver.v
+		/output/ip/apb_subsystem/rtl/pwm/pwm_apb.sv
+		/output/ip/apb_subsystem/rtl/pwm/pwm.sv
+	busmatrix_filelist.f
+	cnn_sram.f
+	design_top.f
+	dma.f
+	dm.f
+	ibex_core.f
+	ibex_core_other.f
+	isp.f
+	model.f
+	top.f
+	uvm_tb.f
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/include/ahb2apb_defines.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/include/SoC_amba-defines.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/pad/TPPADLRCMCUDB.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/pad/pin_mux_rf.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/pad/gnrl_io_pad.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/pad/pin_mux.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/i2c/i2c_master_defines.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/i2c/i2c_master_byte_ctrl.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/i2c/timescale.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/i2c/i2c_master_top.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/i2c/i2c_master_bit_ctrl.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/ahb2apb/ahb2apb.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/apb_subsystem.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/spi_master_fifo.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/spi_master_tx.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/spi_master_clkgen.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/spi_master_apb_if.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/spi_master_controller.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/spi_master_rx.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/qspi/apb_spi_master.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_defines.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/raminfr_hubing.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_apb.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_rfifo_hubing.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_transmitter.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_sync_flops.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_tfifo_hubing.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/uart/uart_receiver.v.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/pwm/pwm_apb.sv.
+irun: *E,FILEMIS: Cannot find the provided file /output/ip/apb_subsystem/rtl/pwm/pwm.sv.
+irun: *E,FMUK: The type of the file (busmatrix_filelist.f) could not be determined.
+irun: *E,FMUK: The type of the file (cnn_sram.f) could not be determined.
+irun: *E,FMUK: The type of the file (design_top.f) could not be determined.
+irun: *E,FMUK: The type of the file (dma.f) could not be determined.
+irun: *E,FMUK: The type of the file (dm.f) could not be determined.
+irun: *E,FMUK: The type of the file (ibex_core.f) could not be determined.
+irun: *E,FMUK: The type of the file (ibex_core_other.f) could not be determined.
+irun: *E,FMUK: The type of the file (isp.f) could not be determined.
+irun: *E,FMUK: The type of the file (model.f) could not be determined.
+irun: *E,FMUK: The type of the file (top.f) could not be determined.
+irun: *E,FMUK: The type of the file (uvm_tb.f) could not be determined.
+TOOL:	irun	15.20-p001: Exiting on Sep 11, 2024 at 16:58:46 CST  (total: 00:00:00)

@@ -1,0 +1,19 @@
+irun: 15.20-p001: (c) Copyright 1995-2016 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-p001: Started on Sep 11, 2024 at 16:43:29 CST
+irun
+	apb_spi_master.v
+	spi_master_apb_if.v
+	spi_master_clkgen.v
+	spi_master_controller.v
+	spi_master_fifo.v
+	spi_master_rx.v
+	spi_master_tx.v
+	-gui
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> ^C
+ncsim> exit
+TOOL:	irun	15.20-p001: Exiting on Sep 11, 2024 at 16:45:35 CST  (total: 00:02:06)

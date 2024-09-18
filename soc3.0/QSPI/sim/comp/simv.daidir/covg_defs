@@ -1,0 +1,260 @@
+global coverage_group 0 $unit::qspi_fun_cov::cov_qspi __coverage_qspi_fun_cov.cov_qspi unused_qspi_fun_cov_cov_qspi_loop_label $unit 0 1 0 1 $unit::../../rtl/qspi/apb_spi_master.v::../../rtl/qspi/spi_master_apb_if.v...@4100540146 0  ( 0 
+)
+ 1 1
+ 60 /home/ICer/soc3.0/QSPI/sim/comp/../../tb/env/qspi_fun_cov.sv
+ 46 0 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+8
+0
+5
+0
+ 7 command 48 0 0 0 0 105 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn 105 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 16 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 4 1 1 0 0 1 1 12 WRITE_ENABLE 49 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 13 WRITE_DISABLE 50 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_1 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 9 READ_DATA 51 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_2 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 16 PAGE_PROGRAMMING 52 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_3 0 0 0 0 0 0 0
+
+ 4 addr 55 0 0 0 0 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_4 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 16 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_5 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 10 read_write 59 0 0 0 0 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_6 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_6 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 4 read 60 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_7 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 5 write 61 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_8 0 0 0 0 0 0 0
+
+ 9 cmd_width 64 0 0 0 0 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_9 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_9 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 32 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 5 1 1 0 0 1 1 18 command_width_zero 65 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_a 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 18 command_width_8bit 66 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_b 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 19 command_width_16bit 67 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_c 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 19 command_width_24bit 68 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_d 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 19 command_width_32bit 69 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_e 0 0 0 0 0 0 0
+
+ 10 data_width 72 0 0 0 0 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_f 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_f 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 32 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 3 1 1 0 0 1 1 16 data_width_32bit 73 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_e 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 16 data_width_64bit 74 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_10 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 17 data_width_128bit 75 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_11 0 0 0 0 0 0 0
+
+ 13 spi_quad_mode 78 0 0 0 0 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_12 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_12 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 9 quad_mode 79 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_8 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 11 single_mode 80 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_7 0 0 0 0 0 0 0
+
+ 16 rdata_addr_dummy 83 0 0 0 0 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_13 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_13 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 32 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 21 rdata_addr_dummy_zero 84 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_a 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 23 rdata_addr_dummy_8cycle 85 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_b 0 0 0 0 0 0 0
+
+ 16 wdata_addr_dummy 88 0 0 0 0 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_14 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_14 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 32 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 21 wdata_addr_dummy_zero 89 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_a 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 23 wdata_addr_dummy_8cycle 90 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 107 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_b 0 0 0 0 0 0 0
+
+ 24 cp_command_spi_quad_mode 0 93 0 0 0 0 2 0 5 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 20 cp_command_cmd_width 0 95 0 0 0 0 2 0 3 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 21 cp_command_data_width 0 97 0 0 0 0 2 0 4 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 22 cp_command_rdata_dummy 0 99 0 0 0 0 2 0 6 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 1 0 0 -1 0 0 1 1 12 cp_cmd_dummy 100 0 1 0 1 1 1 0 0 0 1 1 1 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_15 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+
+ 22 cp_command_wdata_dummy 0 103 0 0 0 0 2 0 7 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 3 1 2 0 0 -1 0 0 1 1 16 ign_write_enable 104 0 2 0 1 1 1 0 0 0 1 1 1 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_16 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+ 1 2 0 0 -1 0 0 1 1 17 ign_write_disable 105 0 2 0 1 1 1 0 0 0 1 1 1 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_17 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+ 1 2 0 0 -1 0 0 1 1 13 ign_read_data 106 0 2 0 1 1 1 0 0 0 1 1 1 108 _vcs_unit__4100540146_qspi_fun_cov_11_0::_vcs_unit__4100540146_qspi_fun_cov_11_0_qspi_fun_cov_cov_qspi_fn_15 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+
+end_coverage_group

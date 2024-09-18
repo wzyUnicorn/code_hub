@@ -1,0 +1,27 @@
+<session version="1.1" release="O-2018.09-1" timestp="2024-09-14 06:56:04 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="686/1093" />
+    <metric name="Cond" value="148/169" />
+    <metric name="Toggle" value="3097/4886" />
+    <metric name="Group" value="95.8974%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="$unit::qspi_fun_cov::cov_qspi">
+      <metric name="Group" value="95.8974%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+  </scope>
+  </old_coverage>
+</session>

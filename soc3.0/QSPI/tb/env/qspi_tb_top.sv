@@ -125,6 +125,9 @@ module qspi_tb_top;
              $fsdbDumpvars("+all");
         end
         initial begin
+             $vcdpluson;
+        end
+        initial begin
            #10000ns;
         end 
 endmodule

@@ -1,0 +1,1 @@
+verdi -f tb.f -f dut.f

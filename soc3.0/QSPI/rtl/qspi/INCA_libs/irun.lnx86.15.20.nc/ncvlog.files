@@ -1,0 +1,11 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/ICer/soc3.0/QSPI/rtl/qspi/apb_spi_master.v
+/home/ICer/soc3.0/QSPI/rtl/qspi/spi_master_apb_if.v
+/home/ICer/soc3.0/QSPI/rtl/qspi/spi_master_clkgen.v
+/home/ICer/soc3.0/QSPI/rtl/qspi/spi_master_controller.v
+/home/ICer/soc3.0/QSPI/rtl/qspi/spi_master_fifo.v
+/home/ICer/soc3.0/QSPI/rtl/qspi/spi_master_rx.v
+/home/ICer/soc3.0/QSPI/rtl/qspi/spi_master_tx.v
