@@ -7,6 +7,8 @@ header {
     overflow：auto；
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .work-experience {
     background-image:url(sz.png);
@@ -17,6 +19,8 @@ header {
     overflow：auto；
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .yuanshen-videos {
@@ -28,6 +32,8 @@ header {
     overflow：auto；
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 	
 }
 .study-videos {
@@ -39,6 +45,8 @@ header {
     overflow：auto；
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .self-evaluation{
     background-image:url(ht.png);
@@ -49,6 +57,8 @@ header {
     overflow：auto；
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
@@ -59,6 +69,8 @@ header {
 	    overflow：auto；
 	    margin-top: 0;
             margin-bottom: 0;
+	    padding-top: 0;
+            padding-bottom: 0;
         }
 
         .contact-info {
@@ -68,5 +80,7 @@ header {
 	    padding: 0;
 	    margin-top: 0;
             margin-bottom: 0;
+	    padding-top: 0;
+            padding-bottom: 0;
         }
 
