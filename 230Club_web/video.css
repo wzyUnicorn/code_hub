@@ -1,53 +1,53 @@
 header {
     background-image:url(ldy.png);
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    overflow：scroll；
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+    overflow:scroll;
 }
 .work-experience {
     background-image:url(sz.png);
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    overflow：scroll；
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+    overflow:scroll;
 }
 
 .yuanshen-videos {
     background-image:url(fnn.png);
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    overflow：scroll；
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+    overflow:scroll;
 	
 }
 .study-videos {
     background-image:url(nxd.png);
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    overflow：scroll；
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+    overflow:scroll;
 	
 }
 .self-evaluation{
     background-image:url(ht.png);
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    overflow：scroll；
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+    overflow:scroll;
 }
 
 
 
 .personal-info {
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-	    overflow：scroll；
+            padding-bottom:20px;
+            margin-bottom:20px;
+	    overflow:scroll;
         }
 
         .contact-info {
-            display: flex;
-            justify-content: space-around;
+            display:flex;
+            justify-content:space-around;
         }
 
 
