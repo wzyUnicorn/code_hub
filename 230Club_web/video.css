@@ -1,86 +1,47 @@
 header {
     background-image:url(ldy.png);
     color: #fff;
-
+    padding: 1rem;
     text-align: center;
-
-    overflow：auto；
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 .work-experience {
     background-image:url(sz.png);
     color: #fff;
-
+    padding: 1rem;
     text-align: center;
-
-    overflow：auto；
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 .yuanshen-videos {
     background-image:url(fnn.png);
     color: #fff;
-
+    padding: 1rem;
     text-align: center;
-
-    overflow：auto；
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
 	
 }
 .study-videos {
     background-image:url(nxd.png);
     color: #fff;
-
+    padding: 1rem;
     text-align: center;
-
-    overflow：auto；
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+	
 }
 .self-evaluation{
     background-image:url(ht.png);
     color: #fff;
-
+    padding: 1rem;
     text-align: center;
-
-    overflow：auto；
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 
 
 .personal-info {
-
+            padding-bottom: 20px;
             margin-bottom: 20px;
-	    overflow：auto；
-	    margin-top: 0;
-            margin-bottom: 0;
-	    padding-top: 0;
-            padding-bottom: 0;
         }
 
         .contact-info {
             display: flex;
             justify-content: space-around;
-	    overflow：auto；
-
-	    margin-top: 0;
-            margin-bottom: 0;
-	    padding-top: 0;
-            padding-bottom: 0;
         }
+
 
