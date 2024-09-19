@@ -3,6 +3,7 @@ header {
     color: #fff;
 
     text-align: center;
+    padding: 0;
     overflow：auto；	
 }
 .work-experience {
@@ -10,6 +11,7 @@ header {
     color: #fff;
 
     text-align: center;
+    padding: 0;
     overflow：auto；
 }
 
@@ -18,6 +20,7 @@ header {
     color: #fff;
 
     text-align: center;
+    padding: 0;
     overflow：auto；
 	
 }
@@ -26,20 +29,22 @@ header {
     color: #fff;
 
     text-align: center;
-    padding: 1rem;	
+    padding: 0;
+    overflow：auto；
 }
 .self-evaluation{
     background-image:url(ht.png);
     color: #fff;
 
     text-align: center;
+    padding: 0;
     overflow：auto；
 }
 
 
 
 .personal-info {
-            padding-bottom: 20px;
+            padding: 0;
             margin-bottom: 20px;
 	    overflow：auto；
         }
@@ -48,5 +53,6 @@ header {
             display: flex;
             justify-content: space-around;
 	    overflow：auto；
+	    padding: 0;
         }
 
