@@ -26,7 +26,7 @@ header {
     color: #fff;
 
     text-align: center;
-    overflow：auto；	
+    padding: 1rem;	
 }
 .self-evaluation{
     background-image:url(ht.png);
