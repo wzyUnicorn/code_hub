@@ -3,14 +3,14 @@ header {
     color: #fff;
 
     text-align: center;
-    overflow：scroll；	
+    overflow：auto；	
 }
 .work-experience {
     background-image:url(sz.png);
     color: #fff;
 
     text-align: center;
-    overflow：scroll；
+    overflow：auto；
 }
 
 .yuanshen-videos {
@@ -18,22 +18,22 @@ header {
     color: #fff;
 
     text-align: center;
-    overflow：scroll；
+    overflow：auto；
 	
 }
 .study-videos {
     background-image:url(nxd.png);
     color: #fff;
-    padding: 1rem;
+
     text-align: center;
-	
+    overflow：auto；	
 }
 .self-evaluation{
     background-image:url(ht.png);
     color: #fff;
 
     text-align: center;
-    overflow：scroll；
+    overflow：auto；
 }
 
 
@@ -41,12 +41,12 @@ header {
 .personal-info {
             padding-bottom: 20px;
             margin-bottom: 20px;
-	    overflow：scroll；
+	    overflow：auto；
         }
 
         .contact-info {
             display: flex;
             justify-content: space-around;
-	    overflow：scroll；
+	    overflow：auto；
         }
 
