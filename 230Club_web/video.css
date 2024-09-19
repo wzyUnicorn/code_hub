@@ -1,32 +1,32 @@
 header {
-    background: #9933FF;
+    background-image:url(ldy.png);
     color: #fff;
     padding: 1rem;
     text-align: center;
 }
 .work-experience {
-    background: #FF99CC;
+    background-image:url(sz.png);
     color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
 .yuanshen-videos {
-    background: #3399FF;
+    background-image:url(fnn.png);
     color: #fff;
     padding: 1rem;
     text-align: center;
 	
 }
 .study-videos {
-    background: #00CC00;
+    background-image:url(nxd.png);
     color: #fff;
     padding: 1rem;
     text-align: center;
 	
 }
 .self-evaluation{
-    background: #CC0000;
+    background-image:url(ht.png);
     color: #fff;
     padding: 1rem;
     text-align: center;
