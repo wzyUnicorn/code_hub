@@ -9,6 +9,7 @@
         body { font-family: Arial, sans-serif; }	
 	div {
 	    text-align: center;
+	    font-weight: bold;
 	}
 	    /* 去除所有超链接的默认样式 */
 	a {
@@ -25,6 +26,7 @@
         background-image:url(bg.jpg);
 	width: 100%; /* 宽度占满整个屏幕 */
 	height: 100vh; /* 高度占满整个视口高度 */
+	margin-top: 0;
    	background-size: cover; /* 背景图片覆盖整个元素 */
    	background-position: center center; /* 背景图片居中显示 */
   	background-repeat: no-repeat; /* 背景图片不重复 */
@@ -45,7 +47,8 @@
     flex-grow: 0; /* 防止链接增长超出其flex-basis */
     flex-shrink: 1; /* 允许链接缩小 */
     flex-basis: calc(33.333% - 40px); /* 每个链接占三分之一的宽度，减去两侧的间距 */
-    margin: 10px 0; /* 只在垂直方向上添加外边距 */
+    margin-top: 0;
+    margin-bottom: 0; 
     box-sizing: border-box; /* 包括padding和border在内的宽度计算 */
     text-decoration: none;
     white-space: nowrap; /* 防止链接文本换行 */
