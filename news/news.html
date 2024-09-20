@@ -7,41 +7,37 @@
     <style>
         /* 这里可以添加CSS样式 */
         body { font-family: Arial, sans-serif; }	
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 0 10px; /* 移除首尾链接的左右padding */
-}
+	div {
+	    text-align: center;
+	}
+	            .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            flex: 1; /* 允许链接占据额外的空间 */
+        }
+        
+        .nav-link:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-.nav-link {
-    color: white;
-    padding: 14px;
-    text-decoration: none;
-    flex: 1; /* 每个链接占据剩余空间 */
-    text-align: center;
-}
-
-.nav-link:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* 媒体查询，用于小屏幕设备 */
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column; /* 堆叠链接 */
-    }
-    .nav-link {
-        flex-basis: 33.333%; /* 每个链接占三分之一的宽度，减去两侧的padding */
-        margin: 10px 0; /* 在链接之间添加垂直间距 */
-    }
-	
-}
-div {
-    text-align: center;
-}
+        /* 媒体查询，用于小屏幕设备 */
+        @media (max-width: 900px) {
+            .nav-link {
+                flex-basis: calc(33.333% - 40px); /* 每个链接占三分之一的宽度，减去两侧的margin */
+                margin: 10px; /* 在链接之间添加间距 */
+            }
+        }
     </style>
 </head>
 <body>
