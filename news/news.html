@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻网站</title>
+    <style>
+        /* 这里可以添加CSS样式 */
+        body { font-family: Arial, sans-serif; }
+        .navbar { overflow: hidden; background-color: #333; }
+        .navbar a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
+        .navbar a:hover { background-color: #ddd; color: black; }
+        .content { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+	    <a href="#news">时政要闻</a>
+        <a href="#music">丝竹之声</a>
+        <a href="#chess">博弈之道</a>
+        <a href="#book">经史子集</a>
+        <a href="#drawing">水墨丹青</a>
+		<a href="#health">岐黄之术</a>
+    </div>
+    <div class="content" id="news" style="display: none;">
+        <h2>新闻频道</h2>
+		<a href="https://news.ifeng.com/c/8d1spMHsPXl">数说中国｜75年来我国能源发展取得显著成就</a>
+    </div>
+ 
+    <div class="content" id="music">
+        <h2>声乐频道</h2>
+        <a href="http://www.example.com/news-article1">古筝入门基本指法</a>
+    </div>
+    <div class="content" id="chess" style="display: none;">
+        <h2>棋牌频道</h2>
+        <p>这里是新闻内容...</p>
+    </div>
+    <div class="content" id="book" style="display: none;">
+        <h2>读书频道</h2>
+        <p>这里是新闻内容...</p>
+    </div>
+    <div class="content" id="drawing" style="display: none;">
+        <h2>绘画频道</h2>
+        <p>这里是新闻内容...</p>
+    </div>
+   <div class="content" id="health" style="display: none;">
+        <h2>健康频道</h2>
+        <p>这里是新闻内容...</p>
+    </div>
+	
+
+    <script>
+        // 这里可以添加JavaScript代码
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                var contentId = this.getAttribute('href');
+                document.querySelectorAll('.content').forEach(c => {
+                    c.style.display = 'none';
+                });
+                document.querySelector(contentId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
