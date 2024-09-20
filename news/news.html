@@ -10,6 +10,17 @@
 	div {
 	    text-align: center;
 	}
+	    /* 去除所有超链接的默认样式 */
+	a {
+    	    color: #000; /* 设置链接颜色为黑色 */
+    	    text-decoration: none; /* 去除下划线 */
+	}
+
+	/* 为悬停状态添加样式 */
+	a:hover {
+ 	   color: #555; /* 鼠标悬停时链接颜色变为深灰色 */
+ 	   text-decoration: underline; /* 鼠标悬停时可以添加下划线，如果需要 */
+	}
 .content{
         background-image:url(bg.jpg);
 	width: 100%; /* 宽度占满整个屏幕 */
