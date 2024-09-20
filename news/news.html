@@ -3,91 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新闻网站</title>
-    <style>
-        /* 这里可以添加CSS样式 */
-        body { font-family: Arial, sans-serif; }	
-	div {
-	    text-align: center;
-	}
-	            .navbar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            background-color: #333;
-            padding: 0;
-        }
-        
-        .nav-link {
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            flex: 1; /* 允许链接占据额外的空间 */
-        }
-        
-        .nav-link:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* 媒体查询，用于小屏幕设备 */
-        @media (max-width: 900px) {
-            .nav-link {
-                flex-basis: calc(33.333% - 40px); /* 每个链接占三分之一的宽度，减去两侧的margin */
-                margin: 10px; /* 在链接之间添加间距 */
-            }
-        }
-    </style>
+    <title>六频道展示</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navbar">
-	    <a href="#news" class="nav-link">时政要闻</a>
-        <a href="#music" class="nav-link">丝竹之声</a>
-        <a href="#chess" class="nav-link">博弈之道</a>
-        <a href="#book" class="nav-link">经史子集</a>
-        <a href="#drawing" class="nav-link">水墨丹青</a>
-		<a href="#health" class="nav-link">岐黄之术</a>
+    <div class="container">
+        <div class="row">
+            <div class="channel channel-1">频道1</div>
+            <div class="channel channel-2">频道2</div>
+            <div class="channel channel-3">频道3</div>
+        </div>
+        <div class="row">
+            <div class="channel channel-4">频道4</div>
+            <div class="channel channel-5">频道5</div>
+            <div class="channel channel-6">频道6</div>
+        </div>
     </div>
-    <div class="content" id="news" style="display: none;">
-        <h2>新闻频道</h2>
-		<a href="https://news.ifeng.com/c/8d1spMHsPXl">数说中国｜75年来我国能源发展取得显著成就</a>
-    </div>
- 
-    <div class="content" id="music">
-        <h2>声乐频道</h2>
-        <a href="http://www.example.com/news-article1">古筝入门基本指法</a>
-    </div>
-    <div class="content" id="chess" style="display: none;">
-        <h2>棋牌频道</h2>
-        <p>这里是新闻内容...</p>
-    </div>
-    <div class="content" id="book" style="display: none;">
-        <h2>读书频道</h2>
-        <p>这里是新闻内容...</p>
-    </div>
-    <div class="content" id="drawing" style="display: none;">
-        <h2>绘画频道</h2>
-        <p>这里是新闻内容...</p>
-    </div>
-   <div class="content" id="health" style="display: none;">
-        <h2>健康频道</h2>
-        <p>这里是新闻内容...</p>
-    </div>
-	
-
-    <script>
-        // 这里可以添加JavaScript代码
-        document.querySelectorAll('.navbar a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                var contentId = this.getAttribute('href');
-                document.querySelectorAll('.content').forEach(c => {
-                    c.style.display = 'none';
-                });
-                document.querySelector(contentId).style.display = 'block';
-            });
-        });
-    </script>
 </body>
 </html>
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* 弹性盒模型，允许换行 */
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; /* 每行元素均匀分布 */
+}
+
+.channel {
+    width: calc(100% / 3); /* 每个频道占总宽度的三分之一 */
+    box-sizing: border-box; /* 包含边框和内边距的尺寸计算 */
+    margin-bottom: 1rem; /* 间距 */
+    padding: 1rem; /* 可选的内部填充 */
+    border: 1px solid #ccc; /* 可选的边框 */
+    min-height: 7rem; /* 保证最小高度，避免过于瘦长 */
+}
+
+/* 如果需要给每个频道单独的样式，可以添加对应class的样式 */
+.channel-1 { background-color: #f1c40f; }
+.channel-2 { background-color: #ff69b4; }
+.channel-3 { background-color: #00bfff; }
+.channel-4 { background-color: #e6e6fa; }
+.channel-5 { background-color: #9b59b6; }
+.channel-6 { background-color: #2ecc71; }
