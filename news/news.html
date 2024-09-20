@@ -10,35 +10,37 @@
 	div {
 	    text-align: center;
 	}
-	            .navbar {
-				
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            background-color: #333;
-            padding: 0;
-        }
-        
-        .nav-link {
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            flex: 1; /* 允许链接占据额外的空间 */
-        }
-        
-        .nav-link:hover {
-            background-color: #ddd;
-            color: black;
-        }
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 0;
+}
 
-        /* 媒体查询，用于小屏幕设备 */
-        @media (max-width: 900px) {
-            .nav-link {
-                flex-basis: calc(33.333% - 40px); /* 每个链接占三分之一的宽度，减去两侧的margin */
-                margin: 10px; /* 在链接之间添加间距 */
-            }
-        }
+.nav-link {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    flex-basis: calc(33.333% - 40px); /* 设置每个链接的基础宽度为容器的三分之一减去两侧的间距 */
+    margin: 0 20px; /* 设置左右间距 */
+    text-decoration: none;
+    white-space: nowrap; /* 防止链接文本换行 */
+}
+
+.nav-link:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* 媒体查询，用于小屏幕设备 */
+@media (max-width: 900px) {
+    .nav-link {
+        flex-basis: 100%; /* 在小屏幕上每个链接占满整行 */
+        margin: 10px 0; /* 调整外边距 */
+    }
+}
     </style>
 </head>
 <body>
