@@ -23,8 +23,11 @@
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    flex-basis: calc(33.333% - 40px); /* 设置每个链接的基础宽度为容器的三分之一减去两侧的间距 */
-    margin: 0 20px; /* 设置左右间距 */
+    flex-grow: 0; /* 防止链接增长超出其flex-basis */
+    flex-shrink: 1; /* 允许链接缩小 */
+    flex-basis: calc(33.333% - 40px); /* 每个链接占三分之一的宽度，减去两侧的间距 */
+    margin: 10px 0; /* 只在垂直方向上添加外边距 */
+    box-sizing: border-box; /* 包括padding和border在内的宽度计算 */
     text-decoration: none;
     white-space: nowrap; /* 防止链接文本换行 */
 }
@@ -34,11 +37,14 @@
     color: black;
 }
 
-/* 媒体查询，用于小屏幕设备 */
-@media (max-width: 900px) {
+/* 媒体查询，用于宽度小于500px的屏幕设备 */
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: row; /* 确保项在一行中 */
+    }
     .nav-link {
-        flex-basis: 100%; /* 在小屏幕上每个链接占满整行 */
-        margin: 10px 0; /* 调整外边距 */
+        flex-basis: calc(33.333% - 20px); /* 每个链接占三分之一的宽度，减去两侧的间距 */
+        margin: 5px; /* 在小屏幕上，链接在水平和垂直方向上都有间距 */
     }
 }
     </style>
