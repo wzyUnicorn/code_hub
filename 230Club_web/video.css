@@ -5,6 +5,10 @@ header {
     text-align:center;
     overflow:auto;
 }
+a {
+    color: #000; /* 设置链接颜色为黑色 */
+    text-decoration: none; /* 去除下划线 */
+}
 .work-experience {
     background-image:url(sz.png);
     color:#fff;
