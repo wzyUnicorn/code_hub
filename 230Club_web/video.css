@@ -4,6 +4,7 @@ header {
     padding:1rem;
     text-align:center;
     overflow:auto;
+    background-repeat: no-repeat;
 }
 a {
     color: #000; /* 设置链接颜色为黑色 */
@@ -15,6 +16,7 @@ a {
     padding:1rem;
     text-align:center;
     overflow:auto;
+    background-repeat: no-repeat;
 }
 
 .yuanshen-videos {
@@ -23,6 +25,7 @@ a {
     padding:1rem;
     text-align:center;
     overflow:auto;
+    background-repeat: no-repeat;
 	
 }
 .study-videos {
@@ -31,7 +34,7 @@ a {
     padding:1rem;
     text-align:center;
     overflow:auto;
-	
+    background-repeat: no-repeat;
 }
 .self-evaluation{
     background-image:url(ht.png);
@@ -39,6 +42,7 @@ a {
     padding:1rem;
     text-align:center;
     overflow:auto;
+    background-repeat: no-repeat;
 }
 
 
