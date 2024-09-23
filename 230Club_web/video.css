@@ -1,7 +1,7 @@
 header {
     background-image:url(ldy.png);
     color:#fff;
-    padding:1rem;
+    padding:0.3rem;
     text-align:center;
     overflow:auto;
 
@@ -13,7 +13,7 @@ a {
 .work-experience {
     background-image:url(sz.png);
     color:#fff;
-    padding:1rem;
+    padding:0.3rem;
     text-align:center;
     overflow:auto;
 
@@ -22,7 +22,7 @@ a {
 .yuanshen-videos {
     background-image:url(fnn.png);
     color:#fff;
-    padding:1rem;
+    padding:0.3rem;
     text-align:center;
     overflow:auto;
 
@@ -31,7 +31,7 @@ a {
 .study-videos {
     background-image:url(nxd.png);
     color:#fff;
-    padding:1rem;
+    padding:0.3rem;
     text-align:center;
     overflow:auto;
 
@@ -39,7 +39,7 @@ a {
 .self-evaluation{
     background-image:url(ht.png);
     color:#fff;
-    padding:1rem;
+    padding:0.3rem;
     text-align:center;
     overflow:auto;
 
